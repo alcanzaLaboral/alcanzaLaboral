@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "RCantidadCandidatosPeridoTiempo";
+}
+
+<!-- start banner Area -->
+<section class="relative about-banner">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="about-content col-lg-12">
+                <h1 class="text-white">
+                    Alcanza Laboral
+                </h1>
+                <p class="text-white link-nav"><a href="index.html">Inicio </a>  <span class="lnr lnr-arrow-right"></span>  <a href="contact.html"> Reporte de Cantidad de Candidatos en un Periodo de tiempo</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End banner Area -->
+<!-- Start contact-page Area -->
+<section class=" section-gap">
+    <div class="container-fluid">
+        <div class="alert alert-warning" role="alert">
+            <div class="row">
+                <form class="form-group row">
+                    <div class="form-group" style="margin: 0px 10px 0px 20px;">
+                        <label>Inicio:</label>
+                        <input style="width: 12rem;" type="date" class="form-control form-control-sm" id="txtInicio" />
+                    </div>
+                    <div class="form-group" style="margin: 0px 10px 0px 20px;">
+                        <label>Fin:</label>
+                        <input style="width: 12rem;" type="date" class="form-control form-control-sm" id="txtFin" />
+                    </div>
+                    <div class="form-group" style="margin: 1.45rem 10px 0px 20px;">
+                        @*<button class="genric-btn primary" style="font-size: 0.8rem; width: 10rem;" onclick="buscarCandidatos()">Buscar</button>*@
+                        <input type="button" value="Buscar" class="genric-btn primary" style="font-size: 0.8rem; width: 10rem;" onclick="buscarCandidatos()" />
+                    </div>
+
+                </form>
+
+
+
+            </div>
+
+
+        </div>
+
+        <div class="container-fluid" style="text-align:center;">
+            <p style="font-size:20px;">Cantidad de Usuarios Registrados:</p>
+            <div style="font-size:40px; color:#FFC107; font-weight:bold;" id="cantUsuarios">0</div>
+        </div>
+
+    </div>
+
+
+</section>
+
+<script src="~/Scripts/Modulo/RCantidadCandidatosPeridoTiempo.js"></script>
+

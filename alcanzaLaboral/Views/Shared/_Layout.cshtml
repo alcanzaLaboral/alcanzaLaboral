@@ -1,0 +1,440 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <!--<link rel="shortcut icon" href="~/img/fav.png">-->
+    <link rel="shortcut icon" href="~/img/fav.ico">
+    
+    <!-- Author Meta -->
+    <meta name="author" content="alcanzaLaboral">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <title>@ViewBag.Title - Alcanza Laboral</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--CSS ============================================= -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    @*<link href="~/Content/Layout/linearicons.css" rel="stylesheet" />
+        <link href="~/Content/Layout/font-awesome.min.css" rel="stylesheet" />*@
+    <link href="~/Content/Layout/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Layout/magnific-popup.css" rel="stylesheet" />
+    <link href="~/Content/Layout/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/Layout/nice-select.css" rel="stylesheet" />
+    <link href="~/Content/Layout/animate.min.css" rel="stylesheet" />
+    <link href="~/Content/Layout/owl.carousel.css" rel="stylesheet" />
+    <link href="~/Content/Layout/main.css" rel="stylesheet" />
+    <!-- Start WOWSlider.com HEAD section -->
+    <link rel="stylesheet" type="text/css" href="~/Content/Layout/engine1/style.css" />
+    <script type="text/javascript" src="~/Content/Layout/engine1/jquery.js"></script>
+
+    <!-- End WOWSlider.com HEAD section -->
+
+
+</head>
+<body>
+
+    <header id="header">
+        @*   <div class="header-top">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-sm-4 col-4 header-top-left">
+
+                        </div>
+                        <div class=" col-lg-4 col-sm-4 col-4 text-center">
+                            <button type="button" class="btn btn-warning" onclick="BuscarCandidatos()" href="#">¡ Buscar Candidatos Ahora !</button>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 col-4 header-top-right">
+                            <div class="header-social">
+                                <button type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#registro_mod">Registrate</button>
+                                <button type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#login_mod">Ingresa&nbsp;a&nbsp;tu&nbsp;cuenta</button>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+        <div class="container-fluid main-menu">
+            <div class="row align-items-center justify-content-between d-flex" style="
+                 margin-left 10px;
+                 ">
+                <div id="logo" class="col-lg-2">
+                    @*<a href="Inicio.html"><img src="~/img/logo.png" alt="logo" title="" /></a>*@
+                    <a href="Inicio.html"><img class="slideInLeft animated" src="~/img/logofinal3.png" alt="logo" title="" /></a>
+                </div>
+                <nav id="nav-menu-container" class="col-lg-7">
+                    <ul class="nav-menu" style="margin-left: 50px;">
+                        <li><a style="font-size:14px;" onclick="Inicio()" href="#">Inicio</a></li>
+                        <li class="menu-has-children">
+                            <a style="font-size:14px;" href="#">Qué es Alcanza Laboral</a>
+                            <ul>
+                                <li><a style="font-size: 16px !important;" onclick="QuienesSomos()" href="#">Qué es Alcanza</a></li>
+                                <li><a style="font-size: 16px !important;" onclick="MisionYVision()" href="#">Misión y visión</a></li>
+                                <li><a style="font-size: 16px !important;" onclick="ConceptosBasicos()" href="#">Conceptos Básicos</a></li>
+                                <li><a style="font-size: 16px !important;" onclick="ConceptosBasicos()" href="#">Como Funciona</a></li>
+                                @*<li><a style="font-size: 16px !important;" onclick="ComoRegistrarse()" href="#">Cómo Registrarse</a></li>
+                                    <li><a style="font-size:14px;" onclick="alcanzaYOtrosPortales()" href="#">Alcanza y otros Portales</a></li>
+                                                            <li><a style="font-size: 16px !important;" onclick="Beneficios()" href="#">Beneficios</a></li>
+                                                            <li><a style="font-size: 16px !important;" onclick="Tarifas()" href="#">Tarifas</a></li>
+                                                            <li><a style="font-size: 16px !important;" onclick="TerminosCondiciones()" href="#">Téminos y Condiciones</a></li>*@
+                            </ul>
+                        </li>
+                        <li class="menu-has-children">
+                            <a style="font-size:14px;" href="#">Proceso de Registro</a>
+                            <ul>
+                                <li><a style="font-size: 16px !important;" onclick="PorQueRegistrarse()" href="#">Por qué Registrarse</a></li>
+                                <li><a style="font-size: 16px !important;" onclick="ComoRegistrarse()" href="#">Cómo Registrarse</a></li>
+                                @*
+                                    <li><a style="font-size: 16px !important;" href="#" data-toggle="modal" data-target="#login_mod">Ingresa a tu cuenta</a></li>*@
+                                <li><a style="font-size: 16px !important;" onclick="Tarifas()" href="#">Tarifas</a></li>
+                                <li><a style="font-size:16px !important;" onclick="Beneficios()" href="#">Beneficios</a></li>
+                                <li><a style="font-size:16px !important;" onclick="Representante()" href="#">Qué es un Representante Comercial</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="menu-has-children" id="miPerfil_li">
+                            <a style="font-size:14px;" href="#">Mi Perfil</a>
+                            <ul>
+                                <li><a style="font-size:14px;" onclick="EditarPerfil()" href="#">Editar Perfil</a></li>
+                                <li><a style="font-size:14px;" onclick="PerfilProfesional()" href="#">Ver Curriculum</a></li>
+                                <li><a style="font-size:14px;" onclick="Salir()" href="#">Salir</a></li>
+                            </ul>
+                        </li>
+                        <li class="move" id="admin_li">
+                            <a style="font-size:14px;" href="#">Administrador</a>
+                            <ul>
+                                <li><a style="font-size:14px;" onclick="RCandidatosPeridoCategoria()" href="#">Candidatos por periodo y categoría</a></li>
+                                <li><a style="font-size:14px;" onclick="RCantidadCandidatosPeridoTiempo()" href="#">Cantidad de candidatos por periodo de tiempo</a></li>
+                                <li><a style="font-size:14px;" onclick="RMontoFacturadoPeriodoTiempo()" href="#">Monto Facturado</a></li>
+                                <li><a style="font-size:14px;" onclick="RCuentas()" href="#">Cuentas Activas/Por vencer</a></li>
+                            </ul>
+                        </li>
+
+                        @*<li><a style="font-size:14px;" onclick="Contactenos()" href="#">Contáctenos</a></li>
+                            <li class="menu-has-children" id="miPerfil_li">
+                                <a style="font-size:14px;" href="#">Mi Perfil</a>
+                                <ul>
+                                    <li><a style="font-size:14px;" onclick="EditarPerfil()" href="#">Editar Perfil</a></li>
+                                    <li><a style="font-size:14px;" onclick="PerfilProfesional()" href="#">Ver Curriculum</a></li>
+                                    <li><a style="font-size:14px;" onclick="Salir()" href="#">Salir</a></li>
+                                </ul>
+                            </li>
+                        *@
+                    </ul>
+                </nav><!-- #nav-menu-container -->
+
+                <div class="col-lg-3 move">
+
+                    <div class=" row">
+                        <div class="col-lg-12 text-right">
+                            <button type="button" class="btn btn-primary ocultarbtn" href="#" data-toggle="modal" data-target="#login_mod">Ingresa&nbsp;a&nbsp;tu&nbsp;cuenta</button>
+
+                            <button type="button" class="btn btn-primary reg ocultarbtn" href="#" data-toggle="modal" data-target="#registro_mod">
+                                Registrate
+                            </button>
+
+
+                        </div>
+                        <div class="col-lg-12 text-right">
+                            <button style="" type="button" class="btn btn-warning" onclick="BuscarCandidatos()" href="#">Buscar Candidatos </button>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                @*<div class="col-lg-6 text-center">
+                    <button type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#registro_mod">
+                           Registrate
+                     </button>
+
+
+
+                       </div>
+                       <div class="col-lg-6 text-center">
+                           <button type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#login_mod">Ingresa&nbsp;a&nbsp;tu&nbsp;cuenta</button>
+                       </div>*@
+
+
+
+            </div>
+        </div>
+        <div class="sidenav">
+            <button id="this" type="button" class="btn btn-primary arrow"></button>
+        </div>
+
+        <div id="sidenav" class="sidenav" style="top: 221px;right: 13px;width: 202px; display:none">
+            <button style="padding-left: 8px; margin-left: 25px;" type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#login_mod">Ingresa&nbsp;a&nbsp;tu&nbsp;cuenta</button>
+            <button style="margin-left: 87px;padding-left: 8px;" type="button" class="btn btn-primary reg" href="#" data-toggle="modal" data-target="#registro_mod">
+                Registrate
+            </button>
+        </div>
+
+    </header><!-- #header -->
+    <!-- Modal Registro -->
+    <div class="modal fade" id="registro_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Crear una Cuenta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <form>
+                                <div class="form-group">
+                                    <label>Nombre de usuario</label>
+                                    <input type="text" class="form-control" id="usu_reg" aria-describedby="emailHelp" placeholder="Ingrese un usuario" onblur="ValidarUsuario()">
+                                </div>
+                                <div class="form-group">
+                                    <label>Contraseña</label>
+                                    <input type="password" class="form-control" id="pass_reg" placeholder="Ingrese su contraseña">
+                                </div>
+                                <div class="form-group">
+                                    <label>Repita su contraseña</label>
+                                    <input type="password" class="form-control" id="rpass_reg" placeholder="Repita su contraseña">
+                                </div>
+                                <div class="form-group">
+                                    <label>E-mail de recepción de ofertas</label>
+                                    <input type="text" class="form-control" id="email_reg" placeholder="Ingrese su e-mail" onblur="ValidarCorreo()">
+                                </div>
+                                <div class="form-group">
+                                    <label>Coloque nuevamente su e-mail</label>
+                                    <input type="text" class="form-control" id="remail_reg" placeholder="Repita su e-mail">
+                                </div>
+                                <div class="form-group">
+                                    <label>Seleccione una pregunta secreta</label>
+                                    <select class="form-control" id="preg_reg">
+                                        <option value="1">Apellido materno de la madre</option>
+                                        <option value="2">Ciudad de nacimiento</option>
+                                        <option value="3">Nombre de la primera mascota</option>
+                                        <option value="4">Película preferida</option>
+                                    </select>
+
+                                </div>
+                                <div class="form-group">
+                                    <label>Respuesta</label>
+                                    <input type="text" class="form-control" id="respuesta_reg" placeholder="Ingrese su respuesta">
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="chk_terminos">
+                                    <label class="custom-control-label" for="chk_terminos">Acepto los <a href="../Inicio/TerminosCondiciones" target="_blank">Términos y Condiciones</a></label>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="genric-btn primary-border" data-dismiss="modal">Cerrar</button>
+                    <button id="registrarCandidatosbtn" type="button" class="genric-btn primary" onclick="Registrar_Onclick()">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="login_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Ingresa a tu cuenta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Usuario</label>
+                                    <input type="email" class="form-control" id="login_usuario" aria-describedby="emailHelp" placeholder="Ingrese su usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Contraseña</label>
+                                    <input type="password" class="form-control" id="login_pass" placeholder="Ingrese su contraseña">
+                                </div>
+                                <a href="#" data-toggle="modal" data-target="#RecuperaPass_mod">¿Olvidaste tu usuario o contraseña?</a>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="genric-btn primary-border" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="genric-btn primary" onclick="Login_Onclick()">Ingresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="RecuperaPass_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Recupera tu Usuario/Contraseña</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Ingrese su correo</label>
+                                    <input type="email" class="form-control" id="correo_recu" placeholder="Ingrese su correo" onblur="ValidarCorreoRecu()">
+                                </div>
+                                <div class="form-group">
+                                    <label>Seleccione una pregunta secreta</label>
+                                    <select class="form-control" id="preg_recu">
+                                        <option value="1">Apellido materno de la madre</option>
+                                        <option value="2">Ciudad de nacimiento</option>
+                                        <option value="3">Nombre de la primera mascota</option>
+                                        <option value="4">Película preferida</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Ingrese su respuesta</label>
+                                    <input type="text" class="form-control" id="respuesta_recu" placeholder="Ingrese su respuesta">
+                                </div>
+
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="genric-btn primary-border" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="genric-btn primary" onclick="Recupera_Onclick()">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @RenderBody()
+    <div class="container-fluid mx-0 px-0">
+        <div class="footer-grids">
+            <div class="footer one">
+                <h3>Sobre Nosotros</h3>
+                <p>
+                    ALCANZA LABORAL es un registro de personas, donde se encuentran los Currículos Vitae (CV)
+                    de profesionales o estudiantes. Los CVs incluyen información personal general, experiencia laboral,
+                    académica y/o profesional de las personas.
+                </p>
+                <p class="adam">- César Dongo-Soria, CEO</p>
+                <div class="clear"></div>
+            </div>
+            <div class="footer two">
+                <h3>Manténgase Conectado</h3>
+                <ul>
+                    <li><a class="fb" href="#"><i></i>Síguenos en Facebook</a></li>
+                    <li><a class="fb1" href="#"><i></i>Síguenos en Twitter</a></li>
+                </ul>
+            </div>
+            <div class="footer three">
+                <h3>Información de Contacto</h3>
+                <ul>
+                    <li>Calle Paris 232, San Miguel<span>Lima-Perú</span></li>
+                    <li>(01) 715-2032  </li>
+                    <li><a href="mailto:info@example.com">contactar@alcanzaperu.com</a> </li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="copy-right-grids">
+            <div class="copy-left">
+                <p class="footer-gd">
+                    ©
+                    <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Alcanza Laboral
+                </p>
+            </div>
+            <div class="copy-right">
+                <ul>
+                    <li><a onclick="Inicio()" href="#">Inicio</a></li>
+                    <li><a onclick="Contactenos()" href="#">Contáctenos</a></li>
+                    <li><a onclick="Inicio()" href="#">Privacy Policy</a></li>
+                    <li><a onclick="TerminosCondiciones()" href="#">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-- End footer Area -->
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)*@
+
+
+
+    <script src="/Scripts/Layout/vendor/jquery-2.2.4.min.js"></script>
+    <script src="~/Scripts/Layout/popper.min.js"></script>
+    <script src="~/Scripts/Layout/vendor/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="~/Scripts/Layout/jquery-ui.js"></script>
+    <script src="~/Scripts/Layout/easing.min.js"></script>
+    <script src="~/Scripts/Layout/hoverIntent.js"></script>
+    <script src="~/Scripts/Layout/superfish.min.js"></script>
+    <script src="~/Scripts/Layout/jquery.ajaxchimp.min.js"></script>
+    <script src="~/Scripts/Layout/jquery.magnific-popup.min.js"></script>
+    <script src="~/Scripts/Layout/jquery.nice-select.min.js"></script>
+    <script src="~/Scripts/Layout/owl.carousel.min.js"></script>
+    <script src="~/Scripts/Layout/mail-script.js"></script>
+    @*<script src="~/Scripts/jquery.redirect.js"></script>*@
+    @*<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.28/dist/sweetalert2.all.min.js"></script>*@
+    <script src="~/Scripts/Layout/sweetalert2.js"></script>
+    <script src="~/Scripts/Layout/main.js"></script>
+    <script src="~/Scripts/Modulo/General.js"></script>
+    <script src="~/Scripts/Layout/wow.min.js"></script>
+    <script>
+        wow = new WOW(
+            {
+                boxClass: 'wow',      // default
+                animateClass: 'animated', // default
+                offset: 0,          // default
+                mobile: true,       // default
+                live: true        // default
+            }
+        )
+        wow.init();
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#this").click(function () {
+                $("#sidenav").fadeToggle("slow");
+            });
+        });
+    </script>
+
+
+
+</body>
+</html>

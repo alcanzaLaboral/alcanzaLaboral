@@ -1,0 +1,236 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="~/img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="alcanzaLaboral">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <title>Perfil Profesional - Alcanza Laboral</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--CSS ============================================= -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link href="~/Content/Layout/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Layout/magnific-popup.css" rel="stylesheet" />
+    <link href="~/Content/Layout/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/Layout/nice-select.css" rel="stylesheet" />
+    <link href="~/Content/Layout/animate.min.css" rel="stylesheet" />
+    <link href="~/Content/Layout/owl.carousel.css" rel="stylesheet" />
+    <link href="~/Content/Layout/main.css" rel="stylesheet" />
+</head>
+<body style="background-color: #ccc;">
+
+    <div class="container" style="background-color: #fff;">
+        <br>
+        <br>
+        <div id="datosgenerales_tab">
+            <div class="row" style="">
+                <div class="col-md-8" style="text-align: center;">
+                    <h3 id="nombre_id"></h3>
+                    <div style="text-align: left; width: 39%; margin: auto; padding: 10px;">
+                        <span style="font-weight: 500;">Fecha Nacimiento:</span>&nbsp;<span id="fechanaci_id"></span><br>
+                        <span style="font-weight: 500;">Edad:</span>&nbsp;<span id="edad_id"></span><br>
+                        <span style="font-weight: 500;">País de Nacionalidad:</span>&nbsp;<span id="nacionalidad_id"></span><br>
+                        <span style="font-weight: 500;">Residencia:</span>&nbsp;<span id="residencia_id"></span><br>
+                        <span style="font-weight: 500; display:none;">Teléfono:</span>&nbsp;<span style="display:none;" id="fono_id"></span><br>
+                        <span style="font-weight: 500; display:none;">Correo:</span>&nbsp;<span style="display:none;" id="correo_id"></span><br>
+                    </div>
+
+                </div>
+                <div class="col-md-4" style="padding-top: 20px;">
+                    <div id="mostrarfoto_perfil">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div id="perfilpro_tab">
+            <div style="width: 90%;border-bottom: 3px solid #373737; margin: auto;"></div>
+            <div style="width: 90%; margin: auto; padding-left: 15px;padding-right: 15px; padding-top: 17px;">
+                <h5>Perfil Profesional:</h5>
+                <p id="resumenpro_id">
+
+                </p>
+            </div>
+        </div>
+        <div id="CatePro_tab">
+            <div style="width: 90%;border-bottom: 3px solid #373737; margin: auto;"></div>
+            <div style="width: 90%; margin: auto; padding-left: 15px;padding-right: 15px; padding-top: 17px;">
+                <h4>Datos Categoría Profesional:</h4>
+                <br>
+                <table class="table table-sm" style="width: 90%; margin: auto;">
+                    <thead>
+                        <tr>
+                            <th scope="col">CATEGORIA PROFESIONAL</th>
+                            <th scope="col">ESPECIALIDAD</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyCategoria"></tbody>
+                </table>
+
+            </div>
+        </div>
+        <div id="TipoEstudio_tab">
+            <div style="height: 15px;"></div>
+            <div style="width: 90%;border-bottom: 3px solid #373737; margin: auto;"></div>
+            <div style="width: 90%; margin: auto; padding-left: 15px;padding-right: 15px; padding-top: 17px;">
+                <h4>Tipos de Estudio:</h4>
+                <br>
+                <table class="table table-sm" style="width: 90%; margin: auto;">
+                    <thead>
+                        <tr>
+                            <th scope="col">TIPO</th>
+                            <th scope="col">NOMBRE</th>
+                            <th scope="col">CULMINADO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyInstitucion"></tbody>
+                </table>
+
+
+            </div>
+        </div>
+        <div id="ExperienciaLaboral_tab">
+            <div style="height: 15px;"></div>
+            <div style="width: 90%;border-bottom: 3px solid #373737; margin: auto;"></div>
+            <div style="width: 90%; margin: auto; padding-left: 15px;padding-right: 15px; padding-top: 17px;">
+                <h4>Experiencia Laboral:</h4>
+                <br>
+                <table class="table table-sm" style="width: 90%; margin: auto;">
+                    <thead>
+                        <tr>
+                            <th scope="col">DESCRIPCION</th>
+                            <th scope="col">TITULO/CARGO</th>
+                            <th scope="col">EMPRESA</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyExperiencia"></tbody>
+                </table>
+
+
+            </div>
+        </div>
+        <div id="AreaIntereses_tab">
+            <div style="height: 15px;"></div>
+            <div style="width: 90%;border-bottom: 3px solid #373737; margin: auto;"></div>
+            <div style="width: 90%; margin: auto; padding-left: 15px;padding-right: 15px; padding-top: 17px;">
+                <h4>Areas de Interés:</h4>
+                <br>
+                <table class="table table-sm" style="width: 90%; margin: auto;">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: center;">ÁREA O PUESTO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyInteres"></tbody>
+                </table>
+
+
+            </div>
+        </div>
+        <div id="DomSoft_tab">
+            <div style="height: 15px;"></div>
+            <div style="width: 90%;border-bottom: 3px solid #373737; margin: auto;"></div>
+            <div style="width: 90%; margin: auto; padding-left: 15px;padding-right: 15px; padding-top: 17px;">
+                <h4>Dominio de Software:</h4>
+                <br>
+                <table class="table table-sm" style="width: 90%; margin: auto;">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: center;">PROGRAMA</th>
+                            <th scope="col" style="text-align: center;">NIVEL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyDSoftware"></tbody>
+                </table>
+
+
+            </div>
+        </div>
+        <div id="EquipoMaq_tab">
+            <div style="height: 15px;"></div>
+            <div style="width: 90%;border-bottom: 3px solid #373737; margin: auto;"></div>
+            <div style="width: 90%; margin: auto; padding-left: 15px;padding-right: 15px; padding-top: 17px;">
+                <h4>Equipo / Maquinaria:</h4>
+                <br>
+                <table class="table table-sm" style="width: 90%; margin: auto;">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: center;">EQUIPO/MAQUINARIA</th>
+                            <th scope="col" style="text-align: center;">NIVEL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyMaquinaria"></tbody>
+                </table>
+
+
+            </div>
+        </div>
+        <div id="Idioma_tab">
+            <div style="height: 15px;"></div>
+            <div style="width: 90%;border-bottom: 3px solid #373737; margin: auto;"></div>
+            <div style="width: 90%; margin: auto; padding-left: 15px;padding-right: 15px; padding-top: 17px;">
+                <h4>Dominio de Idiomas:</h4>
+                <br>
+                <table class="table table-sm" style="width: 90%; margin: auto;">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: center;">IDIOMA</th>
+                            <th scope="col" style="text-align: center;">HABLADO</th>
+                            <th scope="col" style="text-align: center;">ESCRITO</th>
+                            <th scope="col" style="text-align: center;">TRADUCCIÓN</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyIdioma"></tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+
+
+
+        <br>
+        <br>
+    </div>
+
+    <!-- End footer Area -->
+
+    <script src="~/Scripts/Layout/vendor/jquery-2.2.4.min.js"></script>
+    <script src="~/Scripts/Layout/popper.min.js"></script>
+    <script src="~/Scripts/Layout/vendor/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="~/Scripts/Layout/jquery-ui.js"></script>
+    <script src="~/Scripts/Layout/easing.min.js"></script>
+    <script src="~/Scripts/Layout/hoverIntent.js"></script>
+    <script src="~/Scripts/Layout/superfish.min.js"></script>
+    <script src="~/Scripts/Layout/jquery.ajaxchimp.min.js"></script>
+    <script src="~/Scripts/Layout/jquery.magnific-popup.min.js"></script>
+    <script src="~/Scripts/Layout/jquery.nice-select.min.js"></script>
+    <script src="~/Scripts/Layout/owl.carousel.min.js"></script>
+    <script src="~/Scripts/Layout/mail-script.js"></script>
+    <script src="~/Scripts/jquery.redirect.js"></script>
+    <script src="~/Scripts/Layout/main.js"></script>
+    <script src="~/Scripts/Modulo/General.js"></script>
+    <script src="~/Scripts/Modulo/PerfilProfesional.js"></script>
+</body>
+</html>
