@@ -5,3 +5,10 @@ C:\Users\112209\Desktop\proyecto_alcanza\alcanzaLaboral\Infraestrutura.Data.SqlS
 C:\Users\112209\Desktop\proyecto_alcanza\alcanzaLaboral\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.csprojResolveAssemblyReference.cache
 C:\Users\112209\Desktop\proyecto_alcanza\alcanzaLaboral\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.dll
 C:\Users\112209\Desktop\proyecto_alcanza\alcanzaLaboral\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.pdb
+C:\Users\112209\Desktop\GT_AL\Infraestrutura.Data.SqlServer\bin\Debug\Infraestrutura.Data.SqlServer.dll
+C:\Users\112209\Desktop\GT_AL\Infraestrutura.Data.SqlServer\bin\Debug\Infraestrutura.Data.SqlServer.pdb
+C:\Users\112209\Desktop\GT_AL\Infraestrutura.Data.SqlServer\bin\Debug\Dominio.Entidades.dll
+C:\Users\112209\Desktop\GT_AL\Infraestrutura.Data.SqlServer\bin\Debug\Dominio.Entidades.pdb
+C:\Users\112209\Desktop\GT_AL\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.csprojResolveAssemblyReference.cache
+C:\Users\112209\Desktop\GT_AL\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.dll
+C:\Users\112209\Desktop\GT_AL\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.pdb

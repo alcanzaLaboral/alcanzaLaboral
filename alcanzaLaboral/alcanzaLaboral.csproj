@@ -241,7 +241,9 @@
     <Content Include="Content\Layout\form-elements.css" />
     <Content Include="Content\Layout\img\acceder.png" />
     <Content Include="Content\Layout\img\header5.png" />
+    <Content Include="Content\Layout\img\salir.png" />
     <Content Include="Content\Layout\img\top-banner.jpg" />
+    <Content Include="Content\Layout\img\volver.png" />
     <Content Include="Content\Layout\jquery-ui.css" />
     <Content Include="Content\Layout\linearicons.css" />
     <Content Include="Content\Layout\magnific-popup.css" />
@@ -316,9 +318,11 @@
     <None Include="Properties\PublishProfiles\2711181.pubxml" />
     <None Include="Properties\PublishProfiles\2711182.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\icons.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.table2excel.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />

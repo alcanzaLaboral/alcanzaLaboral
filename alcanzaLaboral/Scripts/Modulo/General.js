@@ -29,6 +29,57 @@ function alert_warning(mensaje) {
     })
 }
 
+function justNumbers(e) {
+    var keynum = window.event ? window.event.keyCode : e.which;
+    if ((keynum == 8) || (keynum == 46))
+        return true;
+
+    return /\d/.test(String.fromCharCode(keynum));
+}
+
+function validarPass() {
+    pass = $('#pass_reg').val();
+    
+    if (pass.length < 8 && pass.length > 0) {
+        alert_warning('La contraseña debe tener un mínimo de 8 caracteres')
+        $('#pass_reg').val('');
+        $('#pass_reg').focus();
+    }    
+}
+
+function validarRPass() {
+    pass = $('#pass_reg').val();
+    rpass = $('#rpass_reg').val();
+
+    if (rpass.length < 8 && rpass.length > 0) {
+        alert_warning('La contraseña debe tener un mínimo de 8 caracteres')
+        $('#rpass_reg').val('');
+        $('#rpass_reg').focus();
+    } else if (rpass != pass && rpass.length > 0) {
+        alert_warning('Las contraseñas deben de coincidir')
+        $('#rpass_reg').val('');
+        $('#rpass_reg').focus();
+    }
+}
+
+function validarEmail(elemento) {
+
+    var texto = document.getElementById(elemento.id).value;
+    var regex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+
+    if (!regex.test(texto) && texto.length > 0) {
+        alert_warning("Ingrese un correo válido");
+        $('#'+ elemento.id).val("");
+        $('#'+ elemento.id).focus();
+    } else if (elemento.id == 'remail_reg' && $('#remail_reg').val().length > 0) {        
+        if ($('#remail_reg').val() != $('#email_reg').val()) {
+            alert_warning('Los correos deben de coincidir');
+            $('#' + elemento.id).val("");
+            $('#' + elemento.id).focus();
+        }
+    }
+}
+
 function ValidarUsuario() {
 
     var nomusuario = $("#usu_reg").val();
@@ -69,8 +120,14 @@ function ValUsuSuccess(data) {
 function ValidarCorreoRecu() {
 
     var emailusuario = $("#correo_recu").val();
+    var texto = document.getElementById('correo_recu').value;
+    var regex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 
-    if (emailusuario.length > 0) {
+    if (!regex.test(texto) && texto.length > 0) {
+        alert_warning("Ingrese un correo válido");
+        $('#correo_recu').val('');
+        $('#correo_recu').focus();
+    } else if (emailusuario.length > 0) {
 
         $.ajax({
             type: "POST",

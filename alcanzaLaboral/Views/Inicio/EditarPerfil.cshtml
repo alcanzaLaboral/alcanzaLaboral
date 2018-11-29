@@ -59,7 +59,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Fecha de Nacimiento</label>
-                                        <input type="date" class="form-control" id="fec_nacimiento" @*placeholder="Seleccione una fecha" onblur="prueba(this)"*@ disabled>
+                                        <input type="date" class="form-control" id="fec_nacimiento" disabled>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">País de Residencia</label>
@@ -69,7 +69,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="celular1">Celular 1</label>
-                                        <input type="text" class="form-control" id="celular1" placeholder="Ingrese un úmero de celular" disabled>
+                                        <input type="text" class="form-control" id="celular1" maxlength="9" placeholder="Ingrese un úmero de celular" onkeypress="return justNumbers(event)" disabled>
                                     </div>
 
                                 </form>
@@ -78,7 +78,7 @@
                                 <form>
                                     <div class="form-group">
                                         <label for="nrodocident">Nro. Documento</label>
-                                        <input type="text" class="form-control" id="nrodocident" placeholder="Ingrese el número de su documento" disabled>
+                                        <input type="text" class="form-control" id="nrodocident" placeholder="Ingrese el número de su documento" onkeypress="return valnrodoc(event)" onblur="validadLongdoc()" disabled>
 
                                     </div>
                                     <div class="form-group">
@@ -98,7 +98,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Celular 2</label>
-                                        <input type="text" class="form-control" id="celular2" placeholder="Ingrese un úmero de celular" disabled>
+                                        <input type="text" class="form-control" id="celular2" maxlength="9" placeholder="Ingrese un úmero de celular" onkeypress="return justNumbers(event)" disabled>
                                     </div>
 
                                 </form>
@@ -122,7 +122,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Telefono Fijo</label>
-                                        <input type="text" class="form-control" id="fijo" aria-describedby="emailHelp" placeholder="Ingrese teléfono fijo" disabled>
+                                        <input type="text" class="form-control" id="fijo" maxlength="9" aria-describedby="emailHelp" placeholder="Ingrese teléfono fijo" onkeypress="return justNumbers(event)" disabled>
                                     </div>
 
 
@@ -226,7 +226,11 @@
                                 <form>
                                     <div class="form-group">
                                         <label>Resumen Profesional / Experiencia Laboral: (Máximo 600 carácteres)</label>
+                                        
+                                        <div style="height:5px;"></div>
                                         <textarea class="form-control" id="resumen_porf" rows="4" disabled maxlength="600"></textarea>
+                                        <div style="height:5px;"></div>
+                                        <label>*No ingresar información de contacto: Teléfono o correo electrónico</label>
                                     </div>
                                 </form>
                             </div>

@@ -1,6 +1,12 @@
 ﻿
 var idusuarioPost = 0;
 
+$(document).ready(function () {
+    if (sessionStorage.getItem('administrador') != 1) {
+        window.location = "../Inicio/Inicio";
+    }
+});
+
 window.onload = function () {
 
 
@@ -12,8 +18,15 @@ window.onload = function () {
 
     if (idusuarioPost > 0) {
         $("#miPerfil_li").removeClass("Ocultar");
+        $("#siden_acceder").addClass("Ocultar");
+        $("#siden_salir").removeClass("Ocultar");
+        $("#socialBar_id").addClass("Ocultar");
+
     } else {
         $("#miPerfil_li").addClass("Ocultar");
+        $("#siden_salir").addClass("Ocultar");
+        $("#siden_acceder").removeClass("Ocultar");
+        $("#socialBar_id").removeClass("Ocultar");
     }
 
     
@@ -123,27 +136,31 @@ function TerminosCondiciones() {
 
 function Salir() {
     sessionStorage.setItem("idusuario", null);
+    sessionStorage.setItem("administrador", null);
     window.location = "../Inicio/Inicio";
 }
 
 function RCandidatosPeridoCategoria() {
-    sessionStorage.setItem("idusuario", null);
+    sessionStorage.setItem("idusuario", idusuarioPost);
     window.location = "../Inicio/RCandidatosPeridoCategoria";
 }
 
 function RCantidadCandidatosPeridoTiempo() {
-    sessionStorage.setItem("idusuario", null);
+    sessionStorage.setItem("idusuario", idusuarioPost);
     window.location = "../Inicio/RCantidadCandidatosPeridoTiempo";
 }
 
 function RMontoFacturadoPeriodoTiempo() {
-    sessionStorage.setItem("idusuario", null);
+    sessionStorage.setItem("idusuario", idusuarioPost);
     window.location = "../Inicio/RPagosPeridoTiempo";
 }
 
 function RCuentas() {
-    sessionStorage.setItem("idusuario", null);
+    sessionStorage.setItem("idusuario", idusuarioPost);
     window.location = "../Inicio/RCuentas";
 }
 
-
+function Representante() {
+    sessionStorage.setItem("idusuario", idusuarioPost);
+    window.location = "../Inicio/Representante";
+}

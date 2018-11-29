@@ -1,7 +1,12 @@
 ﻿var idusuarioPost = 0;
 
-window.onload = function () {
+$(document).ready(function () {
+    if (sessionStorage.getItem('administrador') != 1) {
+        window.location = "../Inicio/Inicio";
+    }
+});
 
+window.onload = function () {
     
 
     idusuarioPost = sessionStorage.getItem("idusuario");
@@ -11,8 +16,15 @@ window.onload = function () {
 
     if (idusuarioPost > 0) {
         $("#miPerfil_li").removeClass("Ocultar");
+        $("#siden_acceder").addClass("Ocultar");
+        $("#siden_salir").removeClass("Ocultar");
+        $("#socialBar_id").addClass("Ocultar");
+
     } else {
         $("#miPerfil_li").addClass("Ocultar");
+        $("#siden_salir").addClass("Ocultar");
+        $("#siden_acceder").removeClass("Ocultar");
+        $("#socialBar_id").removeClass("Ocultar");
     }
 
     Spinner_ListarCategoria();
@@ -23,11 +35,21 @@ window.onload = function () {
     $("select[name=combo_cate]").change(function () {
         idcategoria = $("#combo_cate").val();
         Spinner_ListarSubCategoria(idcategoria);
-
-
     });
 
 
+}
+
+function exportarExcel2() {
+    $('#tb_reporte').table2excel({
+        exclude: ".noExl",
+        name: "Excel Document Name",
+        filename: "ReporteCandidatos",
+        fileext: ".xls",
+        exclude_img: true,
+        exclude_links: true,
+        exclude_inputs: true
+    });
 }
 
 
@@ -213,27 +235,32 @@ function TerminosCondiciones() {
 
 function Salir() {
     sessionStorage.setItem("idusuario", null);
+    sessionStorage.setItem("administrador", null);
     window.location = "../Inicio/Inicio";
 }
 
 function RCandidatosPeridoCategoria() {
-    sessionStorage.setItem("idusuario", null);
+    sessionStorage.setItem("idusuario", idusuarioPost);
     window.location = "../Inicio/RCandidatosPeridoCategoria";
 }
 
 function RCantidadCandidatosPeridoTiempo() {
-    sessionStorage.setItem("idusuario", null);
+    sessionStorage.setItem("idusuario", idusuarioPost);
     window.location = "../Inicio/RCantidadCandidatosPeridoTiempo";
 }
 
 function RMontoFacturadoPeriodoTiempo() {
-    sessionStorage.setItem("idusuario", null);
+    sessionStorage.setItem("idusuario", idusuarioPost);
     window.location = "../Inicio/RPagosPeridoTiempo";
 }
 
 function RCuentas() {
-    sessionStorage.setItem("idusuario", null);
+    sessionStorage.setItem("idusuario", idusuarioPost);
     window.location = "../Inicio/RCuentas";
 }
 
+function Representante() {
+    sessionStorage.setItem("idusuario", idusuarioPost);
+    window.location = "../Inicio/Representante";
+}
 
