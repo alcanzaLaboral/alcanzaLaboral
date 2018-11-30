@@ -44,8 +44,6 @@ window.onload = function () {
     $("select[name=combo_cate]").change(function () {
         idcategoria = $("#combo_cate").val();
         Spinner_ListarSubCategoria(idcategoria);
-
-
     });    
 
 
@@ -205,7 +203,9 @@ function contactar(emailusuario, nombre) {
 
 function vercv(varriable) {
     sessionStorage.setItem("idcandidato", varriable);
-    window.open('../Inicio/PerfilProfesional', '_blank');
+    sessionStorage.setItem('peticionver', 1);
+    window.location = "../Inicio/PerfilProfesional";
+    //window.open('../Inicio/PerfilProfesional', '_blank');
 }
 
 function Contactar_Onclick() {
@@ -248,11 +248,12 @@ function buscarCandidatos() {
     var Nacionalidad = $("#combo_nacionalidad").val();
     var Sexo = $("#sexo").val();
     var TipoCandidato_sp = $("#TipoCandidato_sp").val();
+    var flag_discap = $("#discapacidad_sp").val();
 
     $.ajax({
         type: "POST",
         url: "../Services/ListarBuscarCandidatos",
-        data: "{ Profesion:'" + parseInt(Profesion) + "', Subprofesion:'" + parseInt(Subprofesion) + "', Nacionalidad:'" + parseInt(Nacionalidad) + "', Sexo:'" + parseInt(Sexo) + "', idtipopostulante:'" + parseInt( TipoCandidato_sp ) + "'}",
+        data: "{ Profesion:'" + parseInt(Profesion) + "', Subprofesion:'" + parseInt(Subprofesion) + "', Nacionalidad:'" + parseInt(Nacionalidad) + "', Sexo:'" + parseInt(Sexo) + "', idtipopostulante:'" + parseInt( TipoCandidato_sp ) + "', flag_discap:'" + flag_discap  + "'}",
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         success: ListarBody,
@@ -327,8 +328,10 @@ function EditarPerfil() {
 }
 
 function PerfilProfesional() {
-    sessionStorage.setItem("idusuario", idusuarioPost);
-    window.open('../Inicio/PerfilProfesional', '_blank');
+    sessionStorage.setItem("idcandidato", idusuarioPost);
+    sessionStorage.setItem('peticionver', 2);
+    window.location = "../Inicio/PerfilProfesional";
+    //window.open('../Inicio/PerfilProfesional', '_blank');
 }
 
 function ComoRegistrarse() {

@@ -252,6 +252,7 @@
     <Content Include="Content\Layout\owl.carousel.css" />
     <Content Include="Content\Layout\Splash.css" />
     <Content Include="Content\Layout\style.css" />
+    <Content Include="Content\PerfilProfesional.css" />
     <Content Include="Content\social1.png" />
     <Content Include="Content\social1hover.png" />
     <Content Include="Content\social2.png" />

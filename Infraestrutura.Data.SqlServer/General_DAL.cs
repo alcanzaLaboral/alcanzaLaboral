@@ -294,6 +294,9 @@ namespace Infraestrutura.Data.SqlServer
                 clase.fechacreacion = dr["fechacreacion"].ToString();
                 clase.finsubscrip = dr["finsubscrip"].ToString();
 
+                clase.flag_discap = int.Parse(dr["flag_discap"].ToString());
+                clase.desc_discap = dr["desc_discap"].ToString();
+
                 listado.Add(clase);
             }
 
@@ -322,7 +325,9 @@ namespace Infraestrutura.Data.SqlServer
             int idtipopostulante,
             int tipo_doc,
             string nro_doc,
-            string emailusuario
+            string emailusuario,
+            int flag_discap,
+            string desc_discap
             )
         {
             List<RespuestaPostEntity> listado = new List<RespuestaPostEntity>();
@@ -347,8 +352,8 @@ namespace Infraestrutura.Data.SqlServer
             cmd.Parameters.AddWithValue("@tipo_doc", tipo_doc);
             cmd.Parameters.AddWithValue("@nro_doc", nro_doc);
             cmd.Parameters.AddWithValue("@emailusuario", emailusuario);
-
-
+            cmd.Parameters.AddWithValue("@flag_discap", flag_discap);
+            cmd.Parameters.AddWithValue("@desc_discap", desc_discap);
 
             cn.getcn.Open();
 
@@ -1173,7 +1178,7 @@ namespace Infraestrutura.Data.SqlServer
             return listado;
         }
 
-        public List<LCandidatos> ListarBuscarCandidatos_DAL(int Profesion, int Subprofesion, int Nacionalidad, int Sexo, int idtipopostulante)
+        public List<LCandidatos> ListarBuscarCandidatos_DAL(int Profesion, int Subprofesion, int Nacionalidad, int Sexo, int idtipopostulante, string flag_discap)
         {
             List<LCandidatos> listado = new List<LCandidatos>();
 
@@ -1185,6 +1190,7 @@ namespace Infraestrutura.Data.SqlServer
             cmd.Parameters.AddWithValue("@nacionalidad", Nacionalidad);
             cmd.Parameters.AddWithValue("@sexo", Sexo);
             cmd.Parameters.AddWithValue("@idtipopostulante", idtipopostulante);
+            cmd.Parameters.AddWithValue("@flag_discap", flag_discap);
 
             cn.getcn.Open();
 
@@ -1200,7 +1206,7 @@ namespace Infraestrutura.Data.SqlServer
                 clase.nacionalidad = dr["nacionalidad"].ToString();
                 clase.sexo = dr["sexo"].ToString();
                 clase.edad = int.Parse(dr["edad"].ToString());
-                clase.emailusuario = dr["emailusuario"].ToString();
+                clase.emailusuario = dr["emailusuario"].ToString();                
                 listado.Add(clase);
             }
 

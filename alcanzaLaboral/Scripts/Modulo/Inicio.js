@@ -90,8 +90,10 @@ function EditarPerfil() {
 }
 
 function PerfilProfesional() {
-    sessionStorage.setItem("idusuario", idusuarioPost);
-    window.open('../Inicio/PerfilProfesional', '_blank');
+    sessionStorage.setItem("idcandidato", idusuarioPost);
+    sessionStorage.setItem('peticionver', 2);
+    window.location = "../Inicio/PerfilProfesional";
+    //window.open('../Inicio/PerfilProfesional', '_blank');
 }
 
 function BuscarCandidatos() {

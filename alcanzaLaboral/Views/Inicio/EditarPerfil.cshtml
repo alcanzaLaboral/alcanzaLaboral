@@ -130,24 +130,42 @@
                             </div>
                         </div>
                         <br />
+                        <label>Desea informar alguna discapacidad:</label>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="rdno" name="rddis" class="custom-control-input">
+                            <label class="custom-control-label" for="rdno">No</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="rdsi" name="rddis" class="custom-control-input">
+                            <label class="custom-control-label" for="rdsi">Sí</label>
+                        </div>
+                        <form>
+                            <div class="form-group">
+                                <label>Describa Brevemente(Max. 50 Caracteres)</label>
+                                <div style="height:5px;"></div>
+                                <div style="width:50%;">
+                                    <textarea class="form-control" id="tadiscapacidad" rows="1" disabled maxlength="50"></textarea>   
+                                </div>
+                                                            
+                            </div>
+                        </form>
+
+                        <br />
                         <label>Clase o Puesto de Trabajo que está buscando:</label>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio1">Profesional</label>
+                            <label class="custom-control-label" for="customRadio1">Profesional / Técnico /  Especialista</label>
                         </div>
                         <div class="custom-control custom-radio">
                             <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
                             <label class="custom-control-label" for="customRadio2">Practicante</label>
                         </div>
-                        @*<div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio3">Puestos que no requieran Estudios / Experiencia</label>
-                            </div>*@
+
                         <br />
                         <div class="row">
                             <div class="col-md-8"></div>
                             <div class="col-md-2">
-                                <button type="submit" class="genric-btn primary-border" onclick="HabilitarCampos_Onclick()">Habilitar&nbsp;Cambios</button>
+                                <button type="submit" class="genric-btn primary-border" onclick="HabilitarCampos_Onclick()">Editar&nbsp;Sección</button>
                             </div>
                             <div class="col-md-2">
                                 <button type="submit" class="genric-btn primary" onclick="ActualizarUsuario_onclick()">Guardar&nbsp;Cambios</button>
@@ -183,33 +201,12 @@
 
                                     </div>
 
-
-
                                 </form>
 
                             </div>
 
 
-                            <!--<div class="col-md-4">
-                                <form>
-                                  <div class="form-group">
-                                    <label for="exampleInputEmail1">Agrega una categoría:</label>
-                                    <select class="form-control">
-                                        <option value="">Ingeniería de Sistemas</option>
-                                    </select>
-                                  </div>
-                                </form>
-                            </div>
-                            <div class="col-md-4">
-                                <form>
-                                  <div class="form-group">
-                                    <label for="exampleInputEmail1">Agrega una sub-categoría:</label>
-                                    <select class="form-control">
-                                        <option value="">Analista de sistemas</option>
-                                    </select>
-                                  </div>
-                                </form>
-                            </div>-->
+                            
                         </div>
                         <div class="row">
                             <div class="col-md-2">
@@ -225,8 +222,7 @@
                             <div class="col-md-12">
                                 <form>
                                     <div class="form-group">
-                                        <label>Resumen Profesional / Experiencia Laboral: (Máximo 600 carácteres)</label>
-                                        
+                                        <label>Resumen Profesional / Experiencia Laboral: (Máximo 600 carácteres)</label>                                        
                                         <div style="height:5px;"></div>
                                         <textarea class="form-control" id="resumen_porf" rows="4" disabled maxlength="600"></textarea>
                                         <div style="height:5px;"></div>
@@ -239,7 +235,7 @@
                         <div class="row">
                             <div class="col-md-8"></div>
                             <div class="col-md-2">
-                                <button type="submit" class="genric-btn primary-border" onclick="HabilitarResumen_onclick()">Habilitar&nbsp;Cambios</button>
+                                <button type="submit" class="genric-btn primary-border" onclick="HabilitarResumen_onclick()">Editar&nbsp;Sección</button>
                             </div>
                             <div class="col-md-2">
                                 <button type="submit" class="genric-btn primary" onclick="ActualizarResumenUsuario_onclick()">Guardar&nbsp;Cambios</button>
@@ -407,7 +403,7 @@
                         <div class="row">
                             <div class="col-md-8"></div>
                             <div class="col-md-2">
-                                <button type="submit" onclick="HabilitarInfoAcademica_Onclick()" class="genric-btn primary-border">Habilitar&nbsp;Cambios</button>
+                                <button type="submit" onclick="HabilitarInfoAcademica_Onclick()" class="genric-btn primary-border">Editar&nbsp;Sección</button>
                             </div>
                             <div class="col-md-2">
                                 <button type="submit" class="genric-btn primary" onclick="ActualizarInfoAcademico_onclick()">Guardar&nbsp;Cambios</button>
@@ -597,7 +593,7 @@
                         <div class="row">
                             <div class="col-md-8"></div>
                             <div class="col-md-2">
-                                <button type="submit" class="genric-btn primary-border" onclick="HabilitarExperienciLaboral_Onclick()">Habilitar&nbsp;Cambios</button>
+                                <button type="submit" class="genric-btn primary-border" onclick="HabilitarExperienciLaboral_Onclick()">Editar&nbsp;Sección</button>
                             </div>
                             <div class="col-md-2">
                                 <button type="submit" class="genric-btn primary" onclick="ActualizarExpLaboral_onclick()">Guardar&nbsp;Cambios</button>
@@ -842,7 +838,7 @@
                         <div class="row">
                             <div class="col-md-8"></div>
                             <div class="col-md-2">
-                                <button type="submit" class="genric-btn primary-border" onclick="HabilitarInfoAdicional_Onclick()">Habilitar&nbsp;Cambios</button>
+                                <button type="submit" class="genric-btn primary-border" onclick="HabilitarInfoAdicional_Onclick()">Editar&nbsp;Sección</button>
                             </div>
                             <div class="col-md-2">
                                 <button type="submit" class="genric-btn primary" onclick="ActualizarDisponibilidad_onclick()">Guardar&nbsp;Cambios</button>
