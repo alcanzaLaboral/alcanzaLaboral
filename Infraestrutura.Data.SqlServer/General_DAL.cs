@@ -144,7 +144,7 @@ namespace Infraestrutura.Data.SqlServer
 
         //Registrar Usuario
         public List<RespuestaPostEntity> RegistrarUsuario_DAL(string nomusuario, string passusuario, string emailusuario,
-            int idpregunta, string respuestaPreg)
+            int idpregunta, string respuestaPreg, int flagref, string emailref)
         {
             List<RespuestaPostEntity> listado = new List<RespuestaPostEntity>();
 
@@ -156,6 +156,9 @@ namespace Infraestrutura.Data.SqlServer
             cmd.Parameters.AddWithValue("@emailusuario", emailusuario);
             cmd.Parameters.AddWithValue("@idpregunta", idpregunta);
             cmd.Parameters.AddWithValue("@respuestaPreg", respuestaPreg);
+
+            cmd.Parameters.AddWithValue("@flagref", flagref);
+            cmd.Parameters.AddWithValue("@emailref", emailref);
 
 
             cn.getcn.Open();
@@ -1178,7 +1181,7 @@ namespace Infraestrutura.Data.SqlServer
             return listado;
         }
 
-        public List<LCandidatos> ListarBuscarCandidatos_DAL(int Profesion, int Subprofesion, int Nacionalidad, int Sexo, int idtipopostulante, string flag_discap)
+        public List<LCandidatos> ListarBuscarCandidatos_DAL(int Profesion, int Subprofesion, int Nacionalidad, int Sexo, int idtipopostulante, string flag_discap, int NroDePagina, int RegPorPag)
         {
             List<LCandidatos> listado = new List<LCandidatos>();
 
@@ -1191,6 +1194,8 @@ namespace Infraestrutura.Data.SqlServer
             cmd.Parameters.AddWithValue("@sexo", Sexo);
             cmd.Parameters.AddWithValue("@idtipopostulante", idtipopostulante);
             cmd.Parameters.AddWithValue("@flag_discap", flag_discap);
+            cmd.Parameters.AddWithValue("@NroDePagina", NroDePagina);
+            cmd.Parameters.AddWithValue("@RegPorPag", RegPorPag);
 
             cn.getcn.Open();
 
@@ -1206,7 +1211,8 @@ namespace Infraestrutura.Data.SqlServer
                 clase.nacionalidad = dr["nacionalidad"].ToString();
                 clase.sexo = dr["sexo"].ToString();
                 clase.edad = int.Parse(dr["edad"].ToString());
-                clase.emailusuario = dr["emailusuario"].ToString();                
+                clase.emailusuario = dr["emailusuario"].ToString();
+                clase.TotalRegistros = int.Parse(dr["TotalRegistros"].ToString());
                 listado.Add(clase);
             }
 
@@ -1336,6 +1342,35 @@ namespace Infraestrutura.Data.SqlServer
                 clase.nombre = dr["nombre"].ToString();
                 clase.emailusuario = dr["emailusuario"].ToString();
                 clase.fechavence = dr["fechavence"].ToString();
+
+                listado.Add(clase);
+            }
+
+            dr.Close();
+            cmd.Dispose();
+            cn.getcn.Close();
+
+            return listado;
+        }
+
+        //===actualizar informacion academica =========
+        public List<RespuestaPostEntity> validaremailref_DAL(string emailusuario)
+        {
+            List<RespuestaPostEntity> listado = new List<RespuestaPostEntity>();
+
+            SqlCommand cmd = new SqlCommand("sp_validar_emailref", cn.getcn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@emailusuario", emailusuario);
+
+            cn.getcn.Open();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                RespuestaPostEntity clase = new RespuestaPostEntity();
+                clase.respuesta = dr["respuesta"].ToString();
 
                 listado.Add(clase);
             }

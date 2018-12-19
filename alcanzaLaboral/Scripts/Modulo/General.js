@@ -29,6 +29,73 @@ function alert_warning(mensaje) {
     })
 }
 
+function cerrar_login() {
+
+    $('#login_usuario').val('')
+    $('#login_pass').val('')
+}
+
+function cerrarRegistro() {
+
+    $('#usu_reg').val('')
+    $('#pass_reg').val('')
+    $('#rpass_reg').val('')
+    $('#email_reg').val('')
+    $('#remail_reg').val('')
+    $('#preg_reg').val(1)
+    $('#respuesta_reg').val('')
+    $('#email_refe').val('')
+    $('#chk_terminos').prop('checked', false)
+    $("#rbt_noref").prop('checked', true)
+    $("#email_refe").prop("disabled", true);
+
+}
+
+function validaremailref() {
+
+    var emailusuario = $("#email_refe").val();
+    var texto = document.getElementById('email_refe').value;
+    var regex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+
+    if (!regex.test(texto) && texto.length > 0) {
+        alert_warning("Ingrese un correo válido");
+        $('#email_refe').val('');
+        $('#email_refe').focus();
+    } else if (emailusuario.length > 0) {
+
+        $.ajax({
+            type: "POST",
+            url: "../Services/validaremailref",
+            data: "{emailusuario:'" + emailusuario + "'}",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: validaremailrefSuccess,
+            failure: function (response) {
+                alert(response.d);
+            },
+            error: OnError
+
+        });
+
+    }
+}
+
+function validaremailrefSuccess(data) {
+
+    respuesta = data[0].respuesta;
+
+    if (respuesta == 'noexists') {
+        alert_error('Correo no registrado')
+        $('#email_refe').val('');
+        $('#email_refe').focus();
+    } else if (respuesta == '1') {
+        alert_warning('Cuenta no activa')
+        $('#email_refe').val('');
+        $('#email_refe').focus();
+    }
+
+}
+
 function justNumbers(e) {
     var keynum = window.event ? window.event.keyCode : e.which;
     if ((keynum == 8) || (keynum == 46))
@@ -78,6 +145,43 @@ function validarEmail(elemento) {
             $('#' + elemento.id).focus();
         }
     }
+}
+
+function ValidarUsuarioLogin() {
+
+    var nomusuario = $("#login_usuario").val();
+
+    if (nomusuario.length > 0) {
+
+        $.ajax({
+            type: "POST",
+            url: "../Services/ValidarUsuario",
+            data: "{nomusuario:'" + nomusuario + "'}",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: ValUsuLoginSuccess,
+            failure: function (response) {
+                alert(response.d);
+            },
+            error: OnError
+
+        });
+    }
+
+}
+
+function ValUsuLoginSuccess(data) {
+
+    for (i = 0; i < data.length; i++) {
+        respuesta = data[0].respuesta;
+    }
+
+    if (respuesta == 'no existe') {
+        alert_warning('El usuario no existe');
+        $("#login_usuario").val('');
+        $("#login_usuario").focus();
+    }
+
 }
 
 function ValidarUsuario() {
@@ -209,20 +313,29 @@ function Login_Onclick() {
     var usuario = $("#login_usuario").val();
     var pass = $("#login_pass").val();
 
-    $.ajax({
-        type: "POST",
-        url: "../Services/Login",
-        data: "{usuario:'" + usuario + "', password:'" + pass + "'}",
-        dataType: "json",
-        contentType: "application/json; charset=utf-8",
-        success: LoginSucces,
-        failure: function (response) {
-            alert(response.d);
-        },
-        error: OnError
+    if (usuario.length < 1) {
+        alert_warning('Ingrese su nombre de usuario')
+    } else if (pass.length < 1 ) {
+        alert_warning('Ingrese una contraseña')
+    } else {
 
-    });
+        $.ajax({
+            type: "POST",
+            url: "../Services/Login",
+            data: "{usuario:'" + usuario + "', password:'" + pass + "'}",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: LoginSucces,
+            failure: function (response) {
+                alert(response.d);
+            },
+            error: OnError
 
+        });
+
+    }
+
+    
 
 }
 
@@ -277,6 +390,8 @@ function Registrar_Onclick() {
 
     var rpass_reg = $("#rpass_reg").val();
     var remail_reg = $("#remail_reg").val();
+    var flagref = sessionStorage.getItem('flagref')
+    var emailref = $("#email_refe").val();
 
     if (nomusuario.length < 1) {
         alert_warning("Ingrese nombre de usuario");
@@ -315,7 +430,7 @@ function Registrar_Onclick() {
             type: "POST",
             url: "../Services/RegistrarUsuario",
             data: "{nomusuario:'" + nomusuario + "', passusuario:'" + passusuario
-                + "', emailusuario:'" + emailusuario + "', idpregunta:'" + idpregunta + "', respuestaPreg:'" + respuestaPreg + "'}",
+                + "', emailusuario:'" + emailusuario + "', idpregunta:'" + idpregunta + "', respuestaPreg:'" + respuestaPreg + "', flagref:'" + parseInt(flagref) + "', emailref:'" + emailref + "'}",
             dataType: "json",
             contentType: "application/json; charset=utf-8",
             success: RegistroSucces,
@@ -340,6 +455,19 @@ function RegistroSucces(data) {
 
     if (respuesta == "true") {
         alert_succes("Registrado satisfactoriamente");
+        $('#btncerrarreg').click()
+
+        $('#usu_reg').val('')
+        $('#pass_reg').val('')
+        $('#rpass_reg').val('')
+        $('#email_reg').val('')
+        $('#remail_reg').val('')
+        $('#preg_reg').val(1)
+        $('#respuesta_reg').val('')
+        $('#email_refe').val('')
+        $('#chk_terminos').prop('checked', false)
+        $("#rbt_noref").prop('checked', true)
+        $("#email_refe").prop("disabled", true);
     }
     else {
         alert("Ups ocurrio un problema al registrar usuario");

@@ -42,11 +42,11 @@ namespace alcanzaLaboral.Controllers
         }
 
         public ActionResult RegistrarUsuario(string nomusuario, string passusuario, string emailusuario,
-            int idpregunta, string respuestaPreg)
+            int idpregunta, string respuestaPreg, int flagref, string emailref)
         {
             General_BL bl = new General_BL();
             List<RespuestaPostEntity> listado = bl.RegistrarUsuario_BL(nomusuario, passusuario, emailusuario,
-            idpregunta, respuestaPreg);
+            idpregunta, respuestaPreg, flagref, emailref);
             return Json(listado);
         }
 
@@ -339,10 +339,10 @@ namespace alcanzaLaboral.Controllers
             return Json(listado);
         }
 
-        public ActionResult ListarBuscarCandidatos(int Profesion, int Subprofesion, int Nacionalidad, int Sexo, int idtipopostulante, string flag_discap)
+        public ActionResult ListarBuscarCandidatos(int Profesion, int Subprofesion, int Nacionalidad, int Sexo, int idtipopostulante, string flag_discap, int NroDePagina, int RegPorPag)
         {
             General_BL bl = new General_BL();
-            List<LCandidatos> listado = bl.ListarBuscarCandidatos_BL(Profesion, Subprofesion, Nacionalidad, Sexo, idtipopostulante, flag_discap);
+            List<LCandidatos> listado = bl.ListarBuscarCandidatos_BL(Profesion, Subprofesion, Nacionalidad, Sexo, idtipopostulante, flag_discap, NroDePagina, RegPorPag);
             return Json(listado);
         }
 
@@ -371,7 +371,12 @@ namespace alcanzaLaboral.Controllers
             List<RCuentas> listado = bl.RCuentas(filtro);
             return Json(listado);
         }
-
+        public ActionResult validaremailref(string emailusuario)
+        {
+            General_BL bl = new General_BL();
+            List<RespuestaPostEntity> listado = bl.validaremailref_BL(emailusuario);
+            return Json(listado);
+        }
 
         public ActionResult EnviarCorreo(string mensajep, string asuntop, string destinop)
         {

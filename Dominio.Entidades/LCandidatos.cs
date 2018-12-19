@@ -16,7 +16,9 @@ namespace Dominio.Entidades
         public string sexo { get; set; }
         public int edad { get; set; }
         public string emailusuario { get; set; }
-        public String fechacreacion { get; set; }
+        public string fechacreacion { get; set; }
+        public int TotalRegistros { get; set; }
+
 
     }
 }

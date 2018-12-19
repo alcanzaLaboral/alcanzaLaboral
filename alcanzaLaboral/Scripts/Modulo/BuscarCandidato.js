@@ -38,8 +38,6 @@ window.onload = function () {
     Spinner_ListarCategoria();
     Spinner_ListarSubCategoria(1);
     Spinner_ListarPaises();
-    
-
 
     $("select[name=combo_cate]").change(function () {
         idcategoria = $("#combo_cate").val();
@@ -96,8 +94,6 @@ function Spinner_ListarSubCategoria(idcategoria) {
         error: OnError
 
     });
-
-
 }
 
 function llenarSpinner_ListarSubCategoria(data) {
@@ -107,7 +103,6 @@ function llenarSpinner_ListarSubCategoria(data) {
     for (i = 0; i < data.length; i++) {
         selectAgregar.append("<option value='" + data[i].idsubcategoria + "'>" + data[i].nomsubcategoria + "</option>");
     }
-
 }
 
 
@@ -173,8 +168,41 @@ function ListarGrilla() {
 
 function ListarBody(data) {
 
+    var pagina = $("#Pagina").val();
+    var select = $("#Pagina");
+    var regporpag = "10";
+    var TotalRegistros = "1";
+    var i = 1;
+
+    select.empty();
+
+    if (data.length != null) {
+
+        if (data.length > 0) {
+            if (parseInt(data[0].TotalRegistros) > parseInt(regporpag)) {
+
+                for (i = 1; i <= Math.ceil(parseInt(data[0].TotalRegistros) / parseInt(regporpag)) ; i++) {
+                    select.append("<option value = " + i + ">" + i + "</option>");
+                }
+            }
+            else {
+                select.append("<option value = '1'> 1</option>");
+            }
+        }
+        else {
+            select.append("<option value = '1'> 1</option>");
+        }
+    }
+    else {
+        select.append("<option value = '1'> 1</option>");
+    }
+
+    $("#Pagina").val(pagina);
+
     var tbody = $("#BodyCandidatos");
     tbody.empty();
+
+    if (data.length > 0) {
 
     for (i = 0; i < data.length; i++) {
 
@@ -193,6 +221,15 @@ function ListarBody(data) {
             "</tr>");
     }
 
+    } else {
+        select.empty();
+        select.append("<option value = '1'> 1</option>");
+
+        tbody.append(
+                        "<td colspan='8'>" +
+                        "No hay registro(s) selecionado(s) por los criterios de búsqueda" +
+                        "</td>");   
+    }
 }
 
 
@@ -249,11 +286,13 @@ function buscarCandidatos() {
     var Sexo = $("#sexo").val();
     var TipoCandidato_sp = $("#TipoCandidato_sp").val();
     var flag_discap = $("#discapacidad_sp").val();
+    var NroDePagina = 1;
+    var RegPorPag = 10;
 
     $.ajax({
         type: "POST",
         url: "../Services/ListarBuscarCandidatos",
-        data: "{ Profesion:'" + parseInt(Profesion) + "', Subprofesion:'" + parseInt(Subprofesion) + "', Nacionalidad:'" + parseInt(Nacionalidad) + "', Sexo:'" + parseInt(Sexo) + "', idtipopostulante:'" + parseInt( TipoCandidato_sp ) + "', flag_discap:'" + flag_discap  + "'}",
+        data: "{ Profesion:'" + parseInt(Profesion) + "', Subprofesion:'" + parseInt(Subprofesion) + "', Nacionalidad:'" + parseInt(Nacionalidad) + "', Sexo:'" + parseInt(Sexo) + "', idtipopostulante:'" + parseInt(TipoCandidato_sp) + "', flag_discap:'" + flag_discap + "', NroDePagina:'" + parseInt(NroDePagina) + "', RegPorPag:'" + parseInt(RegPorPag) + "'}",
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         success: ListarBody,

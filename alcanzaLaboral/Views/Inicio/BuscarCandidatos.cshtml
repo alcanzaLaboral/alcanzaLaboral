@@ -3,6 +3,8 @@
     ViewBag.Title = "BuscarCandidatos";
 }
 
+
+
 <!-- start banner Area -->
 <section class="relative about-banner">
     <div class="overlay overlay-bg"></div>
@@ -88,10 +90,10 @@
 
         <div class="container-fluid">
 
-            <div style="display:none;">
+            <div>
 
                 <input class="btn btn-sm btn-warning" style="float: right; margin-left: 1px; color:#fff;" type="button" value=">">
-                <select style="float: right;width: 3.8rem;" class="form-control form-control-sm">
+                <select id="Pagina" style="float: right;width: 3.8rem;" class="form-control form-control-sm">
                     <option value="">1</option>
                     <option value="">2</option>
                     <option value="">3</option>
@@ -99,8 +101,8 @@
                 <input class="btn btn-sm btn-warning" style="float: right; margin-right: 1px; color:#fff;" type="button" value="<">
                 <span style="float: right;margin-top: 0.3rem;">Página :&nbsp;&nbsp;</span>
             </div>
-            @*<br>
-                <br>*@
+            <br>
+                <br>
             <div style="width: 100%; overflow: auto;">
                 <table class="table table-sm">
                     <thead>

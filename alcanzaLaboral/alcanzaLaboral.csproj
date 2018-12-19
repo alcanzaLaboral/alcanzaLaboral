@@ -284,6 +284,7 @@
     <Content Include="img\data1\tooltips\slider5.jpg" />
     <Content Include="img\fav.ico" />
     <Content Include="img\header5.png" />
+    <Content Include="img\loading.gif" />
     <Content Include="img\logofinal3.png" />
     <Content Include="img\mision.jpg" />
     <Content Include="img\porqueRegistrarme.jpg" />
