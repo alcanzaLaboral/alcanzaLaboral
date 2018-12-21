@@ -263,6 +263,7 @@
     <Content Include="Content\social4hover.png" />
     <Content Include="Content\social5.png" />
     <Content Include="Content\social5hover.png" />
+    <Content Include="Content\style5.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -316,6 +317,7 @@
     <Content Include="Content\Layout\Rubik-Bold.ttf" />
     <Content Include="Content\Layout\Rubik-Medium.ttf" />
     <Content Include="Content\Layout\Rubik-Regular.ttf" />
+    <None Include="Properties\PublishProfiles\2012181.pubxml" />
     <None Include="Properties\PublishProfiles\2611181.pubxml" />
     <None Include="Properties\PublishProfiles\2711181.pubxml" />
     <None Include="Properties\PublishProfiles\2711182.pubxml" />

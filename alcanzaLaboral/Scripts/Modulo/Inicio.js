@@ -42,7 +42,7 @@ $(document).ready(function () {
 
 window.onload = function () {
 
-    
+
     $("#rbt_noref").prop('checked', true);
 
     $("#rbt_siref").click(function () {

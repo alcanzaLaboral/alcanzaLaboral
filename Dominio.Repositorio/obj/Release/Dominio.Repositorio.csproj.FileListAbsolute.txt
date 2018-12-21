@@ -7,3 +7,12 @@ C:\Users\112209\Desktop\proyecto_alcanza\alcanzaLaboral\Dominio.Repositorio\bin\
 C:\Users\112209\Desktop\proyecto_alcanza\alcanzaLaboral\Dominio.Repositorio\obj\Release\Dominio.Repositorio.csprojResolveAssemblyReference.cache
 C:\Users\112209\Desktop\proyecto_alcanza\alcanzaLaboral\Dominio.Repositorio\obj\Release\Dominio.Repositorio.dll
 C:\Users\112209\Desktop\proyecto_alcanza\alcanzaLaboral\Dominio.Repositorio\obj\Release\Dominio.Repositorio.pdb
+C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Repositorio\bin\Release\Dominio.Repositorio.dll
+C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Repositorio\bin\Release\Dominio.Repositorio.pdb
+C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Repositorio\bin\Release\Dominio.Entidades.dll
+C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Repositorio\bin\Release\Infraestrutura.Data.SqlServer.dll
+C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Repositorio\bin\Release\Dominio.Entidades.pdb
+C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Repositorio\bin\Release\Infraestrutura.Data.SqlServer.pdb
+C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Repositorio\obj\Release\Dominio.Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Repositorio\obj\Release\Dominio.Repositorio.dll
+C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Repositorio\obj\Release\Dominio.Repositorio.pdb
