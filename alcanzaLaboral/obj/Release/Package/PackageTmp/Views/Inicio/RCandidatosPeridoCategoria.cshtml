@@ -41,10 +41,8 @@
                         <input style="width: 12rem;" type="date" class="form-control form-control-sm" id="txtFin" />
                     </div>
                     <div class="form-group" style="margin: 1.45rem 10px 0px 20px;">
+                        @*<button class="genric-btn primary" style="font-size: 0.8rem; width: 10rem;" onclick="buscarCandidatos()">Buscar</button>*@
                         <input type="button" value="Buscar" class="genric-btn primary" style="font-size: 0.8rem; width: 10rem;" onclick="buscarCandidatos()" />
-                    </div>
-                    <div class="form-group" style="margin: 1.45rem 10px 0px 20px;" >     
-                        <a onclick="exportarExcel2()"  class="genric-btn btn-success" style="font-size: 0.8rem; width: 10rem; color:#fff;">Exportar&nbsp;&nbsp;<i class="fas fa-file-excel"></i></a> 
                     </div>
 
                 </form>
@@ -72,7 +70,7 @@
             @*<br>
                 <br>*@
             <div style="width: 100%; overflow: auto;">
-                <table id="tb_reporte" class="table table-sm">
+                <table class="table table-sm">
                     <thead>
                         <tr class="table-register">
                             <th scope="col" style="width: 12.5%; text-align: center;">Nombres</th>
@@ -99,7 +97,6 @@
                             </tr>*@
 
                     </tbody>
-                   
                 </table>
             </div>
 

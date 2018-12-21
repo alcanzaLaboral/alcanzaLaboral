@@ -2,16 +2,10 @@
 var idusuarioPost = 0;
 var adminPost = 0;
 
-//$(window).keypress(function (e) {
-//    if (e.keyCode == 13) {
-//        Login_Onclick()
-//    }
-//});
+window.onload = function () {
 
-$(document).ready(function () {
-
-    sessionStorage.setItem('flagref', 0)
-
+   
+    
     idusuarioPost = sessionStorage.getItem("idusuario");
     adminPost = sessionStorage.getItem("administrador");
 
@@ -19,16 +13,12 @@ $(document).ready(function () {
         idusuarioPost = 0;
     }
 
-    if (idusuarioPost > 0) {
+    if(idusuarioPost > 0){
         $("#miPerfil_li").removeClass("Ocultar");
-        $("#siden_acceder").addClass("Ocultar");
-        $("#siden_salir").removeClass("Ocultar");       
         $("#socialBar_id").addClass("Ocultar");
-
+        
     } else {
         $("#miPerfil_li").addClass("Ocultar");
-        $("#siden_salir").addClass("Ocultar");
-        $("#siden_acceder").removeClass("Ocultar");
         $("#socialBar_id").removeClass("Ocultar");
     }
 
@@ -37,35 +27,7 @@ $(document).ready(function () {
     } else {
         $("#admin_li").addClass("Ocultar");
     }
-    
-});
 
-window.onload = function () {
-
-
-    $("#rbt_noref").prop('checked', true);
-
-    $("#rbt_siref").click(function () {
-        if (this.checked) {
-            $("#email_refe").prop("disabled", false);
-            sessionStorage.setItem('flagref',1)
-        }
-        else {
-            $("#email_refe").prop("disabled", true);
-            sessionStorage.setItem('flagref', 0)
-        }
-    });
-
-    $("#rbt_noref").click(function () {
-        if (this.checked) {
-            $("#email_refe").prop("disabled", true);
-            sessionStorage.setItem('flagref', 1)
-        }
-        else {
-            $("#email_refe").prop("disabled", false);
-            sessionStorage.setItem('flagref', 0)
-        }
-    });
 
 }
 
@@ -123,10 +85,8 @@ function EditarPerfil() {
 }
 
 function PerfilProfesional() {
-    sessionStorage.setItem("idcandidato", idusuarioPost);
-    sessionStorage.setItem('peticionver', 2);
-    window.location = "../Inicio/PerfilProfesional";
-    //window.open('../Inicio/PerfilProfesional', '_blank');
+    sessionStorage.setItem("idusuario", idusuarioPost);
+    window.open('../Inicio/PerfilProfesional', '_blank');
 }
 
 function BuscarCandidatos() {
@@ -146,33 +106,28 @@ function TerminosCondiciones() {
 
 function Salir() {
     sessionStorage.setItem("idusuario", null);
-    sessionStorage.setItem("administrador", null);
     window.location = "../Inicio/Inicio";
 }
 
 function RCandidatosPeridoCategoria() {
-    sessionStorage.setItem("idusuario", idusuarioPost);
+    sessionStorage.setItem("idusuario", null);
     window.location = "../Inicio/RCandidatosPeridoCategoria";
 }
 
 function RCantidadCandidatosPeridoTiempo() {
-    sessionStorage.setItem("idusuario", idusuarioPost);
+    sessionStorage.setItem("idusuario", null);
     window.location = "../Inicio/RCantidadCandidatosPeridoTiempo";
 }
 
 function RMontoFacturadoPeriodoTiempo() {
-    sessionStorage.setItem("idusuario", idusuarioPost);
+    sessionStorage.setItem("idusuario", null);
     window.location = "../Inicio/RPagosPeridoTiempo";
 }
 
 function RCuentas() {
-    sessionStorage.setItem("idusuario", idusuarioPost);
+    sessionStorage.setItem("idusuario", null);
     window.location = "../Inicio/RCuentas";
 }
 
-function Representante() {
-    sessionStorage.setItem("idusuario", idusuarioPost);
-    window.location = "../Inicio/Representante";
-}
 
   

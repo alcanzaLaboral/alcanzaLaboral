@@ -1,0 +1,185 @@
+﻿
+@{
+    ViewBag.Title = "BuscarCandidatos";
+}
+
+<!-- start banner Area -->
+<section class="relative about-banner">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="about-content col-lg-12">
+                <h1 class="text-white">
+                    Alcanza Laboral
+                </h1>
+                <p class="text-white link-nav"><a href="index.html">Inicio </a>  <span class="lnr lnr-arrow-right"></span>  <a href="contact.html"> Buscar Candidatos</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End banner Area -->
+<!-- Start contact-page Area -->
+<section class=" section-gap">
+    <div class="container-fluid">
+        <div class="alert alert-warning" role="alert">
+            <div class="row">
+                <form class="form-group row">
+                    <div class="form-group" style="margin: 0px 10px 0px 20px;">
+                        <label>Seleccionar una categoría:</label>
+                        <select style="width: 12rem;" class="form-control form-control-sm" id="combo_cate" name="combo_cate">
+                            @*<option value="">Practicante</option>*@
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin: 0px 10px 0px 20px;">
+                        <label>Seleccionar sub-categoría:</label>
+                        <select style="width: 12rem;" class="form-control form-control-sm" id="combo_subcate">
+                            @*<option value="">Practicante</option>*@
+                        </select>
+                    </div>
+                    @*<div class="form-group" style="margin: 0px 10px 0px 20px;">
+                            <label>Tipo:</label>
+                            <select style="width: 12rem;" class="form-control form-control-sm" id="tipo">
+                                <option value="1">Practicante</option>
+                                <option value="2">Empleado</option>
+                                <option value="3">Ambos</option>
+                            </select>
+                        </div>*@
+                    <div class="form-group" style="margin: 0px 10px 0px 20px;">
+                        <label>Nacionalidad:</label>
+                        <select style="width: 12rem;" class="form-control form-control-sm" id="combo_nacionalidad">
+                            @*<option value="">Venezuela</option>*@
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin: 0px 10px 0px 20px;">
+                        <label>Sexo:</label>
+                        <select style="width: 12rem;" class="form-control form-control-sm" id="sexo">
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="0">Ambos</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin: 0px 10px 0px 20px;">
+                        <label>Tipo de Candidato:</label>
+                        <select style="width: 12rem;" class="form-control form-control-sm" id="TipoCandidato_sp">
+                            <option value="1">Profesional</option>
+                            <option value="2">Practicante</option>
+                            @*<option value="3">Sin Experiencia</option>*@
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin: 1.45rem 10px 0px 20px;">
+                        @*<button class="genric-btn primary" style="font-size: 0.8rem; width: 10rem;" onclick="buscarCandidatos()">Buscar</button>*@
+                        <input type="button" value="Buscar" class="genric-btn primary" style="font-size: 0.8rem; width: 10rem;" onclick="buscarCandidatos()" />
+                    </div>
+
+                </form>
+
+
+
+            </div>
+
+
+        </div>
+
+        <div class="container-fluid">
+
+            <div style="display:none;">
+
+                <input class="btn btn-sm btn-warning" style="float: right; margin-left: 1px; color:#fff;" type="button" value=">">
+                <select style="float: right;width: 3.8rem;" class="form-control form-control-sm">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+                <input class="btn btn-sm btn-warning" style="float: right; margin-right: 1px; color:#fff;" type="button" value="<">
+                <span style="float: right;margin-top: 0.3rem;">Página :&nbsp;&nbsp;</span>
+            </div>
+            @*<br>
+                <br>*@
+            <div style="width: 100%; overflow: auto;">
+                <table class="table table-sm">
+                    <thead>
+                        <tr class="table-register">
+                            <th scope="col" style="width: 12.5%; text-align: center;">Nombres</th>
+                            <th scope="col" style="width: 12.5%; text-align: center;">Profesión</th>
+                            <th scope="col" style="width: 12.5%; text-align: center;">Especialidad</th>
+                            <th scope="col" style="width: 12.5%; text-align: center;">Nacionalidad</th>
+                            <th scope="col" style="width: 12.5%; text-align: center;">Sexo</th>
+                            <th scope="col" style="width: 12.5%; text-align: center;">Edad</th>
+                            @*<th scope="col" style="width: 12.5%; text-align: center;">Tipo Solicitante</th>*@
+                            <th style="text-align: center;"></th>
+                            <th style="text-align: center;"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="BodyCandidatos">
+                        @*<tr>
+                                <td style="text-align: center;" id="nombre">Cristopher Junior Torres Martinez</td>
+                                <td style="text-align: center;" id="profesion">Ingeniero de Sistemas</td>
+                                <td style="text-align: center;" id="especialidad">Analista en Sistemas</td>
+                                <td style="text-align: center;" id="nacionalidad">Perú</td>
+                                <td style="text-align: center;" id="sexo">Masculino</td>
+                                <td style="text-align: center;" id="edad">25</td>
+                                <td style="text-align: center;" id="tipo">Empleado</td>
+                                <td style="text-align: center;"><a href="#"><span class="badge badge-categoria">Ver C.V</span></a></td>
+                            </tr>*@
+
+                    </tbody>
+                </table>
+            </div>
+
+
+            <!-- Modal Login -->
+            <div class="modal fade" id="contac_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Contactar Candidato</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <form>
+                                        <div class="form-group">
+                                            <label>Ingrese Nombre de Persona que desea contactar al candidato(a):</label>
+                                            <input type="text" class="form-control" id="nom_contacto">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Ingrese su email:</label>
+                                            <input type="text" class="form-control" id="email_contacto">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Teléfono de Contacto:</label>
+                                            <input type="text" class="form-control" id="fono_contacto">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Descripción del Puesto: (40 Caracteres)</label>
+                                            <textarea class="form-control" id="desc_contacto" rows="2" maxlength="40"></textarea>
+                                        </div>
+                                        <label id="nombredestinatario" style="display:none;"></label>
+                                        <label id="correodestinatario" style="display:none;"></label>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="cancelarContactar" type="button" class="genric-btn primary-border" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="genric-btn primary" onclick="Contactar_Onclick()">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+<script src="~/Scripts/Modulo/BuscarCandidato.js"></script>
+
+

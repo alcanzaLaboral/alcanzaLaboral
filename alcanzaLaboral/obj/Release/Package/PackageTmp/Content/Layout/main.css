@@ -2119,22 +2119,8 @@ button.btn.btn-primary {
 
 .btn.btn-primary.arrow {
     background: #92c7eb;
+    /*background-image: url(/img/ACCEDER.png);*/
     background: url("img/acceder.png");
-    background-size: cover;
-    background-position: center;
-    display: inline-block;
-    border: none;
-    padding: 60px;
-    width: 126px;
-    border-radius: 900px;
-    height: 70px;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-.btn.btn-primary.salir {
-    background: #92c7eb;
-    background: url("img/salir.png");
     background-size: cover;
     background-position: center;
     display: inline-block;
@@ -2152,10 +2138,6 @@ button.btn.btn-primary {
 }
 
 .btn.btn-primary.arrow:hover {
-    padding: 20px;
-}
-
-.btn.btn-primary.salir:hover {
     padding: 20px;
 }
 

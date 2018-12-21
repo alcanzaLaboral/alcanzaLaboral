@@ -1,0 +1,1070 @@
+﻿
+@{
+    ViewBag.Title = "EditarPerfil";
+}
+
+<!-- start banner Area -->
+<section class="about-banner relative">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="about-content col-lg-12">
+                <h1 class="text-white">
+                    Alcanza Laboral
+                </h1>
+                <p class="text-white link-nav"><a href="index.html">Inicio </a> &nbsp; <i class="fa fa-arrow-right"></i> &nbsp; <a href="insurance.html"> Editar Perfil</a></p>
+            </div>
+        </div>
+        @*<a href="~/Views/Inicio/EditarPerfil.cshtml">~/Views/Inicio/EditarPerfil.cshtml</a>*@
+    </div>
+</section>
+<!-- End banner Area -->
+<!-- Start insurence-one Area -->
+<section class="insurence-one-area section-gap">
+    <div class="container">
+        <div>
+            <p style="color:cornflowerblue">Inicio de Subscripción: <span id="inisubs_id"></span></p>
+            <p style="color:brown">Fin de Subscripción: <span id="finsubs_id"></span></p>
+        </div>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Datos de Usuario y Perfil Profesional
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <h5>Datos del Usuario:</h5>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Tipo de Documento</label>
+                                        <select class="form-control" id="sp_TipoDoc" name="sp_TipoDoc" disabled>
+                                            <option value="1">Documento Nacional de Identidad</option>
+                                            <option value="2">Carnet de Extranjería</option>
+                                            <option value="3">Pasaporte</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Nombres</label>
+                                        <input type="text" class="form-control" id="nombres" aria-describedby="emailHelp" placeholder="Ingrese su nombre" disabled>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Fecha de Nacimiento</label>
+                                        <input type="date" class="form-control" id="fec_nacimiento" @*placeholder="Seleccione una fecha" onblur="prueba(this)"*@ disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">País de Residencia</label>
+                                        <select class="form-control" id="sp_ListarPais" name="sp_ListarPais" disabled>
+                                            <option value="">PERU</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="celular1">Celular 1</label>
+                                        <input type="text" class="form-control" id="celular1" placeholder="Ingrese un úmero de celular" disabled>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="col-md-4">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="nrodocident">Nro. Documento</label>
+                                        <input type="text" class="form-control" id="nrodocident" placeholder="Ingrese el número de su documento" disabled>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Apellido Paterno</label>
+                                        <input type="text" class="form-control" id="apepaterno" aria-describedby="emailHelp" placeholder="Ingrese su apellido paterno" disabled>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Nacionalidad</label>
+                                        <select class="form-control" id="sp_Nacionalidad" name="sp_Nacionalidad" disabled>
+                                            <option value="">PERU</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Ciudad</label>
+                                        <input type="text" class="form-control" id="ciudad" aria-describedby="emailHelp" placeholder="Ingrese la ciudad" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Celular 2</label>
+                                        <input type="text" class="form-control" id="celular2" placeholder="Ingrese un úmero de celular" disabled>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="col-md-4">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Correo electrónico</label>
+                                        <input type="text" class="form-control" id="correoelec" placeholder="Ingrese su correo" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Apellido Materno</label>
+                                        <input type="text" class="form-control" id="apematerno" aria-describedby="emailHelp" placeholder="Ingrese su apellido materno" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Sexo</label>
+                                        <select class="form-control" id="sp_genero" disabled>
+                                            <option value="1">Masculino</option>
+                                            <option value="2">Femenino</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Telefono Fijo</label>
+                                        <input type="text" class="form-control" id="fijo" aria-describedby="emailHelp" placeholder="Ingrese teléfono fijo" disabled>
+                                    </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+                        <br />
+                        <label>Clase o Puesto de Trabajo que está buscando:</label>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio1">Profesional</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio2">Practicante</label>
+                        </div>
+                        @*<div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">Puestos que no requieran Estudios / Experiencia</label>
+                            </div>*@
+                        <br />
+                        <div class="row">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-2">
+                                <button type="submit" class="genric-btn primary-border" onclick="HabilitarCampos_Onclick()">Habilitar&nbsp;Cambios</button>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" class="genric-btn primary" onclick="ActualizarUsuario_onclick()">Guardar&nbsp;Cambios</button>
+                            </div>
+
+                        </div>
+                        <h5>Datos Perfil Profesional:</h5>
+                        <br>
+                        <div class="row">
+
+                            <div class="col-md-8">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Categoría de Perfil Profesional:</label>
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr class="table-register">
+                                                    <th scope="col">Categoría Profesional</th>
+                                                    <th scope="col">Sub-Categoría Profesional</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="bodyCategoria">
+                                                <tr>
+                                                    <td>Ingeniería de Sistemas</td>
+                                                    <td>Analista Senior</td>
+                                                    <td><a href="#"><span class="badge badge-categoria">Eliminar</span></a></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+
+
+                                </form>
+
+                            </div>
+
+
+                            <!--<div class="col-md-4">
+                                <form>
+                                  <div class="form-group">
+                                    <label for="exampleInputEmail1">Agrega una categoría:</label>
+                                    <select class="form-control">
+                                        <option value="">Ingeniería de Sistemas</option>
+                                    </select>
+                                  </div>
+                                </form>
+                            </div>
+                            <div class="col-md-4">
+                                <form>
+                                  <div class="form-group">
+                                    <label for="exampleInputEmail1">Agrega una sub-categoría:</label>
+                                    <select class="form-control">
+                                        <option value="">Analista de sistemas</option>
+                                    </select>
+                                  </div>
+                                </form>
+                            </div>-->
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <button type="submit" class="genric-btn primary-border" data-toggle="modal" data-target="#categoriapro_mod">Agregar&nbsp;Categoría</button>
+                            </div>
+                            <div class="col-md-10">
+                                <div style="height: 0.7rem;"></div>
+                                Se cargará costos adicionales al ingresar más de una categoría*
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Resumen Profesional / Experiencia Laboral: (Máximo 600 carácteres)</label>
+                                        <textarea class="form-control" id="resumen_porf" rows="4" disabled maxlength="600"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-2">
+                                <button type="submit" class="genric-btn primary-border" onclick="HabilitarResumen_onclick()">Habilitar&nbsp;Cambios</button>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" class="genric-btn primary" onclick="ActualizarResumenUsuario_onclick()">Guardar&nbsp;Cambios</button>
+                            </div>
+
+                        </div>
+
+                        <!-- Modals -->
+                        <!-- Modal Categoria Profesional -->
+                        <div class="modal fade" id="categoriapro_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Agregar Categoría</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Agrega una categoría:</label>
+                                                        <select class="form-control" id="sp_categoria" name="sp_categoria">
+                                                            <option value="1">Ingeniería de Sistemas</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Agrega una sub-categoría:</label>
+                                                        <select class="form-control" id="sp_subcategoria" name="sp_subcategoria">
+                                                            <option value="1">Analista de sistemas</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="genric-btn primary-border" data-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="genric-btn primary" onclick="btnCategoria_Onclick()">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Información Académica
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Nivel Máximo de Estudios:</label>
+                                <select class="form-control" id="sp_NivelEstudio" disabled>
+                                    <option value="1">Primaria</option>
+                                    <option value="2">Secundaria</option>
+                                    <option value="3">Técnico</option>
+                                    <option value="4">Técnico Superior</option>
+                                    <option value="5">Universitaria(Bachiller)</option>
+                                    <option value="6">Maestria</option>
+                                    <option value="7">Doctorado</option>
+                                    <option value="8">Otros</option>
+                                </select>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Especifique:</label>
+                                    <input type="text" id="espnivel" class="form-control" aria-describedby="emailHelp" placeholder="Especifique su nivel de estudios" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Tipo de Estudios:</label>
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr class="table-register">
+                                                    <th scope="col">Tipo</th>
+                                                    <th scope="col">Nombre de la Institución</th>
+                                                    <th scope="col">Culminado</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="bodyInstitucion">
+                                                <tr>
+                                                    <td>Colegio</td>
+                                                    <td>Bartolomé Herrera</td>
+                                                    <td>Sí</td>
+                                                    <td><a href="#"><span class="badge badge-categoria">Eliminar</span></a></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+
+
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <button type="submit" class="genric-btn primary-border" data-toggle="modal" data-target="#tipoEstudios_mod">Agregar&nbsp;Tipo&nbsp;de&nbsp;Estudios</button>
+                            </div>
+                        </div>
+                        <br>
+                        <h5>Seminarios / Cursos:</h5>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Descripción</label>
+                                        <input type="text" id="descripcion" class="form-control" placeholder="Ingrese una descripción" disabled>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Duración</label>
+                                        <input type="text" id="duracion" class="form-control" placeholder="Ingrese su duración" disabled>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-4">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Instituto</label>
+                                        <input type="text" id="intituto" class="form-control" placeholder="Ingrese el nombre de la institución" disabled>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-4">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Fecha</label>
+                                        <input type="date" class="form-control" id="fecha" aria-describedby="emailHelp" placeholder="Ingrese su apellido materno" disabled>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-2">
+                                <button type="submit" onclick="HabilitarInfoAcademica_Onclick()" class="genric-btn primary-border">Habilitar&nbsp;Cambios</button>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" class="genric-btn primary" onclick="ActualizarInfoAcademico_onclick()">Guardar&nbsp;Cambios</button>
+                            </div>
+
+                        </div>
+
+                        <!-- Modals -->
+                        <!-- Modal Categoria Profesional -->
+                        <div class="modal fade" id="tipoEstudios_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Agregar Categoría</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>Tipo de Estudios:</label>
+                                                        <select class="form-control" id="sp_tipEstudio">
+                                                            <option value="1">Colegio</option>
+                                                            <option value="2">Universidad</option>
+                                                            <option value="3">Instituto</option>
+                                                            <option value="4">Otro</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>Nombre de la Institución:</label>
+                                                        <input type="text" id="nomInstituto" class="form-control" placeholder="Ingrese nombre de la institución">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>Estudios Culminados:</label>
+                                                        <select class="form-control" id="sp_culminado">
+                                                            <option value="1">Si</option>
+                                                            <option value="2">No</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>Título Obtenido:</label>
+                                                        <input type="text" id="nomtitulo" class="form-control" placeholder="Ingrese su título">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="genric-btn primary-border" data-dismiss="modal">Cerrar</button>
+                                        <button onclick="btnIAcademico_Onclick()" type="button" class="genric-btn primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Experiencia Laboral
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Experiencia Laboral:</label>
+                                        <select class="form-control" id="sp_Experiencia" disabled>
+                                            <option value="1">Si</option>
+                                            <option value="2">No</option>
+                                        </select>
+
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-4">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Tiempo de Experiencia:</label>
+                                        <input type="text" id="tiempoexp" class="form-control" placeholder="Ingrese su tiempo de experiencia" disabled>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-4">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Situación Laboral Actual:</label>
+                                        <select class="form-control" id="sp_situacion" disabled>
+                                            <option value="1">Estudiante</option>
+                                            <option value="2">Empleado</option>
+                                            <option value="3">Desempleado</option>
+                                            <option value="4">Retirado</option>
+                                        </select>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Area de Experiencia Labor:</label>
+                                        <input type="text" id="pri_experiencia" class="form-control" placeholder="Primera Experiencia" disabled>
+                                        <div style="height: 0.5rem"></div>
+                                        <input type="text" id="seg_experiencia" class="form-control" placeholder="Segunda Experiencia" disabled>
+                                        <div style="height: 0.5rem"></div>
+                                        <input type="text" id="terc_experiencia" class="form-control" placeholder="Tercera Experiencia" disabled>
+                                        <div style="height: 0.5rem"></div>
+                                        <input type="text" id="cuart_experiencia" class="form-control" placeholder="Cuarta Experiencia" disabled>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Experiencia Laboral:</label>
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr class="table-register">
+                                                    <th scope="col">Descripción</th>
+                                                    <th scope="col">Título / Cargo</th>
+                                                    <th scope="col">Empresa</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="bodyExperiencia">
+                                                <tr>
+                                                    <td>Desarrollador Web</td>
+                                                    <td>Programador .Net Senior</td>
+                                                    <td>Driven Perú S.A.C</td>
+                                                    <td><a href="#"><span class="badge badge-categoria">Eliminar</span></a></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+
+
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <button type="submit" class="genric-btn primary-border" data-toggle="modal" data-target="#experiencialab_mod">Agregar&nbsp;Experiencia&nbsp;Laboral</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-2">
+                                <button type="submit" class="genric-btn primary-border" onclick="HabilitarExperienciLaboral_Onclick()">Habilitar&nbsp;Cambios</button>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" class="genric-btn primary" onclick="ActualizarExpLaboral_onclick()">Guardar&nbsp;Cambios</button>
+                            </div>
+
+                        </div>
+
+                        <!-- Modals -->
+                        <!-- Modal Experiencia -->
+                        <div class="modal fade" id="experiencialab_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Experiencia Laboral</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>Descripción del Puesto:</label>
+                                                        <input type="text" class="form-control" id="descripcion_reg" placeholder="Ingrese una descripción">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Título / Cargo:</label>
+                                                        <input type="text" id="titulo_reg" class="form-control" placeholder="Título o Cargo">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Desde:</label>
+                                                        <input type="date" id="fecdesde_reg" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Hasta:</label>
+                                                        <input type="date" id="fechasta_reg" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Nombre de la Empresa:</label>
+                                                        <input type="text" id="empresa_reg" class="form-control" placeholder="Ingrese nombre de la empresa">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Actividad de la Empresa:</label>
+                                                        <input type="text" id="actempresa_reg" class="form-control" placeholder="Ingrese actividad de la empresa">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>País:</label>
+                                                        <select class="form-control" id="sp_pais_reg">
+                                                            <option value="">Perú</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Ciudad:</label>
+                                                        <input type="text" id="ciudad_reg" class="form-control" placeholder="Ingrese nombre de la ciudad">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Desempeño y Logros:</label>
+                                                        <textarea class="form-control" id="desemp_reg" rows="5"></textarea>
+                                                    </div>
+
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="genric-btn primary-border" data-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="genric-btn primary" onclick="btnExperiencia_Onclick()">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Información Adicional
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <form>
+                                    <div class="form-group">
+                                        <h5>Dominio de Software:</h5>
+                                        <br>
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr class="table-register">
+                                                    <th scope="col">Programa</th>
+                                                    <th scope="col">Nivel</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="bodyDSoftware">
+                                                <tr>
+                                                    <td>Visual Studio</td>
+                                                    <td>Intermedio</td>
+                                                    <td><a href="#"><span class="badge badge-categoria">Eliminar</span></a></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+
+
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <button type="submit" class="genric-btn primary-border" data-toggle="modal" data-target="#programa_mod">Agregar&nbsp;Programa</button>
+                            </div>
+                        </div>
+
+                        <!------------------------------->
+                        <br>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <form>
+                                    <div class="form-group">
+                                        <h5>Equipo / Maquinaria:</h5>
+                                        <br>
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr class="table-register">
+                                                    <th scope="col">Nombre de Equipo / Maquinaria</th>
+                                                    <th scope="col">Nivel</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="bodyMaquinaria">
+                                                <tr>
+                                                    <td>Máquina de coser</td>
+                                                    <td>Avanzado</td>
+                                                    <td><a href="#"><span class="badge badge-categoria">Eliminar</span></a></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+
+
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <button type="submit" class="genric-btn primary-border" data-toggle="modal" data-target="#equipo_mod">Agregar&nbsp;Equipo&nbsp;o&nbsp;Maquinaria</button>
+                            </div>
+                        </div>
+
+                        <!------------------------------->
+                        <br>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <form>
+                                    <div class="form-group">
+                                        <h5>Dominio de Idiomas:</h5>
+                                        <br>
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr class="table-register">
+                                                    <th scope="col">Idioma</th>
+                                                    <th scope="col">Hablado</th>
+                                                    <th scope="col">Escrito</th>
+                                                    <th scope="col">Traducción</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="bodyIdioma">
+                                                <tr>
+                                                    <td>Inglés</td>
+                                                    <td>Inicial</td>
+                                                    <td>Inicial</td>
+                                                    <td>Inicial</td>
+                                                    <td><a href="#"><span class="badge badge-categoria">Eliminar</span></a></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+
+
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <button type="submit" class="genric-btn primary-border" data-toggle="modal" data-target="#idioma_mod">Agregar&nbsp;Idioma</button>
+                            </div>
+                        </div>
+
+                        <!------------------------------->
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <form>
+                                    <div class="form-group">
+                                        <h5>Disponibilidad Laboral:</h5>
+                                        <br>
+                                        <div>
+                                            <div class="form-group">
+                                                <label>Disponibilidad:</label>
+                                                <select class="form-control" id="sp_disponibilidad" disabled>
+                                                    <option value="1">Inmediata</option>
+                                                    <option value="2">Negociable</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </form>
+
+                            </div>
+                        </div>
+                        <!------------------------------->
+                        <br>
+                        <div class="row">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-2">
+                                <button type="submit" class="genric-btn primary-border" onclick="HabilitarInfoAdicional_Onclick()">Habilitar&nbsp;Cambios</button>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" class="genric-btn primary" onclick="ActualizarDisponibilidad_onclick()">Guardar&nbsp;Cambios</button>
+                            </div>
+
+                        </div>
+
+                        <!-- Modals -->
+                        <!-- Modal Programa -->
+                        <div class="modal fade" id="programa_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Dominio de Software</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>Nombre del Programa:</label>
+                                                        <input id="nomprograma_reg" type="text" class="form-control" placeholder="Ingrese nombre del programa">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>Nivel:</label>
+                                                        <select class="form-control" id="sp_nivelprograma">
+                                                            <option value="1">Inicial</option>
+                                                            <option value="2">Medio</option>
+                                                            <option value="3">Experto</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="genric-btn primary-border" data-dismiss="modal">Cerrar</button>
+                                        <button onclick="btnDSoftware_Onclick()" type="button" class="genric-btn primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Equipo -->
+                        <div class="modal fade" id="equipo_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Dominio de Equipo / Maquinaria</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>Nombre de Equipo o Maquinaria:</label>
+                                                        <input type="text" id="nom_maquinaria" class="form-control" placeholder="Ingrese equipo o maquinaria">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>Nivel:</label>
+                                                        <select class="form-control" id="sp_nivmaquinaria">
+                                                            <option value="1">Inicial</option>
+                                                            <option value="2">Medio</option>
+                                                            <option value="3">Experto</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="genric-btn primary-border" data-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="genric-btn primary" onclick="btnMaquinaria_Onclick()">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Idioma -->
+                        <div class="modal fade" id="idioma_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Dominio de Idiomas</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>Idioma:</label>
+                                                        <input type="text" id="idioma_reg" class="form-control" placeholder="Ingrese un idioma">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>Hablado:</label>
+                                                        <select class="form-control" id="sp_ihablado">
+                                                            <option value="1">Inicial</option>
+                                                            <option value="2">Medio</option>
+                                                            <option value="3">Experto</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>Escrito:</label>
+                                                        <select class="form-control" id="sp_iescrito">
+                                                            <option value="1">Inicial</option>
+                                                            <option value="2">Medio</option>
+                                                            <option value="3">Experto</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-10">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>Traducción:</label>
+                                                        <select class="form-control" id="itraduccion">
+                                                            <option value="1">Inicial</option>
+                                                            <option value="2">Medio</option>
+                                                            <option value="3">Experto</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="genric-btn primary-border" data-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="genric-btn primary" onclick="btnDIdioma_Onclick()">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Agregar Foto
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        <h5>Agrega una foto a tu Perfil</h5>
+                        <br />
+                        <p>El formato permitido para la foto debe ser jpg*</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <br /><br /><br />
+                                <form>
+                                    <div class="form-group">
+                                        <input type="file" id="myfile" class="form-control-file form-control-sm" />
+                                    </div>
+
+                                    &nbsp;&nbsp;<button onclick="GuardarFoto()" type="button" class="genric-btn primary">Guardar</button>
+                                </form>
+                            </div>
+                            <div class="col-md-6" style="text-align:center;">
+                                <div id="mostrarfoto_perfil">
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End insurence-one Area -->
+
+
+
+<script type="text/javascript" src="~/Scripts/Modulo/EditarPerfil.js"></script>

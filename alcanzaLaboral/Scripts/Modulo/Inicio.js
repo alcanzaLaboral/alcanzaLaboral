@@ -2,15 +2,7 @@
 var idusuarioPost = 0;
 var adminPost = 0;
 
-//$(window).keypress(function (e) {
-//    if (e.keyCode == 13) {
-//        Login_Onclick()
-//    }
-//});
-
 $(document).ready(function () {
-
-    sessionStorage.setItem('flagref', 0)
 
     idusuarioPost = sessionStorage.getItem("idusuario");
     adminPost = sessionStorage.getItem("administrador");
@@ -40,32 +32,7 @@ $(document).ready(function () {
     
 });
 
-window.onload = function () {
-
-
-    $("#rbt_noref").prop('checked', true);
-
-    $("#rbt_siref").click(function () {
-        if (this.checked) {
-            $("#email_refe").prop("disabled", false);
-            sessionStorage.setItem('flagref',1)
-        }
-        else {
-            $("#email_refe").prop("disabled", true);
-            sessionStorage.setItem('flagref', 0)
-        }
-    });
-
-    $("#rbt_noref").click(function () {
-        if (this.checked) {
-            $("#email_refe").prop("disabled", true);
-            sessionStorage.setItem('flagref', 1)
-        }
-        else {
-            $("#email_refe").prop("disabled", false);
-            sessionStorage.setItem('flagref', 0)
-        }
-    });
+window.onload = function () {  
 
 }
 

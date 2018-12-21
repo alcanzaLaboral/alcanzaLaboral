@@ -41,10 +41,10 @@ namespace Dominio.Repositorio
 
         //Registrar Usuario
         public List<RespuestaPostEntity> RegistrarUsuario_BL(string nomusuario, string passusuario, string emailusuario,
-            int idpregunta, string respuestaPreg, int flagref, string emailref)
+            int idpregunta, string respuestaPreg)
         {
             return dal.RegistrarUsuario_DAL(nomusuario, passusuario, emailusuario,
-            idpregunta, respuestaPreg, flagref, emailref);
+            idpregunta, respuestaPreg);
         }
 
         //Listar Paises
@@ -303,9 +303,9 @@ namespace Dominio.Repositorio
             return dal.ListarCandidatos_DAL(Profesion, Subprofesion, Tipo, Nacionalidad, Sexo);
         }
 
-        public List<LCandidatos> ListarBuscarCandidatos_BL(int Profesion, int Subprofesion, int Nacionalidad, int Sexo, int idtipopostulante, string flag_discap, int NroDePagina, int RegPorPag)
+        public List<LCandidatos> ListarBuscarCandidatos_BL(int Profesion, int Subprofesion, int Nacionalidad, int Sexo, int idtipopostulante, string flag_discap)
         {
-            return dal.ListarBuscarCandidatos_DAL(Profesion, Subprofesion, Nacionalidad, Sexo, idtipopostulante, flag_discap, NroDePagina, RegPorPag);
+            return dal.ListarBuscarCandidatos_DAL(Profesion, Subprofesion, Nacionalidad, Sexo, idtipopostulante, flag_discap);
         }
         public List<LCandidatos> RCandidatosPeridoCategoria(int Profesion, int Subprofesion, string dfechaIni, string dfechaFin)
         {
@@ -322,10 +322,6 @@ namespace Dominio.Repositorio
         public List<RCuentas> RCuentas(int filtro)
         {
             return dal.RCuentas(filtro);
-        }
-        public List<RespuestaPostEntity> validaremailref_BL(string emailusuario)
-        {
-            return dal.validaremailref_DAL(emailusuario);
         }
 
     }

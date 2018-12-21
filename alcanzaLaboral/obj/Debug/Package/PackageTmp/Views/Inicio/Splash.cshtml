@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Splash";
+}
+
+<style>
+    #header, #socialBar_id {
+        display: none;
+    }
+</style>
+
+<link href="~/Content/Layout/Splash.css" rel="stylesheet" />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<div id="circle1"></div>
+<div id="shadowring"></div>
+<div id="circle2"></div>
+<canvas height="200" width="200" id="counter" />
+
+<a id="IrInicio" href="@Url.Action("Inicio", "Inicio")"></a>
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/Modulo/Splash.js"></script>
+

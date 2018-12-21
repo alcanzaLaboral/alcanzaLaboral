@@ -1,47 +1,43 @@
-﻿
-$(document).ready(function () {
+﻿/// <reference path="Inicio.js" />
+var counter = document.getElementById('counter').getContext('2d');
+var no = 0; // Starting Point
+var pointToFill = 4.72;  //Point from where you want to fill the circle
+var cw = counter.canvas.width;  //Return canvas width
+var ch = counter.canvas.height; //Return canvas height
+var diff;   // find the different between current value (no) and trageted value (100)
 
-    document.getElementById('IrInicio').click();
+function fillCounter() {
+    diff = ((no / 100) * Math.PI * 2 * 10);
 
-});
+    counter.clearRect(0, 0, cw, ch);   // Clear canvas every time when function is call
 
-//var counter = document.getElementById('counter').getContext('2d');
-//var no = 0; 
-//var pointToFill = 4.72;  
-//var cw = counter.canvas.width;  
-//var ch = counter.canvas.height; 
-//var diff;   
+    counter.lineWidth = 15;     // size of stroke
 
-//function fillCounter() {
-//    diff = ((no / 100) * Math.PI * 2 * 10);
+    counter.fillStyle = '#fff';     // color that you want to fill in counter/circle
 
-//    counter.clearRect(0, 0, cw, ch);  
+    counter.strokeStyle = '#FFBE00';    // Stroke Color
 
-//    counter.lineWidth = 15;   
+    counter.textAlign = 'center';
 
-//    counter.fillStyle = '#fff';    
+    counter.font = "25px monospace";    //set font size and face
 
-//    counter.strokeStyle = '#FFBE00';    
+    counter.fillText(no + '%', 100, 110);       //fillText(text,x,y);
 
-//    counter.textAlign = 'center';
+    counter.beginPath();
+    counter.arc(100, 100, 90, pointToFill, diff / 10 + pointToFill);    //arc(x,y,radius,start,stop)
 
-//    counter.font = "25px monospace";   
+    counter.stroke();   // to fill stroke
 
-//    counter.fillText(no + '%', 100, 110);       
+    // now add condition
 
-//    counter.beginPath();
-//    counter.arc(100, 100, 90, pointToFill, diff / 10 + pointToFill);   
+    if (no >= 100) {
+        clearTimeout(fill);     //fill is a variable that call the function fillcounter()
+        document.getElementById('IrInicio').click();
+        //window.location = "../alcanzaLaboral/Inicio/Inicio";
+    }
+    no++;
+}
 
-//    counter.stroke();  
+//now call the function
 
-    
-
-//    if (no >= 100) {
-//        clearTimeout(fill);    
-//        document.getElementById('IrInicio').click();
-//        //window.location = "../alcanzaLaboral/Inicio/Inicio";
-//    }
-//    no++;
-//}
-
-//var fill = setInterval(fillCounter, 40);     
+var fill = setInterval(fillCounter, 40);     //call the fillCounter function after every 40MS

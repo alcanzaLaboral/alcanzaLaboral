@@ -1,46 +1,11 @@
 ﻿var idusuarioPost;
 var adminPost = 0;
 
-$(document).ready(function () {
-    
-
-    if (sessionStorage.getItem('idusuario') == null) {
-        idusuarioPost = 0;
-    } else {
-        idusuarioPost = sessionStorage.getItem('idusuario');
-    }
-
-    if (idusuarioPost > 0) {
-        $("#miPerfil_li").removeClass("Ocultar");
-        $("#siden_acceder").addClass("Ocultar");
-        $("#siden_salir").removeClass("Ocultar");
-        $("#socialBar_id").addClass("Ocultar");
-
-    } else {
-        $("#miPerfil_li").addClass("Ocultar");
-        $("#siden_salir").addClass("Ocultar");
-        $("#siden_acceder").removeClass("Ocultar");
-        $("#socialBar_id").removeClass("Ocultar");
-    }
-
-    if (adminPost == 1) {
-        $("#admin_li").removeClass("Ocultar");
-    } else {
-        $("#admin_li").addClass("Ocultar");
-    }
-    
-    if (sessionStorage.getItem('idusuario') == 0) {
-        window.location = "../Inicio/Inicio";
-    }
-
-});
-
 window.onload = function () {
 
     idusuarioPost = sessionStorage.getItem("idusuario");
     adminPost = sessionStorage.getItem("administrador");
     $("#customRadio1").prop('checked', true);
-    $("#rdno").prop('checked', true);
     Spinner_ListarPaises();
     Spinner_ListarNacionalidad();
     Spinner_ListarCategoria();
@@ -58,32 +23,9 @@ window.onload = function () {
     $("select[name=sp_categoria]").change(function () {
         idcategoria = $("#sp_categoria").val();
         Spinner_ListarSubCategoria(idcategoria);
-    });
-
-    $("input[id=rdsi]").click(function () {
-        $("#tadiscapacidad").prop("disabled", false);
-        $("#tadiscapacidad").focus();
-    });
-
-    $("input[id=rdno]").click(function () {
-        $("#tadiscapacidad").prop("disabled", true);
-        $("#tadiscapacidad").val('');
-    });
-
-    $("select[name=sp_TipoDoc]").change(function () {
-
-        tipoDoc = $('#sp_TipoDoc').val();
-        $('#nrodocident').val('');
-
-        if(tipoDoc == 1){
-            document.getElementById('nrodocident').maxLength = "8";
-        }else{
-            document.getElementById('nrodocident').maxLength = "12";
-        }
 
 
     });
-    
 
     
     if (adminPost == 1) {
@@ -94,40 +36,6 @@ window.onload = function () {
     
     
 }
-
-function validadLongdoc() {
-    tipoDoc = $('#sp_TipoDoc').val();
-    nrodocident = $('#nrodocident').val();
-
-    if (tipoDoc == 1 && nrodocident.length != 8) {
-        alert_warning('El DNI debe tener 8 dígitos');
-        $('#nrodocident').val('');
-        $('#nrodocident').focus();
-    } else if (tipoDoc == 2 && nrodocident.length != 12 && nrodocident.length > 0) {
-        alert_warning('El Carnet de extranjería debe tener 12 dígitos');
-        $('#nrodocident').val('');
-        $('#nrodocident').focus();
-    } else if (tipoDoc == 3 && nrodocident.length != 12 && nrodocident.length > 0) {
-        alert_warning('El Pasaporte debe tener 12 dígitos');
-        $('#nrodocident').val('');
-        $('#nrodocident').focus();
-    }
-}
-
-function valnrodoc(e) {
-
-
-    if ($('#sp_TipoDoc').val() == 1) {
-        document.getElementById('nrodocident').maxLength = "8";
-        var keynum = window.event ? window.event.keyCode : e.which;
-        if ((keynum == 8) || (keynum == 46))
-            return true;
-
-        return /\d/.test(String.fromCharCode(keynum));
-    }
-   
-}
-
 //Residencia
 function Spinner_ListarPaises() {
 
@@ -210,6 +118,9 @@ function DetalleUsuario(id_usuario) {
 
 function detalleUsuarioSucces(data) {
 
+    
+
+    for (i = 0; i < data.length; i++) {
         Nombres = data[0].Nombres;
         ApePaterno = data[0].ApePaterno;
         ApeMaterno = data[0].ApeMaterno;
@@ -244,9 +155,9 @@ function detalleUsuarioSucces(data) {
 
         fechacreacion = data[0].fechacreacion;
         finsubscrip = data[0].finsubscrip;
+       
+    }
 
-        flag_discap = data[0].flag_discap;
-        desc_discap = data[0].desc_discap;       
 
         $("#nombres").val(Nombres);
         $("#apepaterno").val(ApePaterno);
@@ -287,18 +198,10 @@ function detalleUsuarioSucces(data) {
             $("#customRadio3").prop('checked', true);
         }
 
-        if (flag_discap == 1) {
-            $("#rdsi").prop('checked', true);
-        } else{
-            $("#rdno").prop('checked', true);
-        }
-
-        $("#tadiscapacidad").val(desc_discap);
-
         document.getElementById('inisubs_id').innerHTML = fechacreacion;
         document.getElementById('finsubs_id').innerHTML = finsubscrip;
        
-        
+
     
 }
 
@@ -372,7 +275,6 @@ function ActualizarUsuario_onclick() {
     var tipo_doc = $("#sp_TipoDoc").val();
     var nro_doc = $("#nrodocident").val();
     var emailusuario = $("#correoelec").val();
-    var desc_discap = $("#tadiscapacidad").val();
    
 
     fec_nacimiento2 = fec_nacimiento1.toString();
@@ -385,13 +287,6 @@ function ActualizarUsuario_onclick() {
     } else if (document.getElementById('customRadio3').checked) {
         idtipopostulante = 3;
     }
-
-    if (document.getElementById('rdsi').checked) {
-        flag_discap = 1;
-    } else {
-        flag_discap = 0;
-        desc_discap = '';
-    } 
     
 
 
@@ -399,7 +294,7 @@ function ActualizarUsuario_onclick() {
         type: "POST",
         url: "../Services/ActualizarUsuario",
         data: "{idusuario:'" + parseInt(idusuario) + "', PriNombre:'" + nombres + "', SegNombre:'" + nombres + "', ApePaterno:'" + apepaterno + "', ApeMaterno:'" + apematerno + "', FecNacimiento:'" + fec_nacimiento2 + "', idNacionalidad:'" + parseInt(sp_Nacionalidad) + "', genero:'" + parseInt(sp_genero) + "', idPaisresidencia:'" + parseInt(sp_ListarPais) + "', Ciudad:'" + ciudad + "', Telfijo:'" + fijo + "', TelCelular1:'" + celular1
-            + "', TelCelular2:'" + celular2 + "', idtipopostulante:'" + parseInt(idtipopostulante) + "', tipo_doc:'" + parseInt(tipo_doc) + "', nro_doc:'" + nro_doc + "', emailusuario:'" + emailusuario + "', flag_discap:'" + flag_discap + "', desc_discap:'" + desc_discap + "'}",
+            + "', TelCelular2:'" + celular2 + "', idtipopostulante:'" + parseInt(idtipopostulante) + "', tipo_doc:'" + parseInt(tipo_doc) + "', nro_doc:'" + nro_doc + "', emailusuario:'" + emailusuario + "'}",
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         success: ResponseUpdateSucces,
@@ -433,7 +328,6 @@ function ResponseUpdateSucces(data) {
         $("#fijo").prop("disabled", true);
         $("#celular1").prop("disabled", true);
         $("#celular2").prop("disabled", true);
-        $("#tadiscapacidad").prop("disabled", true);
 
         
 
@@ -1601,11 +1495,8 @@ function EditarPerfil() {
 }
 
 function PerfilProfesional() {
-    alert(idusuarioPost);
     sessionStorage.setItem("idcandidato", idusuarioPost);
-    sessionStorage.setItem('peticionver', 2);
-    window.location = "../Inicio/PerfilProfesional";
-    //window.open('../Inicio/PerfilProfesional', '_blank');
+    window.open('../Inicio/PerfilProfesional', '_blank');
 }
 
 function ComoRegistrarse() {
@@ -1625,34 +1516,29 @@ function TerminosCondiciones() {
 
 function Salir() {
     sessionStorage.setItem("idusuario", null);
-    sessionStorage.setItem("administrador", null);
     window.location = "../Inicio/Inicio";
 }
 
 function RCandidatosPeridoCategoria() {
-    sessionStorage.setItem("idusuario", idusuarioPost);
+    sessionStorage.setItem("idusuario", null);
     window.location = "../Inicio/RCandidatosPeridoCategoria";
 }
 
 function RCantidadCandidatosPeridoTiempo() {
-    sessionStorage.setItem("idusuario", idusuarioPost);
+    sessionStorage.setItem("idusuario", null);
     window.location = "../Inicio/RCantidadCandidatosPeridoTiempo";
 }
 
 function RMontoFacturadoPeriodoTiempo() {
-    sessionStorage.setItem("idusuario", idusuarioPost);
+    sessionStorage.setItem("idusuario", null);
     window.location = "../Inicio/RPagosPeridoTiempo";
 }
 
 function RCuentas() {
-    sessionStorage.setItem("idusuario", idusuarioPost);
+    sessionStorage.setItem("idusuario", null);
     window.location = "../Inicio/RCuentas";
 }
 
-function Representante() {
-    sessionStorage.setItem("idusuario", idusuarioPost);
-    window.location = "../Inicio/Representante";
-}
 
 
 //Error
