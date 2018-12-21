@@ -7,12 +7,18 @@ using Dominio.Entidades;
 using Dominio.Repositorio;
 using System.Net.Mail;
 using System.Text;
+using Newtonsoft.Json;
+using Infraestrutura.Data.SqlServer;
 
 namespace alcanzaLaboral.Controllers
 {
     public class ServicesController : Controller
     {
         // GET: Services
+
+     
+     
+
         public ActionResult Login(string usuario, string password)
         {
             General_BL bl = new General_BL();
@@ -42,11 +48,11 @@ namespace alcanzaLaboral.Controllers
         }
 
         public ActionResult RegistrarUsuario(string nomusuario, string passusuario, string emailusuario,
-            int idpregunta, string respuestaPreg, int flagref, string emailref)
+            int idpregunta, string respuestaPreg)
         {
             General_BL bl = new General_BL();
             List<RespuestaPostEntity> listado = bl.RegistrarUsuario_BL(nomusuario, passusuario, emailusuario,
-            idpregunta, respuestaPreg, flagref, emailref);
+            idpregunta, respuestaPreg);
             return Json(listado);
         }
 
@@ -339,10 +345,10 @@ namespace alcanzaLaboral.Controllers
             return Json(listado);
         }
 
-        public ActionResult ListarBuscarCandidatos(int Profesion, int Subprofesion, int Nacionalidad, int Sexo, int idtipopostulante, string flag_discap, int NroDePagina, int RegPorPag)
+        public ActionResult ListarBuscarCandidatos(int Profesion, int Subprofesion, int Nacionalidad, int Sexo, int idtipopostulante, string flag_discap)
         {
             General_BL bl = new General_BL();
-            List<LCandidatos> listado = bl.ListarBuscarCandidatos_BL(Profesion, Subprofesion, Nacionalidad, Sexo, idtipopostulante, flag_discap, NroDePagina, RegPorPag);
+            List<LCandidatos> listado = bl.ListarBuscarCandidatos_BL(Profesion, Subprofesion, Nacionalidad, Sexo, idtipopostulante, flag_discap);
             return Json(listado);
         }
 
@@ -371,12 +377,7 @@ namespace alcanzaLaboral.Controllers
             List<RCuentas> listado = bl.RCuentas(filtro);
             return Json(listado);
         }
-        public ActionResult validaremailref(string emailusuario)
-        {
-            General_BL bl = new General_BL();
-            List<RespuestaPostEntity> listado = bl.validaremailref_BL(emailusuario);
-            return Json(listado);
-        }
+
 
         public ActionResult EnviarCorreo(string mensajep, string asuntop, string destinop)
         {
