@@ -13,3 +13,8 @@ C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Entidades\bin\Debug\Dominio.E
 C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Entidades\obj\Debug\Dominio.Entidades.csprojResolveAssemblyReference.cache
 C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Entidades\obj\Debug\Dominio.Entidades.dll
 C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Entidades\obj\Debug\Dominio.Entidades.pdb
+C:\Users\Programacion\Desktop\alcanza_2112181\Dominio.Entidades\bin\Debug\Dominio.Entidades.dll
+C:\Users\Programacion\Desktop\alcanza_2112181\Dominio.Entidades\bin\Debug\Dominio.Entidades.pdb
+C:\Users\Programacion\Desktop\alcanza_2112181\Dominio.Entidades\obj\Debug\Dominio.Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Programacion\Desktop\alcanza_2112181\Dominio.Entidades\obj\Debug\Dominio.Entidades.dll
+C:\Users\Programacion\Desktop\alcanza_2112181\Dominio.Entidades\obj\Debug\Dominio.Entidades.pdb

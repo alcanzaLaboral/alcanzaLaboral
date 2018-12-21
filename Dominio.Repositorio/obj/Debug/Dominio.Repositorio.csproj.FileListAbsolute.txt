@@ -25,3 +25,12 @@ C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Repositorio\bin\Debug\Infraes
 C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Repositorio\obj\Debug\Dominio.Repositorio.csprojResolveAssemblyReference.cache
 C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Repositorio\obj\Debug\Dominio.Repositorio.dll
 C:\Users\Cristopher\Desktop\alcanza_171218\Dominio.Repositorio\obj\Debug\Dominio.Repositorio.pdb
+C:\Users\Programacion\Desktop\alcanza_2112181\Dominio.Repositorio\bin\Debug\Dominio.Repositorio.dll
+C:\Users\Programacion\Desktop\alcanza_2112181\Dominio.Repositorio\bin\Debug\Dominio.Repositorio.pdb
+C:\Users\Programacion\Desktop\alcanza_2112181\Dominio.Repositorio\bin\Debug\Dominio.Entidades.dll
+C:\Users\Programacion\Desktop\alcanza_2112181\Dominio.Repositorio\bin\Debug\Infraestrutura.Data.SqlServer.dll
+C:\Users\Programacion\Desktop\alcanza_2112181\Dominio.Repositorio\bin\Debug\Dominio.Entidades.pdb
+C:\Users\Programacion\Desktop\alcanza_2112181\Dominio.Repositorio\bin\Debug\Infraestrutura.Data.SqlServer.pdb
+C:\Users\Programacion\Desktop\alcanza_2112181\Dominio.Repositorio\obj\Debug\Dominio.Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\Programacion\Desktop\alcanza_2112181\Dominio.Repositorio\obj\Debug\Dominio.Repositorio.dll
+C:\Users\Programacion\Desktop\alcanza_2112181\Dominio.Repositorio\obj\Debug\Dominio.Repositorio.pdb
