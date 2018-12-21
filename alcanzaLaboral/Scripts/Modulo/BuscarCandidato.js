@@ -42,7 +42,55 @@ window.onload = function () {
     $("select[name=combo_cate]").change(function () {
         idcategoria = $("#combo_cate").val();
         Spinner_ListarSubCategoria(idcategoria);
-    });    
+    });
+
+
+    $("#chk_cate").click(function () {
+        if (this.checked) {
+            $("#combo_cate").prop("disabled", false);
+            $("#combo_subcate").prop("disabled", false);
+        }
+        else {
+            $("#combo_cate").prop("disabled", true);
+            $("#combo_subcate").prop("disabled", true);
+        }
+    });
+
+    $("#chk_naci").click(function () {
+        if (this.checked) {
+            $("#combo_nacionalidad").prop("disabled", false);
+        }
+        else {
+            $("#combo_nacionalidad").prop("disabled", true);
+        }
+    });
+
+    $("#chk_sexo").click(function () {
+        if (this.checked) {
+            $("#sexo").prop("disabled", false);
+        }
+        else {
+            $("#sexo").prop("disabled", true);
+        }
+    });
+
+    $("#chk_tipocandi").click(function () {
+        if (this.checked) {
+            $("#TipoCandidato_sp").prop("disabled", false);
+        }
+        else {
+            $("#TipoCandidato_sp").prop("disabled", true);
+        }
+    });
+
+    $("#chk_discapa").click(function () {
+        if (this.checked) {
+            $("#discapacidad_sp").prop("disabled", false);
+        }
+        else {
+            $("#discapacidad_sp").prop("disabled", true);
+        }
+    });
 
 
 }
@@ -280,6 +328,9 @@ function ContactarSuccess() {
 }
 
 function buscarCandidatos() {
+
+    $('#loading_wrap').removeClass('Ocultar')   
+
     var Profesion = $("#combo_cate").val();
     var Subprofesion = $("#combo_subcate").val();
     var Nacionalidad = $("#combo_nacionalidad").val();
@@ -301,8 +352,15 @@ function buscarCandidatos() {
         },
         error: OnError
 
-    });
+    }).done(function (output) {
 
+        if (output) {
+
+            //$('#loading_wrap').css('display', 'none');
+            $('#loading_wrap').addClass('Ocultar')
+        }
+
+    });;
     
 }
 

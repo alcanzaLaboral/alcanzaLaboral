@@ -5,3 +5,10 @@ C:\Users\112209\Desktop\proyecto_alcanza\alcanzaLaboral\Infraestrutura.Data.SqlS
 C:\Users\112209\Desktop\proyecto_alcanza\alcanzaLaboral\Infraestrutura.Data.SqlServer\obj\Release\Infraestrutura.Data.SqlServer.csprojResolveAssemblyReference.cache
 C:\Users\112209\Desktop\proyecto_alcanza\alcanzaLaboral\Infraestrutura.Data.SqlServer\obj\Release\Infraestrutura.Data.SqlServer.dll
 C:\Users\112209\Desktop\proyecto_alcanza\alcanzaLaboral\Infraestrutura.Data.SqlServer\obj\Release\Infraestrutura.Data.SqlServer.pdb
+C:\Users\Cristopher\Desktop\alcanza_171218\Infraestrutura.Data.SqlServer\bin\Release\Infraestrutura.Data.SqlServer.dll
+C:\Users\Cristopher\Desktop\alcanza_171218\Infraestrutura.Data.SqlServer\bin\Release\Infraestrutura.Data.SqlServer.pdb
+C:\Users\Cristopher\Desktop\alcanza_171218\Infraestrutura.Data.SqlServer\bin\Release\Dominio.Entidades.dll
+C:\Users\Cristopher\Desktop\alcanza_171218\Infraestrutura.Data.SqlServer\bin\Release\Dominio.Entidades.pdb
+C:\Users\Cristopher\Desktop\alcanza_171218\Infraestrutura.Data.SqlServer\obj\Release\Infraestrutura.Data.SqlServer.csprojResolveAssemblyReference.cache
+C:\Users\Cristopher\Desktop\alcanza_171218\Infraestrutura.Data.SqlServer\obj\Release\Infraestrutura.Data.SqlServer.dll
+C:\Users\Cristopher\Desktop\alcanza_171218\Infraestrutura.Data.SqlServer\obj\Release\Infraestrutura.Data.SqlServer.pdb

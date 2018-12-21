@@ -38,39 +38,16 @@
     <link rel="stylesheet" type="text/css" href="~/Content/Layout/engine1/style.css" />
     <script type="text/javascript" src="~/Content/Layout/engine1/jquery.js"></script>
 
-    <!-- End WOWSlider.com HEAD section -->
-
-
 </head>
 <body>
 
+    <div id='loading_wrap' class="Ocultar" style="position: fixed;left: 0px;top: 0px;width: 100%;height: 100%;z-index: 9999;background-color:rgba(128, 128, 128, 0.4);opacity: .8;">
+        <img src="~/img/loading.gif" style="width:50px; height:50px; top:50%; right:50%; position:absolute;" />
+    </div>
+
     <header id="header">
-        @*   <div class="header-top">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-sm-4 col-4 header-top-left">
-
-                        </div>
-                        <div class=" col-lg-4 col-sm-4 col-4 text-center">
-                            <button type="button" class="btn btn-warning" onclick="BuscarCandidatos()" href="#">¡ Buscar Candidatos Ahora !</button>
-                        </div>
-                        <div class="col-lg-4 col-sm-4 col-4 header-top-right">
-                            <div class="header-social">
-                                <button type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#registro_mod">Registrate</button>
-                                <button type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#login_mod">Ingresa&nbsp;a&nbsp;tu&nbsp;cuenta</button>
-
-
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>*@
         <div class="container-fluid main-menu">
-            <div class="row align-items-center justify-content-between d-flex" style="
-                 margin-left 10px;
-                 ">
+            <div class="row align-items-center justify-content-between d-flex" style="margin-left: 10px;">
                 <div id="logo" class="col-lg-2">
                     @*<a href="Inicio.html"><img src="~/img/logo.png" alt="logo" title="" /></a>*@
                     <a href="Inicio.html"><img class="slideInLeft animated" src="~/img/logofinal3.png" alt="logo" title="" /></a>
@@ -175,25 +152,28 @@
 
             </div>
         </div>
-        <div class="sidenav">
+        <div id="siden_salir" class="sidenav Ocultar">
+            <button id="fbtn_salir" onclick="Salir()" type="button" class="btn btn-primary salir"></button>
+        </div>
+        <div id="siden_acceder" class="sidenav">
             <button id="this" type="button" class="btn btn-primary arrow"></button>
         </div>
 
         <div id="sidenav" class="sidenav" style="top: 221px;right: 13px;width: 202px; display:none">
-            <button style="padding-left: 8px; margin-left: 25px;" type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#login_mod">Ingresa&nbsp;a&nbsp;tu&nbsp;cuenta</button>
             <button style="margin-left: 87px;padding-left: 8px;" type="button" class="btn btn-primary reg" href="#" data-toggle="modal" data-target="#registro_mod">
                 Registrate
             </button>
+            <button style="padding-left: 8px; margin-left: 25px;" type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#login_mod">Ingresa&nbsp;a&nbsp;tu&nbsp;cuenta</button> 
         </div>
 
     </header><!-- #header -->
     <!-- Modal Registro -->
-    <div class="modal fade" id="registro_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="registro_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"  data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLongTitle">Crear una Cuenta</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button id="btncerrarreg" onclick="cerrarRegistro(this)" type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -208,19 +188,19 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Contraseña</label>
-                                    <input type="password" class="form-control" id="pass_reg" placeholder="Ingrese su contraseña">
+                                    <input type="password" class="form-control" id="pass_reg" placeholder="Ingrese su contraseña" onblur="validarPass()">
                                 </div>
                                 <div class="form-group">
                                     <label>Repita su contraseña</label>
-                                    <input type="password" class="form-control" id="rpass_reg" placeholder="Repita su contraseña">
+                                    <input type="password" class="form-control" id="rpass_reg" placeholder="Repita su contraseña" onblur="validarRPass()">
                                 </div>
                                 <div class="form-group">
                                     <label>E-mail de recepción de ofertas</label>
-                                    <input type="text" class="form-control" id="email_reg" placeholder="Ingrese su e-mail" onblur="ValidarCorreo()">
+                                    <input type="text" class="form-control" id="email_reg" placeholder="Ingrese su e-mail" onblur="validarEmail(this)">
                                 </div>
                                 <div class="form-group">
                                     <label>Coloque nuevamente su e-mail</label>
-                                    <input type="text" class="form-control" id="remail_reg" placeholder="Repita su e-mail">
+                                    <input type="text" class="form-control" id="remail_reg" placeholder="Repita su e-mail" onblur="validarEmail(this)">
                                 </div>
                                 <div class="form-group">
                                     <label>Seleccione una pregunta secreta</label>
@@ -236,7 +216,21 @@
                                     <label>Respuesta</label>
                                     <input type="text" class="form-control" id="respuesta_reg" placeholder="Ingrese su respuesta">
                                 </div>
-                                <div class="custom-control custom-checkbox">
+                                <div class="custom-control-inline">
+                                    <label>¿Alguien te ha referido?</label>
+                                    <div class="custom-control custom-radio custom-control-inline" style="margin-left:10px;">
+                                        <input type="radio" id="rbt_siref" name="customRadioInline1" class="custom-control-input">
+                                        <label style="margin-top:2px;" class="custom-control-label" for="rbt_siref">Sí</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="rbt_noref" name="customRadioInline1" class="custom-control-input">
+                                        <label style="margin-top:2px;" class="custom-control-label" for="rbt_noref">No</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control" id="email_refe" placeholder="Ingrese correo del que lo refirió" onblur="validaremailref()" disabled>
+                                </div>
+                                <div class="custom-control custom-checkbox" style="margin-top:5px;">
                                     <input type="checkbox" class="custom-control-input" id="chk_terminos">
                                     <label class="custom-control-label" for="chk_terminos">Acepto los <a href="../Inicio/TerminosCondiciones" target="_blank">Términos y Condiciones</a></label>
                                 </div>
@@ -247,7 +241,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="genric-btn primary-border" data-dismiss="modal">Cerrar</button>
+                    <button onclick="cerrarRegistro(this)" type="button" class="genric-btn primary-border" data-dismiss="modal">Cerrar</button>
                     <button id="registrarCandidatosbtn" type="button" class="genric-btn primary" onclick="Registrar_Onclick()">Guardar</button>
                 </div>
             </div>
@@ -255,12 +249,12 @@
     </div>
 
     <!-- Modal Login -->
-    <div class="modal fade" id="login_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="login_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLongTitle">Ingresa a tu cuenta</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button onclick="cerrar_login(this)" type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -271,7 +265,7 @@
                             <form>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Usuario</label>
-                                    <input type="email" class="form-control" id="login_usuario" aria-describedby="emailHelp" placeholder="Ingrese su usuario">
+                                    <input type="email" class="form-control" id="login_usuario" aria-describedby="emailHelp" placeholder="Ingrese su usuario" onblur="ValidarUsuarioLogin()">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Contraseña</label>
@@ -285,15 +279,15 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="genric-btn primary-border" data-dismiss="modal">Cancelar</button>
+                    <button onclick="cerrar_login(this)" type="button" class="genric-btn primary-border" data-dismiss="modal">Cancelar</button>
                     <button type="button" class="genric-btn primary" onclick="Login_Onclick()">Ingresar</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal Login -->
-    <div class="modal fade" id="RecuperaPass_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <!-- Modal Recuperar Pass -->
+    <div class="modal fade" id="RecuperaPass_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"  data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -309,7 +303,7 @@
                             <form>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Ingrese su correo</label>
-                                    <input type="email" class="form-control" id="correo_recu" placeholder="Ingrese su correo" onblur="ValidarCorreoRecu()">
+                                    <input type="email" class="form-control" id="correo_recu" placeholder="Ingrese su correo" onblur="validarEmail(this)">
                                 </div>
                                 <div class="form-group">
                                     <label>Seleccione una pregunta secreta</label>
@@ -414,6 +408,8 @@
     <script src="~/Scripts/Layout/main.js"></script>
     <script src="~/Scripts/Modulo/General.js"></script>
     <script src="~/Scripts/Layout/wow.min.js"></script>
+    <script src="~/Scripts/jquery.table2excel.min.js"></script>
+    <script src="~/Scripts/icons.js"></script>
     <script>
         wow = new WOW(
             {

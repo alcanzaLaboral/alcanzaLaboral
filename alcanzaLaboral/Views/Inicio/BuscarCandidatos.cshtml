@@ -3,7 +3,9 @@
     ViewBag.Title = "BuscarCandidatos";
 }
 
+<link href="~/Content/style5.css" rel="stylesheet" />
 
+@*<div style="height:150px;"></div>*@
 
 <!-- start banner Area -->
 <section class="relative about-banner">
@@ -21,173 +23,209 @@
 </section>
 <!-- End banner Area -->
 <!-- Start contact-page Area -->
-<section class="section-gap">
-    <div class="container-fluid">
-        <div class="alert alert-warning" role="alert">
-            <div class="row">
-                <form class="form-group row">
-                    <div class="form-group" style="margin: 0px 10px 0px 20px;">
-                        <label>Seleccionar una categoría:</label>
-                        <select style="width: 12rem;" class="form-control form-control-sm" id="combo_cate" name="combo_cate">
-                            @*<option value="">Practicante</option>*@
-                        </select>
+<section class="section-gap" style="margin-top:-3%  ;">
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 style="color:#fff;">Buscar Candidatos</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+
+                <form style="width: 90%;margin: auto;">
+                    <div class="form-group">
+
+                        <div class="custom-control custom-checkbox" style="margin-bottom: 10px">
+                            <input type="checkbox" class="custom-control-input" id="chk_cate">
+                            <label class="custom-control-label" for="chk_cate">Seleccionar una categoría:</label>
+                        </div>
+                        <select style="width: 12rem;" class="form-control form-control-sm" id="combo_cate" name="combo_cate" disabled></select>
                     </div>
-                    <div class="form-group" style="margin: 0px 10px 0px 20px;">
+                    <div class="form-group">
                         <label>Seleccionar sub-categoría:</label>
-                        <select style="width: 12rem;" class="form-control form-control-sm" id="combo_subcate">
-                            @*<option value="">Practicante</option>*@
-                        </select>
+                        <select style="width: 12rem;" class="form-control form-control-sm" id="combo_subcate" disabled></select>
                     </div>
-                    @*<div class="form-group" style="margin: 0px 10px 0px 20px;">
-                            <label>Tipo:</label>
-                            <select style="width: 12rem;" class="form-control form-control-sm" id="tipo">
-                                <option value="1">Practicante</option>
-                                <option value="2">Empleado</option>
-                                <option value="3">Ambos</option>
-                            </select>
-                        </div>*@
-                    <div class="form-group" style="margin: 0px 10px 0px 20px;">
-                        <label>Nacionalidad:</label>
-                        <select style="width: 12rem;" class="form-control form-control-sm" id="combo_nacionalidad">
-                            @*<option value="">Venezuela</option>*@
-                        </select>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox" style="margin-bottom: 10px">
+                            <input type="checkbox" class="custom-control-input" id="chk_naci">
+                            <label class="custom-control-label" for="chk_naci">Nacionalidad:</label>
+                        </div>
+
+                        <select style="width: 12rem;" class="form-control form-control-sm" id="combo_nacionalidad" disabled></select>
                     </div>
-                    <div class="form-group" style="margin: 0px 10px 0px 20px;">
-                        <label>Sexo:</label>
-                        <select style="width: 12rem;" class="form-control form-control-sm" id="sexo">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox" style="margin-bottom: 10px">
+                            <input type="checkbox" class="custom-control-input" id="chk_sexo">
+                            <label class="custom-control-label" for="chk_sexo">Sexo:</label>
+                        </div>
+
+                        <select style="width: 12rem;" class="form-control form-control-sm" id="sexo" disabled>
                             <option value="1">Masculino</option>
                             <option value="2">Femenino</option>
                             <option value="0">Ambos</option>
                         </select>
                     </div>
-                    <div class="form-group" style="margin: 0px 10px 0px 20px;">
-                        <label>Tipo de Candidato:</label>
-                        <select style="width: 12rem;" class="form-control form-control-sm" id="TipoCandidato_sp">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox" style="margin-bottom: 10px">
+                            <input type="checkbox" class="custom-control-input" id="chk_tipocandi">
+                            <label class="custom-control-label" for="chk_tipocandi">Tipo de Candidato:</label>
+                        </div>
+                        <select style="width: 12rem;" class="form-control form-control-sm" id="TipoCandidato_sp" disabled>
                             <option value="1">Profesional</option>
-                            <option value="2">Practicante</option>                            
+                            <option value="2">Practicante</option>
                         </select>
                     </div>
-                    <div class="form-group" style="margin: 0px 10px 0px 20px;">
-                        <label>Discapacidad:</label>
-                        <select style="width: 12rem;" class="form-control form-control-sm" id="discapacidad_sp">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox" style="margin-bottom: 10px">
+                            <input type="checkbox" class="custom-control-input" id="chk_discapa">
+                            <label class="custom-control-label" for="chk_discapa">Discapacidad:</label>
+                        </div>
+                        <select style="width: 12rem;" class="form-control form-control-sm" id="discapacidad_sp" disabled>
                             <option value="">No Filtrar</option>
                             <option value="0">No</option>
-                            <option value="1">Sí</option>                            
+                            <option value="1">Sí</option>
                         </select>
-                    </div>
-                    <div class="form-group" style="margin: 1.45rem 10px 0px 20px;">                        
-                        <input type="button" value="Buscar" class="genric-btn primary" style="font-size: 0.8rem; width: 10rem;" onclick="buscarCandidatos()" />
                     </div>
 
                 </form>
 
+                
 
+            </ul>
+           <ul class="list-unstyled CTAs">
+                
+                <li>
+                    @*<input type="button" value="Buscar" class="genric-btn primary" style="font-size: 0.8rem; width: 10rem;" onclick="buscarCandidatos()" />*@
+                    <a class="article" style="cursor:pointer;" onclick="buscarCandidatos()">Buscar</a>
+                </li>
+            </ul>
+
+
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+
+            <button type="button" id="sidebarCollapse" class="navbar-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <div class="container-fluid">
+
+                <div>
+
+                    <input class="btn btn-sm btn-warning" style="float: right; margin-left: 1px; color:#fff;" type="button" value=">">
+                    <select id="Pagina" style="float: right;width: 3.8rem;" class="form-control form-control-sm">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                    <input class="btn btn-sm btn-warning" style="float: right; margin-right: 1px; color:#fff;" type="button" value="<">
+                    <span style="float: right;margin-top: 0.3rem;">Página :&nbsp;&nbsp;</span>
+                </div>
+                <br>
+                <br>
+                <div style="width: 100%; overflow: auto;">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr class="table-register">
+                                <th scope="col" style="width: 12.5%; text-align: center;">Nombres</th>
+                                <th scope="col" style="width: 12.5%; text-align: center;">Profesión</th>
+                                <th scope="col" style="width: 12.5%; text-align: center;">Especialidad</th>
+                                <th scope="col" style="width: 12.5%; text-align: center;">Nacionalidad</th>
+                                <th scope="col" style="width: 12.5%; text-align: center;">Sexo</th>
+                                <th scope="col" style="width: 12.5%; text-align: center;">Edad</th>
+                                @*<th scope="col" style="width: 12.5%; text-align: center;">Tipo Solicitante</th>*@
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="BodyCandidatos">
+                            @*<tr>
+                                    <td style="text-align: center;" id="nombre">Cristopher Junior Torres Martinez</td>
+                                    <td style="text-align: center;" id="profesion">Ingeniero de Sistemas</td>
+                                    <td style="text-align: center;" id="especialidad">Analista en Sistemas</td>
+                                    <td style="text-align: center;" id="nacionalidad">Perú</td>
+                                    <td style="text-align: center;" id="sexo">Masculino</td>
+                                    <td style="text-align: center;" id="edad">25</td>
+                                    <td style="text-align: center;" id="tipo">Empleado</td>
+                                    <td style="text-align: center;"><a href="#"><span class="badge badge-categoria">Ver C.V</span></a></td>
+                                </tr>*@
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+                
 
             </div>
 
 
         </div>
+    </div>
 
-        <div class="container-fluid">
-
-            <div>
-
-                <input class="btn btn-sm btn-warning" style="float: right; margin-left: 1px; color:#fff;" type="button" value=">">
-                <select id="Pagina" style="float: right;width: 3.8rem;" class="form-control form-control-sm">
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                </select>
-                <input class="btn btn-sm btn-warning" style="float: right; margin-right: 1px; color:#fff;" type="button" value="<">
-                <span style="float: right;margin-top: 0.3rem;">Página :&nbsp;&nbsp;</span>
-            </div>
-            <br>
-                <br>
-            <div style="width: 100%; overflow: auto;">
-                <table class="table table-sm">
-                    <thead>
-                        <tr class="table-register">
-                            <th scope="col" style="width: 12.5%; text-align: center;">Nombres</th>
-                            <th scope="col" style="width: 12.5%; text-align: center;">Profesión</th>
-                            <th scope="col" style="width: 12.5%; text-align: center;">Especialidad</th>
-                            <th scope="col" style="width: 12.5%; text-align: center;">Nacionalidad</th>
-                            <th scope="col" style="width: 12.5%; text-align: center;">Sexo</th>
-                            <th scope="col" style="width: 12.5%; text-align: center;">Edad</th>
-                            @*<th scope="col" style="width: 12.5%; text-align: center;">Tipo Solicitante</th>*@
-                            <th style="text-align: center;"></th>
-                            <th style="text-align: center;"></th>
-                        </tr>
-                    </thead>
-                    <tbody id="BodyCandidatos">
-                        @*<tr>
-                                <td style="text-align: center;" id="nombre">Cristopher Junior Torres Martinez</td>
-                                <td style="text-align: center;" id="profesion">Ingeniero de Sistemas</td>
-                                <td style="text-align: center;" id="especialidad">Analista en Sistemas</td>
-                                <td style="text-align: center;" id="nacionalidad">Perú</td>
-                                <td style="text-align: center;" id="sexo">Masculino</td>
-                                <td style="text-align: center;" id="edad">25</td>
-                                <td style="text-align: center;" id="tipo">Empleado</td>
-                                <td style="text-align: center;"><a href="#"><span class="badge badge-categoria">Ver C.V</span></a></td>
-                            </tr>*@
-
-                    </tbody>
-                </table>
-            </div>
-
-
-            <!-- Modal Login -->
-            <div class="modal fade" id="contac_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Contactar Candidato</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-md-1"></div>
-                                <div class="col-md-10">
-                                    <form>
-                                        <div class="form-group">
-                                            <label>Ingrese Nombre de Persona que desea contactar al candidato(a):</label>
-                                            <input type="text" class="form-control" id="nom_contacto">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Ingrese su email:</label>
-                                            <input type="text" class="form-control" id="email_contacto">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Teléfono de Contacto:</label>
-                                            <input type="text" class="form-control" id="fono_contacto">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Descripción del Puesto: (40 Caracteres)</label>
-                                            <textarea class="form-control" id="desc_contacto" rows="2" maxlength="40"></textarea>
-                                        </div>
-                                        <label id="nombredestinatario" style="display:none;"></label>
-                                        <label id="correodestinatario" style="display:none;"></label>
-
-                                    </form>
+    <!-- Modal Login -->
+    <div class="modal fade" id="contac_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Contactar Candidato</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <form>
+                                <div class="form-group">
+                                    <label>Ingrese Nombre de Persona que desea contactar al candidato(a):</label>
+                                    <input type="text" class="form-control" id="nom_contacto">
                                 </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button id="cancelarContactar" type="button" class="genric-btn primary-border" data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="genric-btn primary" onclick="Contactar_Onclick()">Enviar</button>
+                                <div class="form-group">
+                                    <label>Ingrese su email:</label>
+                                    <input type="text" class="form-control" id="email_contacto">
+                                </div>
+                                <div class="form-group">
+                                    <label>Teléfono de Contacto:</label>
+                                    <input type="text" class="form-control" id="fono_contacto">
+                                </div>
+                                <div class="form-group">
+                                    <label>Descripción del Puesto: (40 Caracteres)</label>
+                                    <textarea class="form-control" id="desc_contacto" rows="2" maxlength="40"></textarea>
+                                </div>
+                                <label id="nombredestinatario" style="display:none;"></label>
+                                <label id="correodestinatario" style="display:none;"></label>
+
+                            </form>
                         </div>
                     </div>
                 </div>
+                <div class="modal-footer">
+                    <button id="cancelarContactar" type="button" class="genric-btn primary-border" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="genric-btn primary" onclick="Contactar_Onclick()">Enviar</button>
+                </div>
             </div>
-
         </div>
-
     </div>
-
 
 </section>
 
 <script src="~/Scripts/Modulo/BuscarCandidato.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+</script>
 
 

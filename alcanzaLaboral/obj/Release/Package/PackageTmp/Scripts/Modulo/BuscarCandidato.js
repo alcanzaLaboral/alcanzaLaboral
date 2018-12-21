@@ -12,8 +12,21 @@ window.onload = function () {
 
     if (idusuarioPost > 0) {
         $("#miPerfil_li").removeClass("Ocultar");
+        $("#siden_acceder").addClass("Ocultar");
+        $("#siden_salir").removeClass("Ocultar");
+        $("#socialBar_id").addClass("Ocultar");
+
     } else {
         $("#miPerfil_li").addClass("Ocultar");
+        $("#siden_salir").addClass("Ocultar");
+        $("#siden_acceder").removeClass("Ocultar");
+        $("#socialBar_id").removeClass("Ocultar");
+    }
+
+    if (adminPost == 1) {
+        $("#admin_li").removeClass("Ocultar");
+    } else {
+        $("#admin_li").addClass("Ocultar");
     }
 
     if (adminPost == 1) {
@@ -25,15 +38,59 @@ window.onload = function () {
     Spinner_ListarCategoria();
     Spinner_ListarSubCategoria(1);
     Spinner_ListarPaises();
-    
-
 
     $("select[name=combo_cate]").change(function () {
         idcategoria = $("#combo_cate").val();
         Spinner_ListarSubCategoria(idcategoria);
+    });
 
 
-    });    
+    $("#chk_cate").click(function () {
+        if (this.checked) {
+            $("#combo_cate").prop("disabled", false);
+            $("#combo_subcate").prop("disabled", false);
+        }
+        else {
+            $("#combo_cate").prop("disabled", true);
+            $("#combo_subcate").prop("disabled", true);
+        }
+    });
+
+    $("#chk_naci").click(function () {
+        if (this.checked) {
+            $("#combo_nacionalidad").prop("disabled", false);
+        }
+        else {
+            $("#combo_nacionalidad").prop("disabled", true);
+        }
+    });
+
+    $("#chk_sexo").click(function () {
+        if (this.checked) {
+            $("#sexo").prop("disabled", false);
+        }
+        else {
+            $("#sexo").prop("disabled", true);
+        }
+    });
+
+    $("#chk_tipocandi").click(function () {
+        if (this.checked) {
+            $("#TipoCandidato_sp").prop("disabled", false);
+        }
+        else {
+            $("#TipoCandidato_sp").prop("disabled", true);
+        }
+    });
+
+    $("#chk_discapa").click(function () {
+        if (this.checked) {
+            $("#discapacidad_sp").prop("disabled", false);
+        }
+        else {
+            $("#discapacidad_sp").prop("disabled", true);
+        }
+    });
 
 
 }
@@ -85,8 +142,6 @@ function Spinner_ListarSubCategoria(idcategoria) {
         error: OnError
 
     });
-
-
 }
 
 function llenarSpinner_ListarSubCategoria(data) {
@@ -96,7 +151,6 @@ function llenarSpinner_ListarSubCategoria(data) {
     for (i = 0; i < data.length; i++) {
         selectAgregar.append("<option value='" + data[i].idsubcategoria + "'>" + data[i].nomsubcategoria + "</option>");
     }
-
 }
 
 
@@ -162,8 +216,41 @@ function ListarGrilla() {
 
 function ListarBody(data) {
 
+    var pagina = $("#Pagina").val();
+    var select = $("#Pagina");
+    var regporpag = "10";
+    var TotalRegistros = "1";
+    var i = 1;
+
+    select.empty();
+
+    if (data.length != null) {
+
+        if (data.length > 0) {
+            if (parseInt(data[0].TotalRegistros) > parseInt(regporpag)) {
+
+                for (i = 1; i <= Math.ceil(parseInt(data[0].TotalRegistros) / parseInt(regporpag)) ; i++) {
+                    select.append("<option value = " + i + ">" + i + "</option>");
+                }
+            }
+            else {
+                select.append("<option value = '1'> 1</option>");
+            }
+        }
+        else {
+            select.append("<option value = '1'> 1</option>");
+        }
+    }
+    else {
+        select.append("<option value = '1'> 1</option>");
+    }
+
+    $("#Pagina").val(pagina);
+
     var tbody = $("#BodyCandidatos");
     tbody.empty();
+
+    if (data.length > 0) {
 
     for (i = 0; i < data.length; i++) {
 
@@ -182,6 +269,15 @@ function ListarBody(data) {
             "</tr>");
     }
 
+    } else {
+        select.empty();
+        select.append("<option value = '1'> 1</option>");
+
+        tbody.append(
+                        "<td colspan='8'>" +
+                        "No hay registro(s) selecionado(s) por los criterios de búsqueda" +
+                        "</td>");   
+    }
 }
 
 
@@ -192,7 +288,9 @@ function contactar(emailusuario, nombre) {
 
 function vercv(varriable) {
     sessionStorage.setItem("idcandidato", varriable);
-    window.open('../Inicio/PerfilProfesional', '_blank');
+    sessionStorage.setItem('peticionver', 1);
+    window.location = "../Inicio/PerfilProfesional";
+    //window.open('../Inicio/PerfilProfesional', '_blank');
 }
 
 function Contactar_Onclick() {
@@ -230,16 +328,22 @@ function ContactarSuccess() {
 }
 
 function buscarCandidatos() {
+
+    $('#loading_wrap').removeClass('Ocultar')   
+
     var Profesion = $("#combo_cate").val();
     var Subprofesion = $("#combo_subcate").val();
     var Nacionalidad = $("#combo_nacionalidad").val();
     var Sexo = $("#sexo").val();
     var TipoCandidato_sp = $("#TipoCandidato_sp").val();
+    var flag_discap = $("#discapacidad_sp").val();
+    var NroDePagina = 1;
+    var RegPorPag = 10;
 
     $.ajax({
         type: "POST",
         url: "../Services/ListarBuscarCandidatos",
-        data: "{ Profesion:'" + parseInt(Profesion) + "', Subprofesion:'" + parseInt(Subprofesion) + "', Nacionalidad:'" + parseInt(Nacionalidad) + "', Sexo:'" + parseInt(Sexo) + "', idtipopostulante:'" + parseInt( TipoCandidato_sp ) + "'}",
+        data: "{ Profesion:'" + parseInt(Profesion) + "', Subprofesion:'" + parseInt(Subprofesion) + "', Nacionalidad:'" + parseInt(Nacionalidad) + "', Sexo:'" + parseInt(Sexo) + "', idtipopostulante:'" + parseInt(TipoCandidato_sp) + "', flag_discap:'" + flag_discap + "', NroDePagina:'" + parseInt(NroDePagina) + "', RegPorPag:'" + parseInt(RegPorPag) + "'}",
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         success: ListarBody,
@@ -248,8 +352,15 @@ function buscarCandidatos() {
         },
         error: OnError
 
-    });
+    }).done(function (output) {
 
+        if (output) {
+
+            //$('#loading_wrap').css('display', 'none');
+            $('#loading_wrap').addClass('Ocultar')
+        }
+
+    });;
     
 }
 
@@ -314,8 +425,10 @@ function EditarPerfil() {
 }
 
 function PerfilProfesional() {
-    sessionStorage.setItem("idusuario", idusuarioPost);
-    window.open('../Inicio/PerfilProfesional', '_blank');
+    sessionStorage.setItem("idcandidato", idusuarioPost);
+    sessionStorage.setItem('peticionver', 2);
+    window.location = "../Inicio/PerfilProfesional";
+    //window.open('../Inicio/PerfilProfesional', '_blank');
 }
 
 function ComoRegistrarse() {
@@ -340,25 +453,31 @@ function TerminosCondiciones() {
 
 function Salir() {
     sessionStorage.setItem("idusuario", null);
+    sessionStorage.setItem("administrador", null);
     window.location = "../Inicio/Inicio";
 }
 
 function RCandidatosPeridoCategoria() {
-    sessionStorage.setItem("idusuario", null);
+    sessionStorage.setItem("idusuario", idusuarioPost);
     window.location = "../Inicio/RCandidatosPeridoCategoria";
 }
 
 function RCantidadCandidatosPeridoTiempo() {
-    sessionStorage.setItem("idusuario", null);
+    sessionStorage.setItem("idusuario", idusuarioPost);
     window.location = "../Inicio/RCantidadCandidatosPeridoTiempo";
 }
 
 function RMontoFacturadoPeriodoTiempo() {
-    sessionStorage.setItem("idusuario", null);
+    sessionStorage.setItem("idusuario", idusuarioPost);
     window.location = "../Inicio/RPagosPeridoTiempo";
 }
 
 function RCuentas() {
-    sessionStorage.setItem("idusuario", null);
+    sessionStorage.setItem("idusuario", idusuarioPost);
     window.location = "../Inicio/RCuentas";
+}
+
+function Representante() {
+    sessionStorage.setItem("idusuario", idusuarioPost);
+    window.location = "../Inicio/Representante";
 }
