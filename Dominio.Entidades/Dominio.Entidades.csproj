@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CantidadEntity.cs" />
+    <Compile Include="CarritoDetalle.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="DetalleUsuarioEntity.cs" />
     <Compile Include="DIdiomaEntity.cs" />

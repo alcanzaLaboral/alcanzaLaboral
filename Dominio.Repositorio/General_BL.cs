@@ -83,9 +83,7 @@ namespace Dominio.Repositorio
             int idtipopostulante,
             int tipo_doc,
             string nro_doc,
-            string emailusuario,
-            int flag_discap,
-            string desc_discap
+            string emailusuario
             )
         {
             return dal.ActualizarUsuario_DAL(
@@ -105,9 +103,7 @@ namespace Dominio.Repositorio
              idtipopostulante,
              tipo_doc,
              nro_doc,
-             emailusuario,
-             flag_discap,
-             desc_discap
+             emailusuario
 
                 );
         }
@@ -303,9 +299,9 @@ namespace Dominio.Repositorio
             return dal.ListarCandidatos_DAL(Profesion, Subprofesion, Tipo, Nacionalidad, Sexo);
         }
 
-        public List<LCandidatos> ListarBuscarCandidatos_BL(int Profesion, int Subprofesion, int Nacionalidad, int Sexo, int idtipopostulante, string flag_discap)
+        public List<LCandidatos> ListarBuscarCandidatos_BL(int Profesion, int Subprofesion, int Nacionalidad, int Sexo, int idtipopostulante)
         {
-            return dal.ListarBuscarCandidatos_DAL(Profesion, Subprofesion, Nacionalidad, Sexo, idtipopostulante, flag_discap);
+            return dal.ListarBuscarCandidatos_DAL(Profesion, Subprofesion, Nacionalidad, Sexo, idtipopostulante);
         }
         public List<LCandidatos> RCandidatosPeridoCategoria(int Profesion, int Subprofesion, string dfechaIni, string dfechaFin)
         {
