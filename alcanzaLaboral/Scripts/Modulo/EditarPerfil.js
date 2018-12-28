@@ -53,7 +53,7 @@ window.onload = function () {
     ListarMaquinaria();
     ListarIdioma();
     ListarInstitucion();
-    mostrarFotoPerfil();
+    //mostrarFotoPerfil();
 
     $("select[name=sp_categoria]").change(function () {
         idcategoria = $("#sp_categoria").val();
@@ -246,7 +246,9 @@ function detalleUsuarioSucces(data) {
         finsubscrip = data[0].finsubscrip;
 
         flag_discap = data[0].flag_discap;
-        desc_discap = data[0].desc_discap;       
+        desc_discap = data[0].desc_discap;
+
+        usuario_foto = data[0].usuario_foto;
 
         $("#nombres").val(Nombres);
         $("#apepaterno").val(ApePaterno);
@@ -298,6 +300,16 @@ function detalleUsuarioSucces(data) {
         document.getElementById('inisubs_id').innerHTML = fechacreacion;
         document.getElementById('finsubs_id').innerHTML = finsubscrip;
        
+
+        var tbodyFoto = $("#mostrarfoto_perfil");
+        tbodyFoto.empty();
+        //tbodyFoto.append("<img src='../documents/" + usuario_foto + "' style='width: 200px;'>");
+
+        tbodyFoto.append("<tr>" +
+               "<td style='text-align:center'><img src='../documents/" + usuario_foto + "' style='width: 200px;'></td>" +
+               "</tr>");
+
+
         
     
 }
@@ -419,8 +431,12 @@ function ResponseUpdateSucces(data) {
         respuesta = data[i].respuesta;
     }
 
-    if (respuesta == "true") {
+    if (respuesta.length > 1) {
         alert_succes("Se registró satisfactoriamente");
+
+        $("#sp_TipoDoc").prop("disabled", true);
+        $("#nrodocident").prop("disabled", true);
+        $("#correoelec").prop("disabled", true);
 
         $("#nombres").prop("disabled", true);
         $("#apepaterno").prop("disabled", true);
@@ -434,6 +450,13 @@ function ResponseUpdateSucces(data) {
         $("#celular1").prop("disabled", true);
         $("#celular2").prop("disabled", true);
         $("#tadiscapacidad").prop("disabled", true);
+
+        var tbodyFoto = $("#mostrarfoto_perfil");
+        tbodyFoto.empty();
+        //tbodyFoto.append("<img src='../documents/" + respuesta + "' style='width: 200px;'>");
+        tbodyFoto.append("<tr>" +
+              "<td style='text-align:center'><img src='../documents/" + usuario_foto + "' style='width: 200px;'></td>" +
+              "</tr>");
 
         
 
@@ -1511,32 +1534,59 @@ function EliminarInstitucion(idacademico) {
 }
 
 function GuardarFoto() {
-    archivo = $('#myfile').val();
+    archivo = $('#myfile').valmostrarFotoPerfil
 
-    if (archivo.length < 1) {
-        alert_warning('Por favor seleccione un archivo');
-    } else {
+    //if (archivo.length < 1) {
+    //    alert_warning('Por favor seleccione un archivo');
+    //} else {
         var formData = new FormData();
         var file = $('#myfile')[0];
         var nombreImagen = idusuarioPost + ".jpg";
         formData.append('file', file.files[0], nombreImagen);
 
         $.ajax({
-            url: '../api/fileUpload',
-            type: 'POST',
-            data: formData,
-            contentType: false,
-            processData: false,
-            success: function (d) {
-                alert_succes('La imagen fue guardada satisfactoriamente');                
+            type: "POST",
+            url: "../Services/EditarFoto",
+            data: "{idusuario:'" + parseInt(idusuario)
+                + "', usuario_foto:'" + nombreImagen + "'}",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                if (data[0].respuesta == 'true') {
+
+                    $.ajax({
+                        url: '../api/fileUpload',
+                        type: 'POST',
+                        data: formData,
+                        contentType: false,
+                        processData: false,
+                        success: function (d) {
+                            alert_succes('La imagen fue guardada satisfactoriamente');
+                        },
+                        error: function () {
+                            alert_error('Ocurrio un problema al guardar la imagen');
+                        }
+                    });
+
+                } else {
+                    alert_error('Ocurrio un problema al guardar la imagen');
+                }
             },
-            error: function () {
-                alert_error('Ocurrio un problema al guardar la imagen');
-            }
+            failure: function (response) {
+                alert(response.d);
+            },
+            error: OnError
         });
-    }
+
+
+
+        
+    //}
 }
 
+function pagaractivarcuenta() {
+    $('#btn_pagaractivar').click()
+}
 
 function mostrarFotoPerfil() {
     //mostrarfoto_perfil
@@ -1601,7 +1651,7 @@ function EditarPerfil() {
 }
 
 function PerfilProfesional() {
-    alert(idusuarioPost);
+    //alert(idusuarioPost);
     sessionStorage.setItem("idcandidato", idusuarioPost);
     sessionStorage.setItem('peticionver', 2);
     window.location = "../Inicio/PerfilProfesional";

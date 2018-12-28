@@ -78,6 +78,10 @@ namespace alcanzaLaboral.Controllers
         {
             return View();
         }
+        public ActionResult DepositoTransferencia()
+        {
+            return View();
+        }
 
         //Reportes
         public ActionResult RCandidatosPeridoCategoria()

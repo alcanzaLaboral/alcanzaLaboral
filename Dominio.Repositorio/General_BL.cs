@@ -327,6 +327,10 @@ namespace Dominio.Repositorio
         {
             return dal.validaremailref_DAL(emailusuario);
         }
+        public List<RespuestaPostEntity> EditarFoto(int idusuario, string usuario_foto)
+        {
+            return dal.EditarFoto(idusuario, usuario_foto);
+        }
 
     }
 }

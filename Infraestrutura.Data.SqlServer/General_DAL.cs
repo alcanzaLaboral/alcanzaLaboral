@@ -300,6 +300,8 @@ namespace Infraestrutura.Data.SqlServer
                 clase.flag_discap = int.Parse(dr["flag_discap"].ToString());
                 clase.desc_discap = dr["desc_discap"].ToString();
 
+                clase.usuario_foto = dr["usuario_foto"].ToString();
+
                 listado.Add(clase);
             }
 
@@ -1362,6 +1364,35 @@ namespace Infraestrutura.Data.SqlServer
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@emailusuario", emailusuario);
+
+            cn.getcn.Open();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                RespuestaPostEntity clase = new RespuestaPostEntity();
+                clase.respuesta = dr["respuesta"].ToString();
+
+                listado.Add(clase);
+            }
+
+            dr.Close();
+            cmd.Dispose();
+            cn.getcn.Close();
+
+            return listado;
+        }
+
+        public List<RespuestaPostEntity> EditarFoto(int idusuario, string usuario_foto)
+        {
+            List<RespuestaPostEntity> listado = new List<RespuestaPostEntity>();
+
+            SqlCommand cmd = new SqlCommand("sp_usuario_foto_editar", cn.getcn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@idusuario", idusuario);
+            cmd.Parameters.AddWithValue("@usuario_foto", usuario_foto);
 
             cn.getcn.Open();
 

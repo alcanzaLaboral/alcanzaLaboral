@@ -15,7 +15,6 @@
                 <p class="text-white link-nav"><a href="index.html">Inicio </a> &nbsp; <i class="fa fa-arrow-right"></i> &nbsp; <a href="insurance.html"> Editar Perfil</a></p>
             </div>
         </div>
-        @*<a href="~/Views/Inicio/EditarPerfil.cshtml">~/Views/Inicio/EditarPerfil.cshtml</a>*@
     </div>
 </section>
 <!-- End banner Area -->
@@ -161,8 +160,9 @@
                             <label class="custom-control-label" for="customRadio2">Practicante</label>
                         </div>
 
+
                         <br />
-                        <div class="row">
+                        @*<div class="row">
                             <div class="col-md-8"></div>
                             <div class="col-md-2">
                                 <button type="submit" class="genric-btn primary-border" onclick="HabilitarCampos_Onclick()">Editar&nbsp;Sección</button>
@@ -170,8 +170,29 @@
                             <div class="col-md-2">
                                 <button type="submit" class="genric-btn primary" onclick="ActualizarUsuario_onclick()">Guardar&nbsp;Cambios</button>
                             </div>
+                        </div>*@
+                        @*<div class="row">
+                            <div class="col-md-7"></div>
+                            <div class="col-md-5">
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <button type="button" onclick="HabilitarCampos_Onclick()" class="genric-btn primary">Editar&nbsp;Sección</button>
+                                    <button type="button" onclick="ActualizarUsuario_onclick()" class="genric-btn primary">Guardar&nbsp;Cambios</button>
+                                    <button type="button" onclick="PerfilProfesional()" class="genric-btn primary">Ver&nbsp;Curriculum</button>
+                                </div>
+                            </div>                            
+                        </div>*@     
+                        <div class="bd-example">
+                            <div class="row text-right d-flex flex-row-reverse">
+                                <div class="col-lg-5 text-center">
+                                    <div onclick="HabilitarCampos_Onclick()" class="genric-btn primary col-xs-12 mb-2">Editar Sección</div>
+                                    <div onclick="ActualizarUsuario_onclick()" class="genric-btn primary col-xs-12 mb-2">Guardar Cambios</div>
+                                    <div onclick="PerfilProfesional()" class="genric-btn primary col-xs-12 mb-2">Ver Curriculum</div>
+                                </div>
+                                <div class="col-lg-7"></div>
 
-                        </div>
+                            </div>
+                        </div>                   
+                        <br />
                         <h5>Datos Perfil Profesional:</h5>
                         <br>
                         <div class="row">
@@ -232,7 +253,7 @@
                             </div>
                         </div>
                         <br>
-                        <div class="row">
+                        @*<div class="row">
                             <div class="col-md-8"></div>
                             <div class="col-md-2">
                                 <button type="submit" class="genric-btn primary-border" onclick="HabilitarResumen_onclick()">Editar&nbsp;Sección</button>
@@ -240,7 +261,52 @@
                             <div class="col-md-2">
                                 <button type="submit" class="genric-btn primary" onclick="ActualizarResumenUsuario_onclick()">Guardar&nbsp;Cambios</button>
                             </div>
+                        </div>*@
+                        @*<div class="row">
+                            <div class="col-md-7"></div>
+                            <div class="col-md-5">
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <button type="button" onclick="HabilitarResumen_onclick()" class="genric-btn primary">Editar&nbsp;Sección</button>
+                                    <button type="button" onclick="ActualizarResumenUsuario_onclick()" class="genric-btn primary">Guardar&nbsp;Cambios</button>
+                                    <button type="button" onclick="PerfilProfesional()" class="genric-btn primary">Ver&nbsp;Curriculum</button>
+                                </div>
+                            </div>
+                        </div>*@
+                        <div class="bd-example">
+                            <div class="row text-right d-flex flex-row-reverse">
+                                <div class="col-lg-5 text-center">
+                                    <div onclick="HabilitarResumen_onclick()" class="genric-btn primary col-xs-12 mb-2">Editar Sección</div>
+                                    <div onclick="ActualizarResumenUsuario_onclick()" class="genric-btn primary col-xs-12 mb-2">Guardar Cambios</div>
+                                    <div onclick="PerfilProfesional()" class="genric-btn primary col-xs-12 mb-2">Ver Curriculum</div>
+                                </div>
+                                <div class="col-lg-7"></div>
 
+                            </div>
+                        </div>
+                        <br />
+                        <h5>Agrega una foto a tu Perfil</h5>
+                        <br />
+                        <p>El formato permitido para la foto debe ser jpg*</p>
+                        <div class="row">
+                            <div class="col-md-6" style="text-align:center;">
+                                <table width="100%">
+                                    <thead></thead>
+                                    <tbody id="mostrarfoto_perfil"></tbody>
+                                </table>
+
+
+                            </div>
+                            <div class="col-md-6">
+                                <br /><br /><br />
+                                <form>
+                                    <div class="form-group">
+                                        <input type="file" id="myfile" class="form-control-file form-control-sm" />
+                                    </div>
+
+                                    &nbsp;&nbsp;<button onclick="GuardarFoto()" type="button" class="genric-btn primary">Guardar</button>
+                                </form>
+                            </div>
+                            
                         </div>
 
                         <!-- Modals -->
@@ -400,7 +466,7 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="row">
+                        @*<div class="row">
                             <div class="col-md-8"></div>
                             <div class="col-md-2">
                                 <button type="submit" onclick="HabilitarInfoAcademica_Onclick()" class="genric-btn primary-border">Editar&nbsp;Sección</button>
@@ -409,6 +475,27 @@
                                 <button type="submit" class="genric-btn primary" onclick="ActualizarInfoAcademico_onclick()">Guardar&nbsp;Cambios</button>
                             </div>
 
+                        </div>*@
+                        @*<div class="row">
+                            <div class="col-md-7"></div>
+                            <div class="col-md-5">
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <button type="button" onclick="HabilitarInfoAcademica_Onclick()" class="genric-btn primary">Editar&nbsp;Sección</button>
+                                    <button type="button" onclick="ActualizarInfoAcademico_onclick()" class="genric-btn primary">Guardar&nbsp;Cambios</button>
+                                    <button type="button" onclick="PerfilProfesional()" class="genric-btn primary">Ver&nbsp;Curriculum</button>
+                                </div>
+                            </div>
+                        </div>*@
+                        <div class="bd-example">
+                            <div class="row text-right d-flex flex-row-reverse">
+                                <div class="col-lg-5 text-center">
+                                    <div onclick="HabilitarInfoAcademica_Onclick()" class="genric-btn primary col-xs-12 mb-2">Editar Sección</div>
+                                    <div onclick="ActualizarInfoAcademico_onclick()" class="genric-btn primary col-xs-12 mb-2">Guardar Cambios</div>
+                                    <div onclick="PerfilProfesional()" class="genric-btn primary col-xs-12 mb-2">Ver Curriculum</div>
+                                </div>
+                                <div class="col-lg-7"></div>
+
+                            </div>
                         </div>
 
                         <!-- Modals -->
@@ -590,7 +677,7 @@
                                 <button type="submit" class="genric-btn primary-border" data-toggle="modal" data-target="#experiencialab_mod">Agregar&nbsp;Experiencia&nbsp;Laboral</button>
                             </div>
                         </div>
-                        <div class="row">
+                        @*<div class="row">
                             <div class="col-md-8"></div>
                             <div class="col-md-2">
                                 <button type="submit" class="genric-btn primary-border" onclick="HabilitarExperienciLaboral_Onclick()">Editar&nbsp;Sección</button>
@@ -599,6 +686,27 @@
                                 <button type="submit" class="genric-btn primary" onclick="ActualizarExpLaboral_onclick()">Guardar&nbsp;Cambios</button>
                             </div>
 
+                        </div>*@
+                        @*<div class="row">
+                            <div class="col-md-7"></div>
+                            <div class="col-md-5">
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <button type="button" onclick="HabilitarExperienciLaboral_Onclick()" class="genric-btn primary">Editar&nbsp;Sección</button>
+                                    <button type="button" onclick="ActualizarExpLaboral_onclick()" class="genric-btn primary">Guardar&nbsp;Cambios</button>
+                                    <button type="button" onclick="PerfilProfesional()" class="genric-btn primary">Ver&nbsp;Curriculum</button>
+                                </div>
+                            </div>
+                        </div>*@
+                        <div class="bd-example">
+                            <div class="row text-right d-flex flex-row-reverse">
+                                <div class="col-lg-5 text-center">
+                                    <div onclick="HabilitarExperienciLaboral_Onclick()" class="genric-btn primary col-xs-12 mb-2">Editar Sección</div>
+                                    <div onclick="ActualizarExpLaboral_onclick()" class="genric-btn primary col-xs-12 mb-2">Guardar Cambios</div>
+                                    <div onclick="PerfilProfesional()" class="genric-btn primary col-xs-12 mb-2">Ver Curriculum</div>
+                                </div>
+                                <div class="col-lg-7"></div>
+
+                            </div>
                         </div>
 
                         <!-- Modals -->
@@ -835,7 +943,7 @@
                         </div>
                         <!------------------------------->
                         <br>
-                        <div class="row">
+                        @*<div class="row">
                             <div class="col-md-8"></div>
                             <div class="col-md-2">
                                 <button type="submit" class="genric-btn primary-border" onclick="HabilitarInfoAdicional_Onclick()">Editar&nbsp;Sección</button>
@@ -844,6 +952,27 @@
                                 <button type="submit" class="genric-btn primary" onclick="ActualizarDisponibilidad_onclick()">Guardar&nbsp;Cambios</button>
                             </div>
 
+                        </div>*@
+                        @*<div class="row">
+                            <div class="col-md-7"></div>
+                            <div class="col-md-5">
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <button type="button" onclick="HabilitarInfoAdicional_Onclick()" class="genric-btn primary">Editar&nbsp;Sección</button>
+                                    <button type="button" onclick="ActualizarDisponibilidad_onclick()" class="genric-btn primary">Guardar&nbsp;Cambios</button>
+                                    <button type="button" onclick="PerfilProfesional()" class="genric-btn primary">Ver&nbsp;Curriculum</button>
+                                </div>
+                            </div>
+                        </div>*@
+                        <div class="bd-example">
+                            <div class="row text-right d-flex flex-row-reverse">
+                                <div class="col-lg-5 text-center">
+                                    <div onclick="HabilitarInfoAdicional_Onclick()" class="genric-btn primary col-xs-12 mb-2">Editar Sección</div>
+                                    <div onclick="ActualizarDisponibilidad_onclick()" class="genric-btn primary col-xs-12 mb-2">Guardar Cambios</div>
+                                    <div onclick="PerfilProfesional()" class="genric-btn primary col-xs-12 mb-2">Ver Curriculum</div>
+                                </div>
+                                <div class="col-lg-7"></div>
+
+                            </div>
                         </div>
 
                         <!-- Modals -->
@@ -1024,7 +1153,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            @*<div class="card">
                 <div class="card-header" id="headingFive">
                     <h5 class="mb-0">
                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -1049,9 +1178,15 @@
                                 </form>
                             </div>
                             <div class="col-md-6" style="text-align:center;">
-                                <div id="mostrarfoto_perfil">
+                                <table>
+                                    <thead></thead>
+                                    <tbody id="mostrarfoto_perfil">
 
-                                </div>
+                                    </tbody>
+
+
+                                </table>
+                                
 
                             </div>
                         </div>
@@ -1059,11 +1194,11 @@
 
                     </div>
                 </div>
-            </div>
+            </div>*@
             <div class="card">
                 <div class="card-header" id="headingSix">
                     <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        <button onclick="pagaractivarcuenta()" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                             Pagar y activar cuenta
                         </button>
                     </h5>
@@ -1099,6 +1234,93 @@
         </div>
     </div>
 </section>
+
+<button style="display:none" id="btn_pagaractivar" type="button" class="btn btn-primary" data-toggle="modal" data-target="#pagosmdl">
+    Pagar y activar cuenta
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="pagosmdl" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" style="color:#FFC107">Selecciona un medio de pago</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container row">
+                    <div class="col-md-6">
+                        <h2 style="text-align:center"><a href="#" data-toggle="modal" data-target="#datospagosmdl">Depósito o Transferencia Bancaria</a></h2>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 style="text-align:center"><a href="#">Pagos a través de nuestro portal web</a></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="display:none;">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------------------------------------------------------------------------------------------------------------->
+
+<div class="modal fade" id="datospagosmdl" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="display:none">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+                    
+                        <table class="table table-sm">
+                            <tbody>
+                                <tr>
+                                    <td>Banco:</td>
+                                    <td>SCOTIABANK</td>
+                                </tr>
+                                <tr>
+                                    <td>Número de Cuenta:</td>
+                                    <td>000-3401723</td>
+                                </tr>
+                                <tr>
+                                    <td>Código de Cuenta Interbancario:</td>
+                                    <td>009-204-000003401723-96</td>
+                                </tr>
+                                <tr>
+                                    <td>Tipo de Cuenta:</td>
+                                    <td>Cuenta Corriente / SOLES</td>
+                                </tr>
+                                <tr>
+                                    <td>Titular:</td>
+                                    <td>CDSP CONSULTORES Y ASOCIADOS E.I.R.L</td>
+                                </tr>
+                                <tr>
+                                    <td>RUC:</td>
+                                    <td>20600870689</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                    
+                    <div class="col-md-6"></div>
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Cancelar</button>
+                <a class="btn btn-sm btn-secondary"  href="@Url.Action("DepositoTransferencia", "Inicio")">Validar Pago</a>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- End insurence-one Area -->
 
 

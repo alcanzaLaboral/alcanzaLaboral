@@ -49,5 +49,7 @@ namespace Dominio.Entidades
         public string finsubscrip { get; set; }
         public int flag_discap { get; set; }
         public string desc_discap { get; set; }
+
+        public string usuario_foto { get; set; }
     }
 }

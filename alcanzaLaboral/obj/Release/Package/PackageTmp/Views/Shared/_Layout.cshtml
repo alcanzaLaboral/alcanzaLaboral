@@ -39,29 +39,53 @@
     <script type="text/javascript" src="~/Content/Layout/engine1/jquery.js"></script>
 
 </head>
-<body>
 
+<body>
     <div id='loading_wrap' class="Ocultar" style="position: fixed;left: 0px;top: 0px;width: 100%;height: 100%;z-index: 9999;background-color:rgba(128, 128, 128, 0.4);opacity: .8;">
-        <img src="~/img/loading.gif" style="width:50px; height:50px; top:50%; right:50%; position:absolute;" />
-    </div>
+            <img src="~/img/loading.gif" style="width:50px; height:50px; top:50%; right:50%; position:absolute;" />
+        </div>
+    
 
     <header id="header">
+        @*   <div class="header-top">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-sm-4 col-4 header-top-left">
+
+                        </div>
+                        <div class=" col-lg-4 col-sm-4 col-4 text-center">
+                            <button type="button" class="btn btn-warning" onclick="BuscarCandidatos()" href="#">¡ Buscar Candidatos Ahora !</button>
+                        </div>
+                        <div class="col-lg-4 col-sm-4 col-4 header-top-right">
+                            <div class="header-social">
+                                <button type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#registro_mod">Registrate</button>
+                                <button type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#login_mod">Ingresa&nbsp;a&nbsp;tu&nbsp;cuenta</button>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>*@
         <div class="container-fluid main-menu">
-            <div class="row align-items-center justify-content-between d-flex" style="margin-left: 10px;">
+            <div class="row align-items-center justify-content-between d-flex" style="
+                 margin-left 10px;
+                 ">
                 <div id="logo" class="col-lg-2">
                     @*<a href="Inicio.html"><img src="~/img/logo.png" alt="logo" title="" /></a>*@
-                    <a href="Inicio.html"><img class="slideInLeft animated" src="~/img/logofinal3.png" alt="logo" title="" /></a>
+                    <a href="Inicio.html"><img class="slideInLeft animated img-fluid" src="~/img/logofinal3.png" alt="logo" title="" /></a>
                 </div>
                 <nav id="nav-menu-container" class="col-lg-7">
                     <ul class="nav-menu" style="margin-left: 50px;">
-                        <li><a style="font-size:14px;" onclick="Inicio()" href="#">Inicio</a></li>
+                        <li><a onclick="Inicio()" href="#">Inicio</a></li>
                         <li class="menu-has-children">
-                            <a style="font-size:14px;" href="#">Qué es Alcanza Laboral</a>
+                            <a href="#">Qué es Alcanza Laboral</a>
                             <ul>
-                                <li><a style="font-size: 16px !important;" onclick="QuienesSomos()" href="#">Qué es Alcanza</a></li>
-                                <li><a style="font-size: 16px !important;" onclick="MisionYVision()" href="#">Misión y visión</a></li>
-                                <li><a style="font-size: 16px !important;" onclick="ConceptosBasicos()" href="#">Conceptos Básicos</a></li>
-                                <li><a style="font-size: 16px !important;" onclick="ConceptosBasicos()" href="#">Como Funciona</a></li>
+                                <li><a onclick="QuienesSomos()" href="#">Qué es Alcanza</a></li>
+                                <li><a onclick="MisionYVision()" href="#">Misión y visión</a></li>
+                                <li><a onclick="ConceptosBasicos()" href="#">Conceptos Básicos</a></li>
                                 @*<li><a style="font-size: 16px !important;" onclick="ComoRegistrarse()" href="#">Cómo Registrarse</a></li>
                                     <li><a style="font-size:14px;" onclick="alcanzaYOtrosPortales()" href="#">Alcanza y otros Portales</a></li>
                                                             <li><a style="font-size: 16px !important;" onclick="Beneficios()" href="#">Beneficios</a></li>
@@ -70,20 +94,22 @@
                             </ul>
                         </li>
                         <li class="menu-has-children">
-                            <a style="font-size:14px;" href="#">Proceso de Registro</a>
+                            <a href="#">Proceso de Registro</a>
                             <ul>
-                                <li><a style="font-size: 16px !important;" onclick="PorQueRegistrarse()" href="#">Por qué Registrarse</a></li>
-                                <li><a style="font-size: 16px !important;" onclick="ComoRegistrarse()" href="#">Cómo Registrarse</a></li>
+                                <li><a onclick="PorQueRegistrarse()" href="#">Por qué Registrarse</a></li>
+                                <li><a onclick="ComoRegistrarse()" href="#">Cómo Registrarse</a></li>
                                 @*
                                     <li><a style="font-size: 16px !important;" href="#" data-toggle="modal" data-target="#login_mod">Ingresa a tu cuenta</a></li>*@
-                                <li><a style="font-size: 16px !important;" onclick="Tarifas()" href="#">Tarifas</a></li>
-                                <li><a style="font-size:16px !important;" onclick="Beneficios()" href="#">Beneficios</a></li>
-                                <li><a style="font-size:16px !important;" onclick="Representante()" href="#">Qué es un Representante Comercial</a></li>
+                                <li><a onclick="Tarifas()" href="#">Tarifas</a></li>
+                                <li><a onclick="Beneficios()" href="#">Beneficios</a></li>
+                                <li><a onclick="Representante()" href="#">Qué es un Representante Comercial</a></li>
 
                             </ul>
                         </li>
+                        <li><a data-toggle="modal" data-target="#registro_mod" href="#">Registrate</a></li>
+                        <li><a data-toggle="modal" data-target="#login_mod" href="#">Iniciar Sesión</a></li>
                         <li class="menu-has-children" id="miPerfil_li">
-                            <a style="font-size:14px;" href="#">Mi Perfil</a>
+                            <a href="#">Mi Perfil</a>
                             <ul>
                                 <li><a style="font-size:14px;" onclick="EditarPerfil()" href="#">Editar Perfil</a></li>
                                 <li><a style="font-size:14px;" onclick="PerfilProfesional()" href="#">Ver Curriculum</a></li>
@@ -91,7 +117,7 @@
                             </ul>
                         </li>
                         <li class="move" id="admin_li">
-                            <a style="font-size:14px;" href="#">Administrador</a>
+                            <a href="#">Administrador</a>
                             <ul>
                                 <li><a style="font-size:14px;" onclick="RCandidatosPeridoCategoria()" href="#">Candidatos por periodo y categoría</a></li>
                                 <li><a style="font-size:14px;" onclick="RCantidadCandidatosPeridoTiempo()" href="#">Cantidad de candidatos por periodo de tiempo</a></li>
@@ -113,17 +139,13 @@
                     </ul>
                 </nav><!-- #nav-menu-container -->
 
-                <div class="col-lg-3 move">
+                <div class="col-lg-3 nav-buttons">
 
-                    <div class=" row">
+                    <div class="row">
+
                         <div class="col-lg-12 text-right">
                             <button type="button" class="btn btn-primary ocultarbtn" href="#" data-toggle="modal" data-target="#login_mod">Ingresa&nbsp;a&nbsp;tu&nbsp;cuenta</button>
-
-                            <button type="button" class="btn btn-primary reg ocultarbtn" href="#" data-toggle="modal" data-target="#registro_mod">
-                                Registrate
-                            </button>
-
-
+                            <button type="button" class="btn btn-primary reg ocultarbtn" href="#" data-toggle="modal" data-target="#registro_mod">Registrate</button>
                         </div>
                         <div class="col-lg-12 text-right">
                             <button style="" type="button" class="btn btn-warning" onclick="BuscarCandidatos()" href="#">Buscar Candidatos </button>
@@ -152,19 +174,20 @@
 
             </div>
         </div>
-        <div id="siden_salir" class="sidenav Ocultar">
-            <button id="fbtn_salir" onclick="Salir()" type="button" class="btn btn-primary salir"></button>
-        </div>
-        <div id="siden_acceder" class="sidenav">
-            <button id="this" type="button" class="btn btn-primary arrow"></button>
-        </div>
+        @*
+            <div id="siden_salir" class="sidenav Ocultar">
+                <button id="fbtn_salir" onclick="Salir()" type="button" class="btn btn-primary salir"></button>
+            </div>
+            <div id="siden_acceder" class="sidenav">
+                <button id="this" type="button" class="btn btn-primary arrow"></button>
+            </div>
 
-        <div id="sidenav" class="sidenav" style="top: 221px;right: 13px;width: 202px; display:none">
-            <button style="margin-left: 87px;padding-left: 8px;" type="button" class="btn btn-primary reg" href="#" data-toggle="modal" data-target="#registro_mod">
-                Registrate
-            </button>
-            <button style="padding-left: 8px; margin-left: 25px;" type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#login_mod">Ingresa&nbsp;a&nbsp;tu&nbsp;cuenta</button> 
-        </div>
+            <div id="sidenav" class="sidenav" style="top: 221px;right: 13px;width: 202px; display:none">
+                <button style="margin-left: 87px;padding-left: 8px;" type="button" class="btn btn-primary reg" href="#" data-toggle="modal" data-target="#registro_mod">
+                    Registrate
+                </button>
+                <button style="padding-left: 8px; margin-left: 25px;" type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#login_mod">Ingresa&nbsp;a&nbsp;tu&nbsp;cuenta</button>
+            </div>*@
 
     </header><!-- #header -->
     <!-- Modal Registro -->
@@ -335,7 +358,7 @@
 
 
     @RenderBody()
-    <div class="container-fluid mx-0 px-0">
+    <div id="footer" class="container-fluid mx-0 px-0">
         <div class="footer-grids">
             <div class="footer one">
                 <h3>Sobre Nosotros</h3>

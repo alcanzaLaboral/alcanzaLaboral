@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "DepositoTransferencia";
+}
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js" type="text/javascript"></script>
+<link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+<!-- start banner Area -->
+<section class="about-banner relative">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="about-content col-lg-12">
+                <h1 class="text-white">
+                    Alcanza Laboral
+                </h1>
+                <p class="text-white link-nav"><a href="index.html">Inicio </a> &nbsp; <i class="fa fa-arrow-right"></i> &nbsp; <a href="insurance.html"> Depósitos o Transacciones</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="insurence-one-area section-gap container">
+    <div style="width:60%;margin:auto;padding:20px;background-color:#EDEEF0;border-radius:10px;">
+        <form>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label col-form-label-sm">Tipo de pago:</label>
+                <div class="col-sm-8">
+                    <select class="form-control form-control-sm">
+                        <option value="1">Transferencia</option>
+                        <option value="2">Depósito</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label col-form-label-sm">Seleccione banco de destino:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label col-form-label-sm">Titular de cuenta origen:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label col-form-label-sm">Monto de pago:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label col-form-label-sm">Fecha de pago:</label>
+                <div class="col-sm-8">
+                    <input id="datepicker" width="276" class="form-control form-control-sm" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label col-form-label-sm">Adjuntar comprobante:</label>
+                <div class="col-sm-8">
+                    <div class="custom-file">
+                        <input type="file" class="form-control-file form-control-sm">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</section>
+
+<script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+</script>

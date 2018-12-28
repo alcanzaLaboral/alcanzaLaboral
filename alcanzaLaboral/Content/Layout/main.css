@@ -48,7 +48,7 @@ html, body {
 
 body {
     color: #777777;
-    font-family: "Poppins", sans-serif;
+    font-family: "Gidole", sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 1.625em;
@@ -115,7 +115,7 @@ a, a:focus, a:hover {
 
 h1, h2, h3,
 h4, h5, h6 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Gidole", sans-serif;
     color: #222222;
     line-height: 1.2em !important;
     margin-bottom: 0;
@@ -127,7 +127,7 @@ h4, h5, h6 {
 .h4, .h5, .h6 {
     margin-bottom: 0;
     margin-top: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Gidole", sans-serif;
     font-weight: 600;
     color: #222222;
 }
@@ -2015,7 +2015,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
     font-family: 'Madeleina Sans';
     line-height: 30px;
-    font-size: 23px;
+    font-size: 20px;
 }
 
 .header-top ul li {
@@ -2039,6 +2039,12 @@ p {
 }
 
 @font-face {
+    font-family: Gidole;
+    src: url(gidole-regular-webfont.ttf);
+}
+
+
+@font-face {
     font-family: ApercuBold;
     src: url(Apercu_Bold.otf);
 }
@@ -2060,7 +2066,9 @@ button.btn.btn-primary, button.btn.btn-warning {
 }
 
 ul.nav-menu.sf-js-enabled.sf-arrows li a {
-    font-size: 21px !important;
+    font-size: 16px;
+    font-family: 'Gidole',Arial,sans-serif !important;
+    text-transform: uppercase;
 }
 
 @media (max-width: 505px) {
@@ -2099,7 +2107,7 @@ ul.nav-menu.sf-js-enabled.sf-arrows li a {
 
 @media (max-width:3000px ) and (min-width: 1350px) {
     #wowslider-container1.ws_gestures {
-        margin-top: 145px;
+        margin-top: 120px;
     }
 }
 
@@ -2107,6 +2115,36 @@ ul.nav-menu.sf-js-enabled.sf-arrows li a {
     .header-top ul li {
         margin-right: 0px;
     }
+}
+@media (max-width: 601px) {
+    div.col-lg-3.nav-buttons {
+        margin-left: 45px;
+    }
+}
+
+#this:not(:disabled):not(.disabled):active, #this:not(:disabled):not(.disabled).active {
+    background-image: url(img/acceder3.png);
+}
+
+    #this:not(:disabled):not(.disabled):active:focus, #this:not(:disabled):not(.disabled).active:focus, .show > #this.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem transparent;
+    }
+
+#this:not(:disabled):not(.disabled):active, #this:not(:disabled):not(.disabled).active, .show > #this.dropdown-toggle {
+    color: #fff;
+    background-color: transparent;
+    border: black solid;
+}
+
+#nav-menu-container > ul > li:nth-child(2) > ul > li:nth-child(1) > a,
+#nav-menu-container > ul > li:nth-child(2) > ul > li:nth-child(2) > a,
+#nav-menu-container > ul > li:nth-child(2) > ul > li:nth-child(3) > a,
+#nav-menu-container > ul > li:nth-child(3) > ul > li:nth-child(1) > a,
+#nav-menu-container > ul > li:nth-child(3) > ul > li:nth-child(2) > a,
+#nav-menu-container > ul > li:nth-child(3) > ul > li:nth-child(3) > a,
+#nav-menu-container > ul > li:nth-child(3) > ul > li:nth-child(4) > a,
+#nav-menu-container > ul > li:nth-child(3) > ul > li:nth-child(5) > a {
+    font-size: 12.5px !important;
 }
 
 button.btn.btn-warning {
@@ -2119,7 +2157,7 @@ button.btn.btn-primary {
 
 .btn.btn-primary.arrow {
     background: #92c7eb;
-    background: url("img/acceder.png");
+    background: url("img/acceder3.png");
     background-size: cover;
     background-position: center;
     display: inline-block;
@@ -2130,6 +2168,7 @@ button.btn.btn-primary {
     height: 70px;
     transition: all 0.5s;
     cursor: pointer;
+    border: black solid;
 }
 
 .btn.btn-primary.salir {
@@ -2203,10 +2242,10 @@ button.btn.btn-primary {
 }
 
 @media (max-width:1350px) {
-    button.btn.btn-primary {
+    /*button.btn.btn-primary {
         transform: scale(0.8);
     }
-
+*/ 
     div#sidenav.sidenav {
         top: 250px !important
     }
@@ -2228,7 +2267,7 @@ button.btn.btn-primary {
 
 @media (max-width:991px) and (min-width:602px) {
     button.btn.btn-warning {
-        margin-left: 50px;
+        margin-left: 100px;
     }
 }
 
@@ -2251,7 +2290,7 @@ button.btn.btn-primary {
         font-size: 12px;
         margin-bottom: 30px;
         transform: scale(1);
-        margin-left: 30px !important
+        margin-left: 30px !important;
     }
 
     button.btn.btn-primary {
@@ -2268,7 +2307,7 @@ button.btn.btn-primary {
     }
 
     div.col-lg-3.move {
-        margin-left: 10px;
+        margin-left: 50px;
     }
 }
 
@@ -2492,8 +2531,14 @@ section.about-banner.relative {
     nav-menu-container {
     }
 }
+@media screen and (max-width:1065px) and (min-width: 992px) {
+    ul.nav-menu.sf-js-enabled.sf-arrows{
+       margin-left:0px !important
+    }
 
-@media screen and (max-width: 1157px) {
+}
+
+@media screen and (max-width: 1294px) {
     ul.nav-menu.sf-js-enabled.sf-arrows li a {
         font-size: 11px !important
     }
@@ -2602,11 +2647,6 @@ body.mobile-nav-active {
 
 #logo {
     padding-left: 15px;
-}
-
-#nav-menu-container {
-    padding-right: 15px;
-    padding-left: 100px;
 }
 
 .primary-btn {
@@ -3070,7 +3110,7 @@ body.mobile-nav-active {
 /*--------- end testimonial area  -------------*/
 /*--------- start home-about area  -------------*/
 .home-about-area .home-about-left {
-    padding-left: 20%;
+    padding-left: 8%;
 }
 
 @media (max-width: 1366px) {
@@ -4816,7 +4856,7 @@ p.footer-gd {
         color: #fff;
         font-weight: 500;
         margin-bottom: 32px;
-        font-family: Poppins;
+        font-family: Gidole;
     }
 
     .footer.one {
@@ -4838,7 +4878,7 @@ p.adam {
     color: #908F8F;
     line-height: 2em;
     font-size: 16px;
-    font-family: poppins;
+    font-family: Gidole;
 }
 
 .footer.two {
@@ -4920,6 +4960,7 @@ p.adam {
 .copy-right-grids {
     padding: 20px 20px;
     background: #211E1E;
+    font-family: Madeleina Sans;
 }
 
 .copy-left {
@@ -4940,7 +4981,7 @@ p.adam {
 
         .copy-right ul li a {
             color: #908F8F;
-            font-size: 13px;
+            font-size: 15px;
         }
 
         .copy-right ul li:nth-child(1) {

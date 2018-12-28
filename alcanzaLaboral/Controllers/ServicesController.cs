@@ -377,6 +377,12 @@ namespace alcanzaLaboral.Controllers
             List<RespuestaPostEntity> listado = bl.validaremailref_BL(emailusuario);
             return Json(listado);
         }
+        public ActionResult EditarFoto(int idusuario, string usuario_foto)
+        {
+            General_BL bl = new General_BL();
+            List<RespuestaPostEntity> listado = bl.EditarFoto(idusuario, usuario_foto);
+            return Json(listado);
+        }
 
         public ActionResult EnviarCorreo(string mensajep, string asuntop, string destinop)
         {

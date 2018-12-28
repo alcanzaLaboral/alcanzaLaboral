@@ -276,6 +276,7 @@
     <Content Include="img\data1\images\canvas.jpg" />
     <Content Include="img\data1\images\slider2.jpg" />
     <Content Include="img\data1\images\slider3.jpg" />
+    <Content Include="img\data1\images\slider32.jpg" />
     <Content Include="img\data1\images\slider4.jpg" />
     <Content Include="img\data1\images\slider5.jpg" />
     <Content Include="img\data1\tooltips\canvas.jpg" />
@@ -317,7 +318,13 @@
     <Content Include="Content\Layout\Rubik-Bold.ttf" />
     <Content Include="Content\Layout\Rubik-Medium.ttf" />
     <Content Include="Content\Layout\Rubik-Regular.ttf" />
+    <Content Include="Content\Layout\gidole-regular-webfont.ttf" />
+    <Content Include="Content\Layout\Gidole-Regular.otf" />
+    <Content Include="Content\Layout\Madeleina Sans.otf" />
     <None Include="Properties\PublishProfiles\2012181.pubxml" />
+    <None Include="Properties\PublishProfiles\2412181.pubxml" />
+    <None Include="Properties\PublishProfiles\2412182.pubxml" />
+    <None Include="Properties\PublishProfiles\2412183.pubxml" />
     <None Include="Properties\PublishProfiles\2611181.pubxml" />
     <None Include="Properties\PublishProfiles\2711181.pubxml" />
     <None Include="Properties\PublishProfiles\2711182.pubxml" />
@@ -427,6 +434,7 @@
     <Content Include="Views\Inicio\RCantidadCandidatosPeridoTiempo.cshtml" />
     <Content Include="Views\Inicio\RPagosPeridoTiempo.cshtml" />
     <Content Include="Views\Inicio\RCuentas.cshtml" />
+    <Content Include="Views\Inicio\DepositoTransferencia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
