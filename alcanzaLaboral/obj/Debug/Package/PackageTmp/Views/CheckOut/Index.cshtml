@@ -9,9 +9,23 @@
     <title></title>
     <link href="~/Content/CheckOut/css/estiloS.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="~/Content/CheckOut/css/estilo2.css">
+    <link href="~/Content/CheckOut/css/loadApp.css" rel="stylesheet" />
+    <link href="~/Content/CheckOut/css/mask.css" rel="stylesheet" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    
+
 </head>
 <body>
+    @*@ViewBag.IP*@
+    <script type="text/javascript" src=@ViewBag.deviceSessionId></script>
+    <noscript>
+        <iframe style="width: 100px; height: 100px; border: 0; position: absolute; top: -5000px;" src=@ViewBag.deviceSessionId></iframe>
+    </noscript>
     <!-- Vista carrito de compra -->
+    <div class="appLoad">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    </div>
     <div id="VistaCarritoCompra">
         <div class="row carrito">
             <div class=" box1">
@@ -19,53 +33,62 @@
                     <span class="titleDetalle">DETALLE DE CARRITO DE COMPRA:</span>
                 </div>
                 <div id="divListadoProductos">
-                    @*<div id="SOMLBL04LH1" class="form-group boxProductCart "><div class="boxTexto"><span class="descripcion">SERVICIO DE ABOGADO X1 (PERU)</span><div class="dataValores"><div class="data"><div class="groupCont"></div> </div> <div class="pSubTotal"><div class="titulo">SubTotal</div><div class="valor" id="divCostoParcial1">S/ 120.00</div></div> </div> <div class="deleteProduct"><a class="deleProduct" data-id="SOMLBL04LH1" data-id="" data-funcion="EliminarItemCarrito"><span class="glyphicon far fa-trash-alt"></span></a></div></div><div class="fondoEspera" style="display: none;"></div></div>*@
-                
-                
                 </div>
                 <section class="checkout-data" id="paso4">
                     @*<form id="form_step_4" name="form_step_4" action="">*@
-                        <div class="b_payments">
-                            <h2 class="sb-l">Métodos de Pago (Seleccione su metodo de pago)</h2>
-                            <p>Tarjeta de Debito/Credito</p>
-                            <ul class="list-payment">
-                                <!-- begin modules/rs_payuapi/views/templates/hook/paymentPE.tpl -->
-                                <li data-type="1" data-status="0" data-name="VISA">
-                                    @*<a href="http://v4.rosateltest.pe/arequipa/pe/module/rs_payuapi/payment" data-link="http://v4.rosateltest.pe/arequipa/pe/module/rs_payuapi/payment" data-action="link-redirect">
-                                        <img src="http://v4.rosateltest.pe/arequipa/themes/rosatel/assets/img/payment/etvisanet.png" alt="VISA">
-                                        <span>VISA</span>
-                                    </a>*@
-                                    <a> 
-                                        <img src="~/Content/CheckOut/img/visa.png" alt="VISA">
-                                        <span>VISA</span>
-                                    </a>
-                                </li>
-                                <li data-type="1" data-status="0" data-name="MASTERCARD">
-                                    <a>
-                                        <img src="~/Content/CheckOut/img/master.png" />
-                                        <span>MASTERCARD</span>
-                                    </a>
-                                </li>
-                                <li data-type="1" data-status="0" data-name="AMEX">
-                                    <a>
-                                        <img src="~/Content/CheckOut/img/american.png" />
-                                        <span>AMERICAN EXPRESS</span>
-                                    </a>
-                                </li>
-                                <li data-type="1" data-status="0" data-name="DINNERSCLUB">
-                                    <a>
-                                        <img src="~/Content/CheckOut/img/diners.png" />
-                                        <span>DINNERSCLUB</span>
-                                    </a>
-                                </li>
+                    <div class="b_payments">
+                        <h2 class="sb-l">Métodos de Pago (Seleccione su metodo de pago)</h2>
+                        <p>Tarjeta de Debito/Credito</p>
+                        <ul class="list-payment">
+                            <!-- begin modules/rs_payuapi/views/templates/hook/paymentPE.tpl -->
+                            <li data-type="1" data-status="0" data-name="VISA">
+                                <a>
+                                    <img src="~/Content/CheckOut/img/visa.png" alt="VISA">
+                                    <span>VISA</span>
+                                </a>
+                            </li>
+                            <li data-type="1" data-status="0" data-name="MASTERCARD">
+                                <a>
+                                    <img src="~/Content/CheckOut/img/master.png" />
+                                    <span>MASTERCARD</span>
+                                </a>
+                            </li>
+                            <li data-type="1" data-status="0" data-name="AMEX">
+                                <a>
+                                    <img src="~/Content/CheckOut/img/american.png" />
+                                    <span>AMERICAN EXPRESS</span>
+                                </a>
+                            </li>
+                            <li data-type="1" data-status="0" data-name="DINERS">
+                                <a>
+                                    <img src="~/Content/CheckOut/img/diners.png" />
+                                    <span>DINNERSCLUB</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <p>Depósito o transferencia bancaria</p>
+                        <ul class="list-payment">
+
+                            <li data-type="0" data-status="0" data-name="BCP">
+                                <a>
+                                    <img src="~/Content/CheckOut/img/bcp-agente.png" />
+                                    <span>Agentes</span>
+                                </a>
+                            </li>
+                            <li data-type="0" data-status="0" data-name="PAGOEFECTIVO">
+                                <a>
+                                    <img src="~/Content/CheckOut/img/pago-efectivo.png" />
+                                    <span>Pago Efectivo</span>
+                                </a>
+                            </li>
 
 
-                            </ul>
-                        </div>
-                    <form action="/CheckOut/EndTrans" method="post">
+                        </ul>
+
+                    </div>
                         <div class="new_card none">
                             <div class="box2">
-                                <h2 class="sb-l">DATOS DE SU NUEVA TARJETA:</h2>
+                                <h2 class="sb-l">DATOS DE SU TARJETA:</h2>
                             </div>
                             <div class="typeCard p-lr check-data">
                                 <div class="check-box active" data-type="Credito">
@@ -81,25 +104,33 @@
                             </div>
                             <div class="box">
                                 <label>Propietario de Tarjeta</label>
-                                <input type="text" name="ownerCard" id="ownerCard" placeholder="propietario de tarjeta" required>
+                                <input type="text" name="ownerCard" id="ownerCard" placeholder="propietario de tarjeta"  autocomplete="off">
+                            </div>
+                            <div class="box">
+                                <label>Telefono</label>
+                                <input type="text" name="ownerTelf" id="ownerTelf" placeholder="propietario de tarjeta" autocomplete="off">
+                            </div>
+                            <div class="box">
+                                <label>Email</label>
+                                <input type="text" name="ownerEmail" id="ownerEmail" placeholder="propietario de tarjeta" autocomplete="off">
                             </div>
                             <div class="box">
                                 <label>Numero de Tarjeta</label>
-                                <input type="number" name="numberCard" id="numberCard" placeholder="Numero de tarjeta" required>
+                                <input type="text" name="numberCard" id="numberCard" maxlength="17" placeholder="Numero de tarjeta"  autocomplete="off">
                             </div>
                             <div class="box">
                                 <label>Fecha de Expiracion</label>
-                                <input type="text" name="dateExpirateCard" id="dateExpirateCard" placeholder="MM/YY" required>
+                                <input type="text" name="dateExpirateCard" id="dateExpirateCard" placeholder="MM/YY" class="masked" pattern="(1[0-2]|0[1-9])\/(1[5-9]|2\d)" data-valid-example="05/18"  autocomplete="off">
                             </div>
                             <div class="box">
                                 <label>CVV/CVC</label>
-                                <input type="number" name="codeCard" id="codeCard" placeholder="CVC" required>
+                                <input type="text" name="codeCard" id="codeCard" maxlength="3" placeholder="CVC"  autocomplete="off">
                             </div>
-                            <div class="box" id="duesNumber">
+                            @*<div class="box" id="duesNumber">
                                 <label>Número de cuotas</label>
-                                <select id="quoteCard" name="quoteCard" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true" required>
+                                <select id="quoteCard" name="quoteCard" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true" >
                                     <option value="0">Selecione</option>
-                                    <option value="1">1</option>
+                                    <option value="1" selected>1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
@@ -112,10 +143,6 @@
                                     <option value="11">11</option>
                                     <option value="12">12</option>
                                 </select>
-                            </div>
-                            @*<div class="box2 c-i n-bottom p-lr">
-                                <input type="checkbox" id="chk_save_card" name="chk_save_card" value="1">
-                                <label class="icon-checkbox" for="chk_save_card"><span>Seleccionar si desea guardar su Tarjeta para futuros pagos.</span></label>
                             </div>*@
                         </div>
                         <div class="box2 c-i n-bottom p-lr">
@@ -125,9 +152,8 @@
 
                         <div class="box2 b-sides p-lr">
                             <button class="btn btn-checkout" name="continue" data-btn="3" data-type="return" value="1" id="regresar">Regresar</button>
-                            <button class="btn bg-r btn-checkout" name="continue" data-btn="5" value="1">Realizar Compra</button>
+                            <button class="btn bg-r btn-checkout" name="continue" data-btn="5" value="1" id="comprar">Realizar Compra</button>
                         </div>
-                    </form>
                 </section>
 
 
@@ -139,40 +165,56 @@
 
             </div>
             <div class="box2">
-
                 <div class="_box">
                     <span class="titleResumen">RESUMEN VENTA:</span>
                     <div class="form-group input-group">
-                        <span class="input-group-addon">Total sin Desc.</span>
-                        <div class="txtCCTotal" id="txtCCTotal">0</div>
+                        <span class="input-group-addon">SUBTOTAL</span>
+                        <div class="txtCCTotal" id="txtCCSubtotal">0</div>
                         <span class="input-group-addon" id="spanSimTotal">S/</span>
                     </div>
                     <div class="form-group input-group">
-                        <span class="input-group-addon">Descuento</span>
-                        <input type="number" id="txtCCDescuentoPorcentaje" class="form-control" min="0" value="0" data-despor="0">
-                        <span class="input-group-addon">%</span>
+                        <span class="input-group-addon">IGV</span>
+                        <div class="txtCCTotal" id="txtCCIGV">0</div>
+                        <span class="input-group-addon" id="spanSimTotal">S/</span>
                     </div>
                     <div class="form-group input-group">
-                        <span class="input-group-addon">Desc. Fijo</span>
-                        <input type="number" id="txtCCDescuentoFijo" class="form-control" min="0" value="0.00">
-                        <span class="input-group-addon" id="spanDesSimbolo">S/</span>
+                        <span class="input-group-addon">TOTAL</span>
+                        <div class="txtCCTotal" id="txtCCTotal">0</div>
+                        <span class="input-group-addon" id="spanSimTotal">S/</span>
                     </div>
+                    @*<div class="form-group input-group">
+                            <span class="input-group-addon">Descuento</span>
+                            <input type="number" id="txtCCDescuentoPorcentaje" class="form-control" min="0" value="0" data-despor="0">
+                            <span class="input-group-addon">%</span>
+                        </div>*@
+                    @*<div class="form-group input-group">
+                            <span class="input-group-addon">IGV</span>
+                            <input type="number" id="impuestos" class="form-control" min="0" value="0.00">
+                            <span class="input-group-addon" id="spanDesSimbolo">S/</span>
+                        </div>*@
 
 
                     @*<div class="form-group">
-                        <span>Eventos Comerciales:</span>
-                        <select class="form-control" id="cboECM"></select>
-                    </div>*@
+                            <span>Eventos Comerciales:</span>
+                            <select class="form-control" id="cboECM"></select>
+                        </div>*@
                     <label id="lblMensajePuntosVenta" data-canje="0"></label>
                     <div class="procesarCompra">
                         <div class="box">
                             <span id="spanPagarCarrito">A PAGAR</span>
                             <span id="spanTotalPagar">120.00</span>
                         </div>
-                      @*  <button type="button" class="form-control btn btn-primary" id="btnProcesarCompra">PROCESAR COMPRA</button>*@
+                        @*  <button type="button" class="form-control btn btn-primary" id="btnProcesarCompra">PROCESAR COMPRA</button>*@
                     </div>
                 </div>
+                <div class="_boxLogo">
+                    <img src="~/Content/CheckOut/img/logoAlcanza.png" style="height:150px;width:150px" />
+                </div>
             </div>
+
+
+
+
         </div>
     </div>
 
@@ -186,5 +228,6 @@
     <link href="~/Content/CheckOut/BootsTrap/bootstrap.min.css?v=1" rel="stylesheet">
     <link href="~/Content/CheckOut/css/font/all.css" rel="stylesheet" type="text/css" />
     <script src="~/Content/CheckOut/js/Core.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/masking-input.js" data-autoinit="true"></script>
 </body>
 </html>

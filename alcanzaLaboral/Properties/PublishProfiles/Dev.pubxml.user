@@ -97,10 +97,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/12/2018 11:54:46</publishTime>
     </File>
     <File Include="bin/alcanzaLaboral.dll">
-      <publishTime>12/16/2018 05:10:16</publishTime>
+      <publishTime>12/27/2018 15:21:17</publishTime>
     </File>
     <File Include="bin/alcanzaLaboral.pdb">
-      <publishTime>12/16/2018 05:10:16</publishTime>
+      <publishTime>12/27/2018 15:21:17</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>11/28/2018 15:40:45</publishTime>
@@ -112,16 +112,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:42</publishTime>
     </File>
     <File Include="bin/Dominio.Entidades.dll">
-      <publishTime>12/16/2018 02:12:20</publishTime>
+      <publishTime>12/27/2018 14:25:30</publishTime>
     </File>
     <File Include="bin/Dominio.Entidades.pdb">
-      <publishTime>12/16/2018 02:12:20</publishTime>
+      <publishTime>12/27/2018 14:25:30</publishTime>
     </File>
     <File Include="bin/Dominio.Repositorio.dll">
-      <publishTime>12/16/2018 03:32:31</publishTime>
+      <publishTime>12/27/2018 14:25:32</publishTime>
     </File>
     <File Include="bin/Dominio.Repositorio.pdb">
-      <publishTime>12/16/2018 03:32:31</publishTime>
+      <publishTime>12/27/2018 14:25:32</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>11/28/2018 15:40:45</publishTime>
@@ -196,10 +196,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:46</publishTime>
     </File>
     <File Include="bin/Infraestrutura.Data.SqlServer.dll">
-      <publishTime>12/16/2018 03:32:31</publishTime>
+      <publishTime>12/27/2018 14:25:32</publishTime>
     </File>
     <File Include="bin/Infraestrutura.Data.SqlServer.pdb">
-      <publishTime>12/16/2018 03:32:31</publishTime>
+      <publishTime>12/27/2018 14:25:32</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>11/28/2018 15:40:46</publishTime>
@@ -265,10 +265,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:47</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>11/28/2018 15:40:47</publishTime>
+      <publishTime>11/27/2018 18:07:34</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.pdb">
+      <publishTime>11/27/2018 17:59:08</publishTime>
     </File>
     <File Include="bin/Owin.dll">
       <publishTime>11/28/2018 15:40:47</publishTime>
+    </File>
+    <File Include="bin/PayApi.dll">
+      <publishTime>12/27/2018 15:21:10</publishTime>
+    </File>
+    <File Include="bin/PayApi.pdb">
+      <publishTime>12/27/2018 15:21:10</publishTime>
+    </File>
+    <File Include="bin/PayApiAsync.dll">
+      <publishTime>12/27/2018 15:21:10</publishTime>
+    </File>
+    <File Include="bin/PayApiAsync.pdb">
+      <publishTime>12/27/2018 15:21:10</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>11/28/2018 15:40:46</publishTime>
@@ -376,13 +391,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/15/2018 15:54:40</publishTime>
     </File>
     <File Include="Content/CheckOut/css/estilo2.css">
-      <publishTime>12/16/2018 04:15:20</publishTime>
+      <publishTime>12/26/2018 02:52:55</publishTime>
     </File>
     <File Include="Content/CheckOut/css/estilos.css">
-      <publishTime>12/15/2018 15:54:40</publishTime>
+      <publishTime>12/24/2018 19:27:30</publishTime>
     </File>
     <File Include="Content/CheckOut/css/font/all.css">
       <publishTime>12/15/2018 15:54:40</publishTime>
+    </File>
+    <File Include="Content/CheckOut/css/loadApp.css">
+      <publishTime>11/17/2018 17:03:26</publishTime>
+    </File>
+    <File Include="Content/CheckOut/css/mask.css">
+      <publishTime>12/24/2018 21:09:45</publishTime>
     </File>
     <File Include="Content/CheckOut/css/webfonts/fa-brands-400.eot">
       <publishTime>12/15/2018 15:54:40</publishTime>
@@ -600,23 +621,35 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/CheckOut/img/american.png">
       <publishTime>12/15/2018 16:06:43</publishTime>
     </File>
+    <File Include="Content/CheckOut/img/bcp-agente.png">
+      <publishTime>12/22/2018 23:20:44</publishTime>
+    </File>
     <File Include="Content/CheckOut/img/diners.png">
       <publishTime>12/15/2018 16:06:43</publishTime>
     </File>
+    <File Include="Content/CheckOut/img/logoAlcanza.jpeg">
+      <publishTime>12/22/2018 23:58:55</publishTime>
+    </File>
+    <File Include="Content/CheckOut/img/logoAlcanza.png">
+      <publishTime>12/26/2018 02:44:48</publishTime>
+    </File>
     <File Include="Content/CheckOut/img/master.png">
       <publishTime>12/15/2018 16:06:43</publishTime>
+    </File>
+    <File Include="Content/CheckOut/img/pago-efectivo.png">
+      <publishTime>12/22/2018 23:20:44</publishTime>
     </File>
     <File Include="Content/CheckOut/img/visa.png">
       <publishTime>12/15/2018 16:06:43</publishTime>
     </File>
     <File Include="Content/CheckOut/js/Core.js">
-      <publishTime>12/16/2018 04:27:40</publishTime>
+      <publishTime>12/27/2018 15:17:58</publishTime>
     </File>
     <File Include="Content/CheckOut/js/jquery-3.1.1.min.js">
       <publishTime>12/15/2018 15:54:41</publishTime>
     </File>
     <File Include="Content/CheckOut/js/js.js">
-      <publishTime>12/15/2018 15:54:41</publishTime>
+      <publishTime>12/24/2018 21:48:42</publishTime>
     </File>
     <File Include="Content/geometry.png">
       <publishTime>11/28/2018 15:40:43</publishTime>
@@ -691,13 +724,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:43</publishTime>
     </File>
     <File Include="Content/Layout/img/acceder.png">
-      <publishTime>11/28/2018 15:40:43</publishTime>
+      <publishTime>12/19/2018 15:11:36</publishTime>
     </File>
     <File Include="Content/Layout/img/header5.png">
       <publishTime>11/28/2018 15:40:43</publishTime>
     </File>
+    <File Include="Content/Layout/img/salir.png">
+      <publishTime>12/19/2018 15:11:36</publishTime>
+    </File>
     <File Include="Content/Layout/img/top-banner.jpg">
       <publishTime>11/28/2018 15:40:43</publishTime>
+    </File>
+    <File Include="Content/Layout/img/volver.png">
+      <publishTime>12/19/2018 15:11:36</publishTime>
     </File>
     <File Include="Content/Layout/jquery-ui.css">
       <publishTime>11/28/2018 15:40:43</publishTime>
@@ -712,7 +751,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:43</publishTime>
     </File>
     <File Include="Content/Layout/main.css">
-      <publishTime>11/28/2018 15:40:43</publishTime>
+      <publishTime>12/19/2018 15:11:36</publishTime>
     </File>
     <File Include="Content/Layout/main.map">
       <publishTime>11/28/2018 15:40:43</publishTime>
@@ -737,6 +776,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/Layout/style.css">
       <publishTime>11/28/2018 15:40:43</publishTime>
+    </File>
+    <File Include="Content/PerfilProfesional.css">
+      <publishTime>12/19/2018 15:11:36</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>11/28/2018 15:40:43</publishTime>
@@ -847,346 +889,346 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/16/2018 04:50:59</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/bootstrap/js/bootstrap.bundle.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/bootstrap/js/bootstrap.bundle.js.map">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/bootstrap/js/bootstrap.bundle.min.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/bootstrap/js/bootstrap.bundle.min.js.map">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/bootstrap/js/bootstrap.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/bootstrap/js/bootstrap.js.map">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/bootstrap/js/bootstrap.min.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/bootstrap/js/bootstrap.min.js.map">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/css/all.css">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/css/all.min.css">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/css/brands.css">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/css/brands.min.css">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/css/fontawesome.css">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/css/fontawesome.min.css">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/css/regular.css">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/css/regular.min.css">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/css/solid.css">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/css/solid.min.css">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/css/svg-with-js.css">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/css/svg-with-js.min.css">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/css/v4-shims.css">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/css/v4-shims.min.css">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/js/all.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/js/all.min.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/js/brands.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/js/brands.min.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/js/fontawesome.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/js/fontawesome.min.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/js/regular.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/js/regular.min.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/js/solid.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/js/solid.min.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/js/v4-shims.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/js/v4-shims.min.js">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/brands.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/fontawesome.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/regular.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/solid.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/v4-shims.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/_animated.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/_bordered-pulled.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/_core.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/_fixed-width.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/_icons.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/_larger.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/_list.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/_mixins.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/_rotated-flipped.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/_screen-reader.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/_shims.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/_stacked.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/less/_variables.less">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/LICENSE.txt">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/package.json">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/README.md">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/brands.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/fontawesome.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/regular.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/solid.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/v4-shims.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/_animated.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/_bordered-pulled.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/_core.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/_fixed-width.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/_icons.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/_larger.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/_list.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/_mixins.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/_rotated-flipped.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/_screen-reader.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/_shims.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/_stacked.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/scss/_variables.scss">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/sprites/brands.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/sprites/regular.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/sprites/solid.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/500px.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/accessible-icon.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/accusoft.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/adn.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/adversal.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/affiliatetheme.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/algolia.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/alipay.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/amazon-pay.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/amazon.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/amilia.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/android.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/angellist.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/angrycreative.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/angular.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/app-store-ios.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/app-store.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/apper.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/apple-pay.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/apple.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/asymmetrik.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/audible.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/autoprefixer.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/avianex.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/aviato.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/aws.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/bandcamp.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/behance-square.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/behance.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/bimobject.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/bitbucket.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/bitcoin.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/bity.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/black-tie.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/blackberry.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/blogger-b.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/blogger.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/bluetooth-b.svg">
-      <publishTime>12/16/2018 04:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/Trasnsa/vendor/fontawesome-free/svgs/brands/bluetooth.svg">
       <publishTime>12/16/2018 04:51:01</publishTime>
@@ -5212,7 +5254,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:44</publishTime>
     </File>
     <File Include="img/data1/images/slider4.jpg">
-      <publishTime>11/28/2018 15:40:44</publishTime>
+      <publishTime>12/19/2018 15:11:36</publishTime>
     </File>
     <File Include="img/data1/images/slider5.jpg">
       <publishTime>11/28/2018 15:40:44</publishTime>
@@ -5272,7 +5314,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:44</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/23/2018 03:38:03</publishTime>
     </File>
     <File Include="Scripts/ai.0.22.9-build00167.js">
       <publishTime>11/28/2018 15:40:45</publishTime>
@@ -5286,6 +5328,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/bootstrap.min.js">
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
+    <File Include="Scripts/icons.js">
+      <publishTime>12/19/2018 15:11:36</publishTime>
+    </File>
     <File Include="Scripts/jquery-1.10.2.js">
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
@@ -5294,6 +5339,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/jquery-1.10.2.min.map">
       <publishTime>11/28/2018 15:40:45</publishTime>
+    </File>
+    <File Include="Scripts/jquery.table2excel.min.js">
+      <publishTime>12/19/2018 15:11:36</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
       <publishTime>11/28/2018 15:40:45</publishTime>
@@ -5374,7 +5422,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
     <File Include="Scripts/Modulo/BuscarCandidato.js">
-      <publishTime>12/16/2018 04:23:08</publishTime>
+      <publishTime>12/23/2018 00:41:42</publishTime>
     </File>
     <File Include="Scripts/Modulo/ComoRegistrarse.js">
       <publishTime>11/28/2018 15:40:45</publishTime>
@@ -5386,13 +5434,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
     <File Include="Scripts/Modulo/EditarPerfil.js">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/19/2018 15:11:37</publishTime>
+    </File>
+    <File Include="Scripts/Modulo/EditarPerfil_Checkout.js">
+      <publishTime>12/27/2018 02:27:57</publishTime>
     </File>
     <File Include="Scripts/Modulo/General.js">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/19/2018 15:11:37</publishTime>
     </File>
     <File Include="Scripts/Modulo/Inicio.js">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/19/2018 15:11:37</publishTime>
     </File>
     <File Include="Scripts/Modulo/MisionYVision.js">
       <publishTime>11/28/2018 15:40:45</publishTime>
@@ -5401,7 +5452,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
     <File Include="Scripts/Modulo/PerfilProfesional.js">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/19/2018 15:11:37</publishTime>
     </File>
     <File Include="Scripts/Modulo/PorQueRegistrarse.js">
       <publishTime>11/28/2018 15:40:45</publishTime>
@@ -5410,16 +5461,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
     <File Include="Scripts/Modulo/RCandidatosPeridoCategoria.js">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/19/2018 15:11:37</publishTime>
     </File>
     <File Include="Scripts/Modulo/RCantidadCandidatosPeridoTiempo.js">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/19/2018 15:11:37</publishTime>
     </File>
     <File Include="Scripts/Modulo/RCuentas.js">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/19/2018 15:11:37</publishTime>
     </File>
     <File Include="Scripts/Modulo/RPagosPeridoTiempo.js">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/19/2018 15:11:37</publishTime>
     </File>
     <File Include="Scripts/Modulo/Splash.js">
       <publishTime>11/28/2018 15:40:45</publishTime>
@@ -5434,7 +5485,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>12/16/2018 04:55:16</publishTime>
+      <publishTime>12/22/2018 22:34:27</publishTime>
     </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
       <publishTime>11/28/2018 15:40:45</publishTime>
@@ -5473,16 +5524,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
     <File Include="Views/CheckOut/EndTrans.cshtml">
-      <publishTime>12/16/2018 05:07:53</publishTime>
+      <publishTime>12/24/2018 20:13:48</publishTime>
     </File>
     <File Include="Views/CheckOut/ErrorShop.cshtml">
       <publishTime>12/16/2018 05:09:17</publishTime>
     </File>
     <File Include="Views/CheckOut/Index.cshtml">
-      <publishTime>12/16/2018 05:18:14</publishTime>
+      <publishTime>12/27/2018 14:20:39</publishTime>
     </File>
     <File Include="Views/CheckOut/OutShop.cshtml">
       <publishTime>12/16/2018 05:06:02</publishTime>
+    </File>
+    <File Include="Views/confirmation/Index.cshtml">
+      <publishTime>12/26/2018 02:32:51</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>11/28/2018 15:40:45</publishTime>
@@ -5497,7 +5551,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
     <File Include="Views/Inicio/BuscarCandidatos.cshtml">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/19/2018 15:11:37</publishTime>
     </File>
     <File Include="Views/Inicio/ComoRegistrarse.cshtml">
       <publishTime>11/28/2018 15:40:45</publishTime>
@@ -5509,16 +5563,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
     <File Include="Views/Inicio/EditarPerfil.cshtml">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/22/2018 22:37:45</publishTime>
     </File>
     <File Include="Views/Inicio/Inicio.cshtml">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/19/2018 15:11:37</publishTime>
     </File>
     <File Include="Views/Inicio/MisionyVision.cshtml">
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
     <File Include="Views/Inicio/PerfilProfesional.cshtml">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/19/2018 15:11:37</publishTime>
     </File>
     <File Include="Views/Inicio/PorQueRegistrarse.cshtml">
       <publishTime>11/28/2018 15:40:45</publishTime>
@@ -5527,19 +5581,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
     <File Include="Views/Inicio/RCandidatosPeridoCategoria.cshtml">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/19/2018 15:11:37</publishTime>
     </File>
     <File Include="Views/Inicio/RCantidadCandidatosPeridoTiempo.cshtml">
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
     <File Include="Views/Inicio/RCuentas.cshtml">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/19/2018 15:11:37</publishTime>
     </File>
     <File Include="Views/Inicio/Representante.cshtml">
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
     <File Include="Views/Inicio/RPagosPeridoTiempo.cshtml">
-      <publishTime>11/28/2018 15:40:45</publishTime>
+      <publishTime>12/19/2018 15:11:37</publishTime>
     </File>
     <File Include="Views/Inicio/Splash.cshtml">
       <publishTime>11/28/2018 15:40:45</publishTime>
@@ -5575,7 +5629,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/12/2018 12:15:50</publishTime>
+      <publishTime>12/19/2018 15:11:37</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>11/28/2018 15:40:45</publishTime>
@@ -5587,7 +5641,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 15:40:45</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/15/2018 16:27:25</publishTime>
+      <publishTime>12/27/2018 15:23:09</publishTime>
     </File>
   </ItemGroup>
 </Project>

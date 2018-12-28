@@ -3,7 +3,7 @@
     Layout = null;
 }
 
-
+@*@ViewBag.Response*@
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +25,6 @@
 <body>
     <div class="overlay"></div>
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-        @*<source src="mp4/bg.mp4" type="video/mp4">*@
         <source src="~/Content/Trasnsa/mp4/bg.mp4" type="video/mp4" />
     </video>
     <div class="masthead">
@@ -37,10 +36,8 @@
                         <h1 class="mb-3">Muchas Gracias!</h1>
                         <p class="mb-5">
                             Hemos procesado correctamente su solictud.
-                            @*<strong>January 2019</strong>! Sign up for updates using the form below!*@
                         </p>
                         <div class="input-group input-group-newsletter">
-                            @*<input type="email" class="form-control" placeholder="Enter email..." aria-label="Enter email..." aria-describedby="basic-addon">*@
                             <div class="input-group-append">
                                 <button class="btn btn-secondary" onclick="window.location.href ='/Inicio/Inicio'" type="button">Ir al Home</button>
                             </div>
@@ -70,7 +67,6 @@
         </ul>
     </div>
     <!-- Bootstrap core JavaScript -->
-    @*<script src="vendor/jquery/jquery.min.js"></script>*@
     <script src="~/Content/Trasnsa/vendor/jquery/jquery.min.js"></script>
     <script src="~/Content/Trasnsa/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Custom scripts for this template -->

@@ -19,3 +19,10 @@ C:\Users\Cristopher\Desktop\alcanza_171218\Infraestrutura.Data.SqlServer\bin\Deb
 C:\Users\Cristopher\Desktop\alcanza_171218\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.csprojResolveAssemblyReference.cache
 C:\Users\Cristopher\Desktop\alcanza_171218\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.dll
 C:\Users\Cristopher\Desktop\alcanza_171218\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.pdb
+C:\Desarrollo\Alcanza\GitHub\Infraestrutura.Data.SqlServer\bin\Debug\Infraestrutura.Data.SqlServer.dll
+C:\Desarrollo\Alcanza\GitHub\Infraestrutura.Data.SqlServer\bin\Debug\Infraestrutura.Data.SqlServer.pdb
+C:\Desarrollo\Alcanza\GitHub\Infraestrutura.Data.SqlServer\bin\Debug\Dominio.Entidades.dll
+C:\Desarrollo\Alcanza\GitHub\Infraestrutura.Data.SqlServer\bin\Debug\Dominio.Entidades.pdb
+C:\Desarrollo\Alcanza\GitHub\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Alcanza\GitHub\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.dll
+C:\Desarrollo\Alcanza\GitHub\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.pdb

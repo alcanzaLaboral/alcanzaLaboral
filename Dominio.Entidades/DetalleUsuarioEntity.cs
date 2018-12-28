@@ -47,5 +47,7 @@ namespace Dominio.Entidades
         public string nro_doc { get; set; }
         public string fechacreacion { get; set; }
         public string finsubscrip { get; set; }
+        public int flag_discap { get; set; }
+        public string desc_discap { get; set; }
     }
 }

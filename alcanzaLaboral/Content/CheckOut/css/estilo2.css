@@ -1648,6 +1648,20 @@ html.typeTTg {
       margin: auto;
       /* margin-bottom: 100px; */
       height: 320px; }
+     .carrito .box2 ._boxLogo {
+      width: 28%;
+      /*padding: 20px;*/
+      background: #fff;
+      border-radius: 5px;
+      margin: auto;
+       margin-left: auto;
+       margin-right: auto;
+      position:fixed;
+      top:303px !important;
+      text-align: center;
+     }
+
+
     .carrito .box2 .txtCCTotal {
       border: 1px solid #ccc;
       padding: 6px 12px;

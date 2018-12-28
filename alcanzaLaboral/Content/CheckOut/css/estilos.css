@@ -910,7 +910,9 @@ html.typeTTg {
       display: flex;
       flex-wrap: wrap; }
       .checkout-data .list-payment li {
-        width: 20%; }
+        width: 20%; 
+        cursor: pointer;
+      }
         .checkout-data .list-payment li:after {
           content: "\e90c";
           font-family: 'icomoon';

@@ -43,6 +43,7 @@
     <Compile Include="CantidadEntity.cs" />
     <Compile Include="CarritoDetalle.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="DatosFacturacion.cs" />
     <Compile Include="DetalleUsuarioEntity.cs" />
     <Compile Include="DIdiomaEntity.cs" />
     <Compile Include="DSoftwareEntity.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RCuentas.cs" />
     <Compile Include="RecuperaCuentaEntity.cs" />
+    <Compile Include="ResponseApi.cs" />
     <Compile Include="RespuestaPostEntity.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -25,3 +25,12 @@ C:\Desarrollo\Alcanza Laboral\Dominio.Repositorio\bin\Debug\Infraestrutura.Data.
 C:\Desarrollo\Alcanza Laboral\Dominio.Repositorio\obj\Debug\Dominio.Repositorio.csprojResolveAssemblyReference.cache
 C:\Desarrollo\Alcanza Laboral\Dominio.Repositorio\obj\Debug\Dominio.Repositorio.dll
 C:\Desarrollo\Alcanza Laboral\Dominio.Repositorio\obj\Debug\Dominio.Repositorio.pdb
+C:\Desarrollo\Alcanza\GitHub\Dominio.Repositorio\bin\Debug\Dominio.Repositorio.dll
+C:\Desarrollo\Alcanza\GitHub\Dominio.Repositorio\bin\Debug\Dominio.Repositorio.pdb
+C:\Desarrollo\Alcanza\GitHub\Dominio.Repositorio\bin\Debug\Dominio.Entidades.dll
+C:\Desarrollo\Alcanza\GitHub\Dominio.Repositorio\bin\Debug\Infraestrutura.Data.SqlServer.dll
+C:\Desarrollo\Alcanza\GitHub\Dominio.Repositorio\bin\Debug\Dominio.Entidades.pdb
+C:\Desarrollo\Alcanza\GitHub\Dominio.Repositorio\bin\Debug\Infraestrutura.Data.SqlServer.pdb
+C:\Desarrollo\Alcanza\GitHub\Dominio.Repositorio\obj\Debug\Dominio.Repositorio.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Alcanza\GitHub\Dominio.Repositorio\obj\Debug\Dominio.Repositorio.dll
+C:\Desarrollo\Alcanza\GitHub\Dominio.Repositorio\obj\Debug\Dominio.Repositorio.pdb

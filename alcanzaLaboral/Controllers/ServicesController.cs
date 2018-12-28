@@ -118,9 +118,9 @@ namespace alcanzaLaboral.Controllers
              idtipopostulante,
              tipo_doc,
              nro_doc,
-             emailusuario,
-             flag_discap,
-             desc_discap
+             emailusuario
+             //flag_discap,
+             //desc_discap
 
                 );
             return Json(listado);
@@ -348,7 +348,7 @@ namespace alcanzaLaboral.Controllers
         public ActionResult ListarBuscarCandidatos(int Profesion, int Subprofesion, int Nacionalidad, int Sexo, int idtipopostulante, string flag_discap)
         {
             General_BL bl = new General_BL();
-            List<LCandidatos> listado = bl.ListarBuscarCandidatos_BL(Profesion, Subprofesion, Nacionalidad, Sexo, idtipopostulante, flag_discap);
+            List<LCandidatos> listado = bl.ListarBuscarCandidatos_BL(Profesion, Subprofesion, Nacionalidad, Sexo, idtipopostulante);
             return Json(listado);
         }
 

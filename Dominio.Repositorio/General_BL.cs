@@ -103,8 +103,9 @@ namespace Dominio.Repositorio
              idtipopostulante,
              tipo_doc,
              nro_doc,
-             emailusuario
-
+             emailusuario,
+             0,
+             null
                 );
         }
         //===actualizar resumen =========
@@ -301,7 +302,7 @@ namespace Dominio.Repositorio
 
         public List<LCandidatos> ListarBuscarCandidatos_BL(int Profesion, int Subprofesion, int Nacionalidad, int Sexo, int idtipopostulante)
         {
-            return dal.ListarBuscarCandidatos_DAL(Profesion, Subprofesion, Nacionalidad, Sexo, idtipopostulante);
+            return dal.ListarBuscarCandidatos_DAL(Profesion, Subprofesion, Nacionalidad, Sexo, idtipopostulante,null);
         }
         public List<LCandidatos> RCandidatosPeridoCategoria(int Profesion, int Subprofesion, string dfechaIni, string dfechaFin)
         {

@@ -1,9 +1,17 @@
 ﻿
 var idusuarioPost;
 
+$(document).ready(function () {
+
+    if (sessionStorage.getItem('peticionver')+'' == 'null') {
+        window.location = "../Inicio/Inicio";
+    }
+
+});
+
 
 window.onload = function () {
-
+    
     idusuarioPost = sessionStorage.getItem("idcandidato");
 
 
@@ -16,9 +24,6 @@ window.onload = function () {
         ListarIdioma();
         mostrarFotoPerfil();
     
-
-   
-
 }
 
 function mostrarFotoPerfil() {

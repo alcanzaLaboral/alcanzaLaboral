@@ -32,6 +32,7 @@ var id_btn=0;
 
             $('.checkout-data .list-payment li').attr("data-status",0);
             $this.attr("data-status",1);
+            setCVV();
 
             if ($this.attr("data-type")==1) {
                 $(".checkout-data .new_card").removeClass("none");
@@ -62,6 +63,20 @@ var id_btn=0;
         closeCardSave();
     });
 
+
+    function setCVV() {
+
+        var mediopago = $('.list-payment li.active').attr("data-name");
+        document.getElementById('codeCard').value = "";
+        document.getElementById('numberCard').value = "";
+        document.getElementById('dateExpirateCard').value = "";
+
+        if (mediopago == 'AMEX') {
+            $("#codeCard").attr('maxlength', '4');
+        } else {
+            $("#codeCard").attr('maxlength', '3');
+        }
+    };
 
     function downNewCard(){
         var seccionNewCard=$(".new_card").position().top;

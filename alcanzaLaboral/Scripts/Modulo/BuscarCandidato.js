@@ -169,7 +169,7 @@ function ListarBody(data) {
 
         fun_ver = 'vercv("' + data[i].id + '")';
         fun_contactar = 'contactar("' + data[i].emailusuario + '","' + data[i].nombre + '")';
-        fun_carrito = 'addCarrito(' + data[i].id + ')';
+        //fun_carrito = 'addCarrito(' + data[i].id + ')';
 
         tbody.append("<tr>" +
             "<td style='text-align:center'>" + data[i].nombre + "</td>" +
@@ -180,7 +180,7 @@ function ListarBody(data) {
             "<td style='text-align:center'>" + data[i].edad + "</td>" +
             "<td style='text-align:center'><a href='#' onclick = '" + fun_ver + "'><span class='badge badge-categoria' id=btnDelete_" + i + ">Ver C.V</span></a></td>" +
             "<td style='text-align:center'><a href='#' onclick = '" + fun_contactar + "' data-toggle='modal' data-target='#contac_mod'><span class='badge badge-categoria' id=btn_Contactar" + i + ">Contactar</span></a></td>" +
-            "<td style='text-align:center'><a href='#' onclick = '" + fun_carrito + "'><span class='badge badge-categoria' id=btn_Contactar" + i + ">Añadir a Carrito</span></a></td>" +
+            //"<td style='text-align:center'><a href='#' onclick = '" + fun_carrito + "'><span class='badge badge-categoria' id=btn_Contactar" + i + ">Añadir a Carrito</span></a></td>" +
             "</tr>");
     }
 
@@ -419,47 +419,3 @@ function AddCarrito(Candidato) {
     }
 
 
-    function setCookie(params) {
-        var name = params.name,
-            value = params.value,
-            expireDays = params.days,
-            expireHours = params.hours,
-            expireMinutes = params.minutes,
-            expireSeconds = params.seconds;
-
-        var expireDate = new Date();
-        if (expireDays) {
-            expireDate.setDate(expireDate.getDate() + expireDays);
-        }
-        if (expireHours) {
-            expireDate.setHours(expireDate.getHours() + expireHours);
-        }
-        if (expireMinutes) {
-            expireDate.setMinutes(expireDate.getMinutes() + expireMinutes);
-        }
-        if (expireSeconds) {
-            expireDate.setSeconds(expireDate.getSeconds() + expireSeconds);
-        }
-
-        document.cookie = name + "=" + escape(value) +
-            ";domain=" + window.location.hostname +
-            ";path=/" +
-            ";expires=" + expireDate.toUTCString();
-    }
-    function deleteCookie(name) {
-        setCookie({ name: name, value: "", seconds: 1 });
-    }
-    function getCookie(name) {
-        if (document.cookie.length > 0) {
-            c_start = document.cookie.indexOf(name + "=");
-            if (c_start != -1) {
-                c_start = c_start + name.length + 1;
-                c_end = document.cookie.indexOf(";", c_start);
-                if (c_end == -1) {
-                    c_end = document.cookie.length;
-                }
-                return unescape(document.cookie.substring(c_start, c_end));
-            }
-        }
-        return "";
-    }

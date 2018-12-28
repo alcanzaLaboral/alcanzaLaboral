@@ -77,6 +77,18 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PayApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PayApi\bin\Debug\PayApi.dll</HintPath>
+    </Reference>
+    <Reference Include="PayApiAsync, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PayApiAsync\bin\Debug\PayApiAsync.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -140,9 +152,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System.Net.Http.Formatting">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
@@ -207,6 +216,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CheckOutController.cs" />
+    <Compile Include="Controllers\confirmationController.cs" />
     <Compile Include="Controllers\fileUploadController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InicioController.cs" />
@@ -233,6 +243,8 @@
     <Content Include="Content\CheckOut\css\estilo2.css" />
     <Content Include="Content\CheckOut\css\estilos.css" />
     <Content Include="Content\CheckOut\css\font\all.css" />
+    <Content Include="Content\CheckOut\css\loadApp.css" />
+    <Content Include="Content\CheckOut\css\mask.css" />
     <Content Include="Content\CheckOut\css\webfonts\fa-brands-400.svg" />
     <Content Include="Content\CheckOut\css\webfonts\fa-regular-400.svg" />
     <Content Include="Content\CheckOut\css\webfonts\fa-solid-900.svg" />
@@ -265,8 +277,11 @@
     <Content Include="Content\CheckOut\icons\icomoon.svg" />
     <Content Include="Content\CheckOut\icons\style.css" />
     <Content Include="Content\CheckOut\img\american.png" />
+    <Content Include="Content\CheckOut\img\bcp-agente.png" />
     <Content Include="Content\CheckOut\img\diners.png" />
+    <Content Include="Content\CheckOut\img\logoAlcanza.png" />
     <Content Include="Content\CheckOut\img\master.png" />
+    <Content Include="Content\CheckOut\img\pago-efectivo.png" />
     <Content Include="Content\CheckOut\img\visa.png" />
     <Content Include="Content\CheckOut\js\Core.js" />
     <Content Include="Content\CheckOut\js\jquery-3.1.1.min.js" />
@@ -1914,6 +1929,7 @@
     <Content Include="Scripts\Modulo\ConceptosBasicos.js" />
     <Content Include="Scripts\Modulo\Contactenos.js" />
     <Content Include="Scripts\Modulo\EditarPerfil.js" />
+    <Content Include="Scripts\Modulo\EditarPerfil_Checkout.js" />
     <Content Include="Scripts\Modulo\General.js" />
     <Content Include="Scripts\Modulo\Inicio.js" />
     <Content Include="Scripts\Modulo\MisionYVision.js" />
@@ -1930,7 +1946,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -1987,6 +2005,7 @@
     <Content Include="Views\CheckOut\EndTrans.cshtml" />
     <Content Include="Views\CheckOut\OutShop.cshtml" />
     <Content Include="Views\CheckOut\ErrorShop.cshtml" />
+    <Content Include="Views\confirmation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2014,6 +2033,9 @@
       <Project>{a30ad9e3-0855-42fa-b2b9-a64e9efa5ae5}</Project>
       <Name>Infraestrutura.Data.SqlServer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

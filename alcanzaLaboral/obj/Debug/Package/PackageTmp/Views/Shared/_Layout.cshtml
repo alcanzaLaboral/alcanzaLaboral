@@ -175,15 +175,18 @@
 
             </div>
         </div>
-        <div class="sidenav">
+        <div id="siden_salir" class="sidenav Ocultar">
+            <button id="fbtn_salir" onclick="Salir()" type="button" class="btn btn-primary salir"></button>
+        </div>
+        <div id="siden_acceder" class="sidenav">
             <button id="this" type="button" class="btn btn-primary arrow"></button>
         </div>
 
         <div id="sidenav" class="sidenav" style="top: 221px;right: 13px;width: 202px; display:none">
-            <button style="padding-left: 8px; margin-left: 25px;" type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#login_mod">Ingresa&nbsp;a&nbsp;tu&nbsp;cuenta</button>
             <button style="margin-left: 87px;padding-left: 8px;" type="button" class="btn btn-primary reg" href="#" data-toggle="modal" data-target="#registro_mod">
                 Registrate
             </button>
+            <button style="padding-left: 8px; margin-left: 25px;" type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#login_mod">Ingresa&nbsp;a&nbsp;tu&nbsp;cuenta</button> 
         </div>
 
     </header><!-- #header -->
@@ -208,19 +211,19 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Contraseña</label>
-                                    <input type="password" class="form-control" id="pass_reg" placeholder="Ingrese su contraseña">
+                                    <input type="password" class="form-control" id="pass_reg" placeholder="Ingrese su contraseña" onblur="validarPass()">
                                 </div>
                                 <div class="form-group">
                                     <label>Repita su contraseña</label>
-                                    <input type="password" class="form-control" id="rpass_reg" placeholder="Repita su contraseña">
+                                    <input type="password" class="form-control" id="rpass_reg" placeholder="Repita su contraseña" onblur="validarRPass()">
                                 </div>
                                 <div class="form-group">
                                     <label>E-mail de recepción de ofertas</label>
-                                    <input type="text" class="form-control" id="email_reg" placeholder="Ingrese su e-mail" onblur="ValidarCorreo()">
+                                    <input type="text" class="form-control" id="email_reg" placeholder="Ingrese su e-mail" onblur="validarEmail(this)">
                                 </div>
                                 <div class="form-group">
                                     <label>Coloque nuevamente su e-mail</label>
-                                    <input type="text" class="form-control" id="remail_reg" placeholder="Repita su e-mail">
+                                    <input type="text" class="form-control" id="remail_reg" placeholder="Repita su e-mail" onblur="validarEmail(this)">
                                 </div>
                                 <div class="form-group">
                                     <label>Seleccione una pregunta secreta</label>
@@ -309,7 +312,7 @@
                             <form>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Ingrese su correo</label>
-                                    <input type="email" class="form-control" id="correo_recu" placeholder="Ingrese su correo" onblur="ValidarCorreoRecu()">
+                                    <input type="email" class="form-control" id="correo_recu" placeholder="Ingrese su correo" onblur="validarEmail(this)">
                                 </div>
                                 <div class="form-group">
                                     <label>Seleccione una pregunta secreta</label>
@@ -414,6 +417,8 @@
     <script src="~/Scripts/Layout/main.js"></script>
     <script src="~/Scripts/Modulo/General.js"></script>
     <script src="~/Scripts/Layout/wow.min.js"></script>
+    <script src="~/Scripts/jquery.table2excel.min.js"></script>
+    <script src="~/Scripts/icons.js"></script>
     <script>
         wow = new WOW(
             {

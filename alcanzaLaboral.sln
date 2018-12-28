@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
+# Visual Studio Express 14 for Web
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alcanzaLaboral", "alcanzaLaboral\alcanzaLaboral.csproj", "{1F8008E5-736B-4B41-8A33-52859045E4E0}"
@@ -22,6 +22,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{CA02E7B7-6E81-42D7-8765-288761B18268}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestrutura.Data.SqlServer", "Infraestrutura.Data.SqlServer\Infraestrutura.Data.SqlServer.csproj", "{A30AD9E3-0855-42FA-B2B9-A64E9EFA5AE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayApi", "PayApi\PayApi.csproj", "{8BC42F22-DBB6-494F-BF8E-7051D22E87A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "..\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.csproj", "{B00C60D3-381D-469E-B02B-F2151373233A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayApiAsync", "PayApiAsync\PayApiAsync.csproj", "{8594F81E-CBF4-4F91-82B6-898739CF902F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,18 @@ Global
 		{A30AD9E3-0855-42FA-B2B9-A64E9EFA5AE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A30AD9E3-0855-42FA-B2B9-A64E9EFA5AE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A30AD9E3-0855-42FA-B2B9-A64E9EFA5AE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BC42F22-DBB6-494F-BF8E-7051D22E87A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BC42F22-DBB6-494F-BF8E-7051D22E87A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BC42F22-DBB6-494F-BF8E-7051D22E87A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BC42F22-DBB6-494F-BF8E-7051D22E87A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B00C60D3-381D-469E-B02B-F2151373233A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B00C60D3-381D-469E-B02B-F2151373233A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B00C60D3-381D-469E-B02B-F2151373233A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B00C60D3-381D-469E-B02B-F2151373233A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8594F81E-CBF4-4F91-82B6-898739CF902F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8594F81E-CBF4-4F91-82B6-898739CF902F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8594F81E-CBF4-4F91-82B6-898739CF902F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8594F81E-CBF4-4F91-82B6-898739CF902F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

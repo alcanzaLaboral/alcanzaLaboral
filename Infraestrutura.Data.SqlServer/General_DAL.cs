@@ -42,6 +42,28 @@ namespace Infraestrutura.Data.SqlServer
             return model;
         }
 
+        public void ConfirmarPago(string state_pol, string v)
+        {
+
+            SqlCommand cmd = new SqlCommand("USP_ConfirmarPago", cn.getcn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@estado", state_pol);
+            cmd.Parameters.AddWithValue("@carrito", v);
+
+            cn.getcn.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            var response = false;
+            while (dr.Read())
+            {
+                response = dr["response"].ToString() == "0" ? false : true;
+            }
+
+            dr.Close();
+            cmd.Dispose();
+            cn.getcn.Close();
+        }
+
         public bool EliminarCarrito(string carrito, int secuencia)
         {
             SqlCommand cmd = new SqlCommand("USP_EliminarCarrito", cn.getcn);
@@ -64,6 +86,88 @@ namespace Infraestrutura.Data.SqlServer
             cmd.Dispose();
             cn.getcn.Close();
             return response;
+        }
+
+        public DatosFacturacion ListarDatosFacturacion(int idUsuario,string carrito)
+        {
+            var model = new DatosFacturacion();
+            try { 
+            SqlCommand cmd = new SqlCommand("USP_ListarDatosFacturacion", cn.getcn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            //cmd.Parameters.AddWithValue("@carrito", carrito == "" ? System.Data.SqlTypes.SqlString.Null : carrito);
+            cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
+            cmd.Parameters.AddWithValue("@carrito", carrito);
+
+            cn.getcn.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    model.transactionID = dr["transactionID"].ToString();
+                    model.PayDescription = dr["PayDescription"].ToString();
+                    model.Value = float.Parse(dr["Value"].ToString());
+                    model.idUsuario =int.Parse(dr["idUsuario"].ToString());
+                    model.Name = dr["Name"].ToString();
+                    model.Email = dr["Email"].ToString();
+                    model.Phone = dr["Phone"].ToString();
+                    model.Document = dr["Document"].ToString();
+                    model.Street = dr["Street"].ToString();
+                    model.City = dr["City"].ToString();
+                    model.State = dr["State"].ToString();
+                    model.Postal = dr["Postal"].ToString();
+                    model.expireDate = dr["expireDate"].ToString();
+
+                }
+
+                dr.Close();
+                cmd.Dispose();
+            cn.getcn.Close();
+            }
+            catch (Exception e) {
+
+            }
+            return model;
+
+        }
+
+        public void GuardarRespuesta(string response,string carrito)
+        {
+            SqlCommand cmd = new SqlCommand("USP_GuardarRespuesta", cn.getcn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@estado", response);
+            cmd.Parameters.AddWithValue("@carrito",carrito);
+
+            cn.getcn.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                var respon = dr["response"].ToString() == "0" ? false : true;
+            }
+
+            dr.Close();
+            cmd.Dispose();
+            cn.getcn.Close();
+        }
+        public void GuardarRespuesta(string response, string state, string carrito)
+        {
+            SqlCommand cmd = new SqlCommand("USP_GuardarRespuestaTC", cn.getcn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@Respuesta", response);
+            cmd.Parameters.AddWithValue("@estado", state);
+            cmd.Parameters.AddWithValue("@carrito", carrito);
+
+            cn.getcn.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                var respon = dr["response"].ToString() == "0" ? false : true;
+            }
+
+            dr.Close();
+            cmd.Dispose();
+            cn.getcn.Close();
         }
 
         //***************************************************************************************************************************************
@@ -372,8 +476,8 @@ namespace Infraestrutura.Data.SqlServer
                 clase.fechacreacion = dr["fechacreacion"].ToString();
                 clase.finsubscrip = dr["finsubscrip"].ToString();
 
-                clase.flag_discap = int.Parse(dr["flag_discap"].ToString());
-                clase.desc_discap = dr["desc_discap"].ToString();
+                //clase.flag_discap = int.Parse(dr["flag_discap"].ToString());
+                //clase.desc_discap = dr["desc_discap"].ToString();
 
                 listado.Add(clase);
             }

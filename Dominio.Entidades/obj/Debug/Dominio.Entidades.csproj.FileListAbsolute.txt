@@ -12,3 +12,8 @@ C:\Desarrollo\Alcanza Laboral\Dominio.Entidades\bin\Debug\Dominio.Entidades.pdb
 C:\Desarrollo\Alcanza Laboral\Dominio.Entidades\obj\Debug\Dominio.Entidades.csprojResolveAssemblyReference.cache
 C:\Desarrollo\Alcanza Laboral\Dominio.Entidades\obj\Debug\Dominio.Entidades.dll
 C:\Desarrollo\Alcanza Laboral\Dominio.Entidades\obj\Debug\Dominio.Entidades.pdb
+C:\Desarrollo\Alcanza\GitHub\Dominio.Entidades\bin\Debug\Dominio.Entidades.dll
+C:\Desarrollo\Alcanza\GitHub\Dominio.Entidades\bin\Debug\Dominio.Entidades.pdb
+C:\Desarrollo\Alcanza\GitHub\Dominio.Entidades\obj\Debug\Dominio.Entidades.dll
+C:\Desarrollo\Alcanza\GitHub\Dominio.Entidades\obj\Debug\Dominio.Entidades.pdb
+C:\Desarrollo\Alcanza\GitHub\Dominio.Entidades\obj\Debug\Dominio.Entidades.csprojResolveAssemblyReference.cache

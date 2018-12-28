@@ -11,7 +11,7 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="~/img/fav.png">
+    <link rel="shortcut icon" href="~/img/fav.ico">
     <!-- Author Meta -->
     <meta name="author" content="alcanzaLaboral">
     <!-- Meta Description -->
@@ -24,7 +24,6 @@
 
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-    <!--CSS ============================================= -->
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link href="~/Content/Layout/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/Layout/magnific-popup.css" rel="stylesheet" />
@@ -33,8 +32,30 @@
     <link href="~/Content/Layout/animate.min.css" rel="stylesheet" />
     <link href="~/Content/Layout/owl.carousel.css" rel="stylesheet" />
     <link href="~/Content/Layout/main.css" rel="stylesheet" />
+    <link href="~/Content/PerfilProfesional.css" rel="stylesheet" />
 </head>
 <body style="background-color: #ccc;">
+
+    <div id="container-floating">
+
+        <div class="nd4 nds" data-toggle="tooltip" data-placement="left" title="Regresar" style="text-align:center;" onclick="regresar()">
+            <i style="color:#fff;margin-top: 0.75rem;" class="fas fa-fast-backward"></i>
+        </div>
+        <div class="nd3 nds" data-toggle="tooltip" data-placement="left" title="Contactar candidato"  style="text-align:center;" onclick="contactar()">
+            <i style="color:#fff;margin-top: 0.75rem;" class="fas fa-user-plus"></i>
+        </div>
+        <div class="nd1 nds" data-toggle="tooltip" data-placement="left" title="Imprimir"  style="text-align:center;" onclick="fprint()">
+            <i style="color:#fff;margin-top: 0.75rem;" class="fas fa-print"></i>
+        </div>
+
+        <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create">
+            <p class="plus">+</p>
+            <img class="edit" src="https://ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/bt_compose2_1x.png">
+        </div>
+
+
+
+    </div>
 
     <div class="container" style="background-color: #fff;">
         <br>
@@ -213,6 +234,54 @@
         <br>
     </div>
 
+    <input style="display:none;" id="btnContactar" type="button" value="contactar" data-toggle="modal" data-target="#contac_mod"/>
+
+    <!-- Modal Contactarse -->
+    <div class="modal fade" id="contac_mod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Contactar Candidato</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <form>
+                                <div class="form-group">
+                                    <label>Ingrese Nombre de Persona que desea contactar al candidato(a):</label>
+                                    <input type="text" class="form-control" id="nom_contacto">
+                                </div>
+                                <div class="form-group">
+                                    <label>Ingrese su email:</label>
+                                    <input type="text" class="form-control" id="email_contacto" onblur="validarEmail(this)">
+                                </div>
+                                <div class="form-group">
+                                    <label>Teléfono de Contacto:</label>
+                                    <input type="text" class="form-control" id="fono_contacto" onkeypress="return justNumbers(event)">
+                                </div>
+                                <div class="form-group">
+                                    <label>Descripción del Puesto: (40 Caracteres)</label>
+                                    <textarea class="form-control" id="desc_contacto" rows="2" maxlength="40"></textarea>
+                                </div>
+                                <label id="nombredestinatario" style="display:none;"></label>
+                                <label id="correodestinatario" style="display:none;"></label>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="cancelarContactar" type="button" class="genric-btn primary-border" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="genric-btn primary" onclick="Contactar_Onclick()">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- End footer Area -->
 
     <script src="~/Scripts/Layout/vendor/jquery-2.2.4.min.js"></script>
@@ -228,9 +297,40 @@
     <script src="~/Scripts/Layout/jquery.nice-select.min.js"></script>
     <script src="~/Scripts/Layout/owl.carousel.min.js"></script>
     <script src="~/Scripts/Layout/mail-script.js"></script>
-    <script src="~/Scripts/jquery.redirect.js"></script>
-    <script src="~/Scripts/Layout/main.js"></script>
+    <script src="~/Scripts/Layout/main.js"></script>      
+    <script src="~/Scripts/icons.js"></script>
+
     <script src="~/Scripts/Modulo/General.js"></script>
     <script src="~/Scripts/Modulo/PerfilProfesional.js"></script>
+
+    <script>
+
+        function fprint() {
+            window.print();
+        }
+
+        function contactar() {
+            nombre = document.getElementById('nombre_id').innerHTML;
+            correo = document.getElementById('correo_id').innerHTML;
+            
+            
+            $('#btnContactar').click();
+        }
+
+        function regresar() {
+            
+            if (sessionStorage.getItem('peticionver') == 1) {
+                window.location = "../Inicio/BuscarCandidatos";
+                sessionStorage.setItem('peticionver', null);
+            } else {
+                window.location = "../Inicio/EditarPerfil";
+                sessionStorage.setItem('peticionver', null);
+            }
+            
+
+        }
+
+    </script>
+
 </body>
 </html>
