@@ -26,3 +26,10 @@ C:\Users\Programacion\Desktop\alcanza_2112181\Infraestrutura.Data.SqlServer\bin\
 C:\Users\Programacion\Desktop\alcanza_2112181\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.csprojResolveAssemblyReference.cache
 C:\Users\Programacion\Desktop\alcanza_2112181\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.dll
 C:\Users\Programacion\Desktop\alcanza_2112181\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.pdb
+C:\Users\Cristopher\Desktop\ultimateAlcanzaLaboral\Infraestrutura.Data.SqlServer\bin\Debug\Infraestrutura.Data.SqlServer.dll
+C:\Users\Cristopher\Desktop\ultimateAlcanzaLaboral\Infraestrutura.Data.SqlServer\bin\Debug\Infraestrutura.Data.SqlServer.pdb
+C:\Users\Cristopher\Desktop\ultimateAlcanzaLaboral\Infraestrutura.Data.SqlServer\bin\Debug\Dominio.Entidades.dll
+C:\Users\Cristopher\Desktop\ultimateAlcanzaLaboral\Infraestrutura.Data.SqlServer\bin\Debug\Dominio.Entidades.pdb
+C:\Users\Cristopher\Desktop\ultimateAlcanzaLaboral\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.csprojResolveAssemblyReference.cache
+C:\Users\Cristopher\Desktop\ultimateAlcanzaLaboral\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.dll
+C:\Users\Cristopher\Desktop\ultimateAlcanzaLaboral\Infraestrutura.Data.SqlServer\obj\Debug\Infraestrutura.Data.SqlServer.pdb
